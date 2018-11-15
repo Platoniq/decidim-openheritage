@@ -1,0 +1,50 @@
+@import "variables";
+
+// Overide background default bar
+.title-bar{
+	background-color: $title-bar-bg;
+}
+
+.navbar {
+	background-color: $navbar-bg;
+}
+.main-nav__link a {
+	color: $navbar-fg;
+	&:hover {
+		color: $navbar-fg-hover;
+	}
+
+}
+
+.topbar__dropmenu {
+	> ul > li > a {
+		color: $link-color;
+	}
+	.is-dropdown-submenu li a {
+		color: $link-color;
+	}
+}
+
+.topbar__edit__link a {
+	color: $link-color;
+	&:hover {
+		color: $link-color;
+	}
+}
+
+.dropdown.menu .is-active > a {
+	color: $link-color;
+}
+
+.topbar__search {
+	input, input:focus {
+		background-color: $navbar-bg;
+		color: $navbar-fg;
+	}
+	input::placeholder, textarea::placeholder {
+		color: $navbar-fg;
+	}
+	svg {
+		color: $navbar-fg;
+	}
+}
