@@ -8,3 +8,28 @@
 .decidim-logo {
 	width: 100px;
 }
+
+//Main footer
+.main-footer {
+  background-color: $main-footer-bg;
+  color: #fff;
+  a {
+  	color: #fff;
+  }
+}
+
+.eu-footer {
+  background-color: $secondary-blue;
+  color: #fff;
+  .flag {
+  	border: 3px white solid;
+  	height: 139px;
+  }
+  .row .column {
+  	margin:1em 0;
+		@media screen and (min-width: 40em) {
+  		min-height: 139px;
+	  	margin:5% 0;
+		}
+  }
+}
