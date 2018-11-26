@@ -15,6 +15,12 @@
 	}
 
 }
+.topbar__user__login{
+  a{
+    color: $link-color;
+    font-weight: 400;
+  }
+}
 
 .topbar__dropmenu {
 	> ul > li > a {
