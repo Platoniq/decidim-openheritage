@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Decidim.configure do |config|
-  config.application_name = "Crowdvocacy Decidim"
-  config.mailer_sender = "notifications@crowdvocacy.org"
+  config.application_name = "OpenHeritage Participatory Platform"
+  config.mailer_sender = "noreply@labs.openheritage.eu"
 
   # Change these lines to set your preferred locales
   config.default_locale = :en
