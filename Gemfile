@@ -4,10 +4,10 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.15.1"
-gem "decidim-conferences", "0.15.1"
-gem "decidim-consultations", "0.15.1"
-gem "decidim-initiatives", "0.15.1"
+gem "decidim", "0.16"
+gem "decidim-conferences", "0.16"
+gem "decidim-consultations", "0.16"
+gem "decidim-initiatives", "0.16"
 
 gem "bootsnap", "~> 1.3"
 
@@ -21,7 +21,7 @@ group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
   gem 'dotenv-rails'
 
-  gem "decidim-dev", "0.15.1"
+  gem "decidim-dev", "0.16"
 end
 
 group :development do
