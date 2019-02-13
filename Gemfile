@@ -30,9 +30,11 @@ group :development do
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 3.5"
+  gem "health_check"
 end
 
 group :production do
   gem "sidekiq"
   gem "fog-aws"
+  gem "health_check"
 end
