@@ -8,10 +8,10 @@ if Rails.env.production?
 	config.throttling_period = 1.minute
 
   end
+end
 
-	# Provided that trusted users use an HTTP request header named APIKey
-	Rack::Attack.safelist("mark any authenticated access safe") do |request|
-	  # Requests are allowed if the return value is truthy
-	  request.env["APIKey"] == "let-me-hack"
-	end
+# Provided that trusted users use an HTTP request header named APIKey
+Rack::Attack.safelist("mark any authenticated access safe") do |request|
+  # Requests are allowed if the return value is truthy
+  request.env["APIKey"] == Rails.application.secrets.rack_attack_apikey || "let-me-hack"
 end
