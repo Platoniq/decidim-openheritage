@@ -10,23 +10,22 @@ if Rails.env.production?
 	config.throttling_period = 1.minute
 
   end
-end
 
+	# require "rack/attack"
+	# Rails.application.configure do |config|
+	#   config.middleware.use Rack::Attack
+	# end
+	# Rack::Attack.throttle(
+	#   "requests by ip",
+	#   limit: 1,
+	#   period: 1.minute,
+	#   &:ip
+	# )
 
-# require "rack/attack"
-# Rails.application.configure do |config|
-#   config.middleware.use Rack::Attack
-# end
-# Rack::Attack.throttle(
-#   "requests by ip",
-#   limit: 1,
-#   period: 1.minute,
-#   &:ip
-# )
-
-# Provided that trusted users use an HTTP request param named skip_rack_attack
-Rack::Attack.safelist("mark any authenticated access safe") do |request|
-  # Requests are allowed if the return value is truthy
-  skip = Rails.application.secrets.rack_attack_skip || 'let-me-hack'
-  request.params['skip_rack_attack'] == skip
+	# Provided that trusted users use an HTTP request param named skip_rack_attack
+	Rack::Attack.safelist("mark any authenticated access safe") do |request|
+	  # Requests are allowed if the return value is truthy
+	  skip = Rails.application.secrets.rack_attack_skip || 'let-me-hack'
+	  request.params['skip_rack_attack'] == skip
+	end
 end
