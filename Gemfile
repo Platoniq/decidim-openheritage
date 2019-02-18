@@ -6,7 +6,7 @@ ruby RUBY_VERSION
 # DECIDIM_VERSION='0.16'
 # DECIDIM_VERSION={path: '../decidim'}
 
-DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim.git", :branch => "fix/user-account-form"}
+DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim.git", :branch => "fix/user-account-form", :ref => 'c14109c07a111797f80af8a2164e8518e58a5108'}
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
