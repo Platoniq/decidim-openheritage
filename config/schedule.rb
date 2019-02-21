@@ -25,8 +25,11 @@ env :GEM_PATH, ENV['GEM_PATH']
 env :GEM_HOME, ENV['GEM_HOME']
 
 every 1.day, at: '1:30 am' do
-    command "echo 'Metrics calculation...'"
+    starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     rake "decidim:metrics:all"
+    ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+    elapsed = ending - starting
+    command "echo $(date)' - Metrics calculation in #{elapsed} seconds'"
     # command "echo 'OpenData generation...'"
     # rake "decidim:open_data:export"
 end
