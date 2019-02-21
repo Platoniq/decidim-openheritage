@@ -1,5 +1,7 @@
 require 'rake'
 
+Rails.application.load_tasks
+
 class MetricsGenerationWorker
   include Sidekiq::Worker
 
