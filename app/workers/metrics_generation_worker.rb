@@ -1,3 +1,5 @@
+require 'rake'
+
 class MetricsGenerationWorker
   include Sidekiq::Worker
 
