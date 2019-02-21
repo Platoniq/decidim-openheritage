@@ -2,7 +2,7 @@
 
 Decidim.configure do |config|
   config.application_name = "OpenHeritage Participatory Platform"
-  config.mailer_sender = "noreply@labs.openheritage.eu"
+  config.mailer_sender = "OH Notifications <noreply@labs.openheritage.eu>"
 
   # Change these lines to set your preferred locales
   config.default_locale = :en
