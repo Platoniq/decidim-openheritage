@@ -6,3 +6,8 @@
   - newsletters_opt_in
   - events
   - metrics
+
+:schedule:
+  hello_world:
+    cron: '0 * * * * *'   # Runs once per minute
+    class: HelloWorld
