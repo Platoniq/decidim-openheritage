@@ -1,0 +1,7 @@
+#config/schedule.yml
+
+metrics_job:
+  cron: "* * * * *"
+  class: "MetricsGenerationWorker"
+  queue: metrics
+
