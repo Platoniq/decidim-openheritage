@@ -12,45 +12,67 @@
 	color: $navbar-fg;
 	&:hover {
 		color: $navbar-fg-hover;
+		box-shadow: inset 0 4px 0 0 lighten($primary-pink, 10%);
 	}
 
 }
-.topbar__user__login{
-  a{
-    color: $link-color;
-    font-weight: 400;
-  }
-}
-
-.topbar__dropmenu {
-	> ul > li > a {
-		color: $link-color;
-	}
-	.is-dropdown-submenu li a {
-		color: $link-color;
-	}
-}
-
-.topbar__edit__link a {
-	color: $link-color;
-	&:hover {
-		color: $link-color;
-	}
-}
-
 .dropdown.menu .is-active > a {
 	color: $link-color;
 }
 
-.topbar__search {
-	input, input:focus {
-		background-color: $navbar-bg;
-		color: $navbar-fg;
+.topbar_ {
+	&_menu {
+		padding: 0.125rem 0.5rem 0;
+		background: rgba(48, 65, 93, 0.1);
+		border-radius: 12.5%;
+		[data-toggle] {
+			margin-bottom:0;
+		}
+		.icon--menu {
+			fill: $primary-blue;
+			width: 1em;
+			height: 1em;
+		}
 	}
-	input::placeholder, textarea::placeholder {
-		color: $navbar-fg;
+	&_edit__link a {
+		padding-left: 5px;
+		color: $link-color;
+		&:hover {
+			color: $link-color;
+		}
 	}
-	svg {
-		color: $navbar-fg;
+	&_user__login{
+	  a {
+	    color: $link-color;
+	    font-weight: 400;
+	  }
+	}
+
+	&_dropmenu {
+		> ul > li > a {
+			color: $link-color;
+		}
+		.is-dropdown-submenu-parent {
+			> a, &.is-active > a {
+				color: white;
+			}
+		}
+		.is-dropdown-submenu li a {
+			color: $link-color;
+		}
+	}
+	&_search {
+		input, input:focus {
+			background-color: $navbar-bg;
+			color: $navbar-fg;
+		}
+		input::placeholder, textarea::placeholder {
+			color: $navbar-fg;
+		}
+		svg {
+			color: $navbar-fg;
+		}
 	}
 }
+
+
