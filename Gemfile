@@ -3,15 +3,17 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION='0.16'
-# DECIDIM_VERSION={path: '../decidim'}
+#DECIDIM_VERSION='0.16'
 
 # DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim.git", :branch => "fix/user-account-form", :ref => 'c14109c'}
+DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.17-unregistered-surveys"}
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-initiatives", DECIDIM_VERSION
+# gem "decidim-surveys", path: "../decidim/decidim-surveys"
+# gem "decidim-forms", path: "../decidim/decidim-forms"
 
 gem "bootsnap", "~> 1.3"
 
