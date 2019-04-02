@@ -1,4 +1,7 @@
 @import "variables";
+@import "foundation";
+@import "decidim/utils/settings";
+
 
 // Overide background default bar
 .title-bar{
@@ -66,7 +69,9 @@
 		}
 		.is-dropdown-submenu-parent {
 			> a, &.is-active > a {
-				color: white;
+				@include breakpoint(smallmedium down) {
+					color: white;
+				}
 			}
 		}
 		.is-dropdown-submenu li a {

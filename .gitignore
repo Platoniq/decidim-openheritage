@@ -37,4 +37,4 @@ public/uploads
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-.env
+.rbenv-vars
