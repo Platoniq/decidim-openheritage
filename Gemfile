@@ -15,6 +15,8 @@ gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-surveys", path: "../decidim/decidim-surveys"
 # gem "decidim-forms", path: "../decidim/decidim-forms"
 
+gem "decidim-direct_verifications", "~> 0.17"
+
 gem "bootsnap", "~> 1.3"
 
 gem "puma", "~> 3.0"
