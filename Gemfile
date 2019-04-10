@@ -6,6 +6,7 @@ ruby RUBY_VERSION
 #DECIDIM_VERSION='0.16'
 
 # DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim.git", :branch => "fix/user-account-form", :ref => 'c14109c'}
+# DECIDIM_VERSION={:path => "../decidim"}
 DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.17-unregistered-surveys"}
 
 gem "decidim", DECIDIM_VERSION

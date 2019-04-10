@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/Platoniq/decidim.git
-  revision: 1a74430f8171d8e3abd70c8be598e7f6d83498cf
+  remote: https://github.com/Platoniq/decidim.git
+  revision: 54a137e3f78709a8478c45357659b91fdb39528b
   branch: 0.17-unregistered-surveys
   specs:
     decidim (0.17.0)
