@@ -12,7 +12,7 @@ DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.17-unregistered-su
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
-gem "decidim-initiatives", DECIDIM_VERSION
+# gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-surveys", path: "../decidim/decidim-surveys"
 # gem "decidim-forms", path: "../decidim/decidim-forms"
 
