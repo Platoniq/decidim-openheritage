@@ -1,10 +1,48 @@
 ---
 pl:
   decidim:
+    accountability:
+      results:
+        show:
+          stats:
+            votes: Pomoc
+    authorization_handlers:
+      help: Pomoc
+    blogs:
+      actions:
+        edit: Edytuj
+    budgets:
+      actions:
+        edit: Edytuj
+    debates:
+      actions:
+        edit: Edytuj
     devise:
       registrations:
         new:
           sign_up: Zarejestruj się
+    menu:
+      help: Pomoc
+      home: Strona główna
+    pages:
+      home:
+        extended:
+          debates_explanation: Debatuj i dyskutuj, podziel swoim spojrzeniem, rozwiń
+            tematykę debat.
+          proposals_explanation: Zgłoś nowe propozycje, wspieraj te zgłoszone oraz
+            wskaż zmiany, które chcesz zobaczyć.
+      index:
+        title: Pomoc
+    shared:
+      links:
+        sign_up: Zarejestruj się
+    sortitions:
+      admin:
+        actions:
+          edit: Edytuj
+    system:
+      actions:
+        edit: Edytuj
   devise:
     registrations:
       new:
@@ -20,17 +58,3 @@ pl:
         sign_up: Zarejestruj się
   locale:
     name: Polski
-  pages:
-    home:
-      extended:
-        debates_explanation: Debatuj i dyskutuj, podziel swoim spojrzeniem, rozwiń
-          tematykę debat.
-        proposals_explanation: Zgłoś nowe propozycje, wspieraj te zgłoszone oraz wskaż
-          zmiany, które chcesz zobaczyć.
-    index:
-      title: Pomoc
-  shared:
-    floating_help:
-      help: Pomoc
-    login_modal:
-      sign_up: Zarejestruj się
