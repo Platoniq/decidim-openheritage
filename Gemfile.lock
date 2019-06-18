@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/Platoniq/decidim.git
+  remote: https://github.com/Platoniq/decidim.git
   revision: dd99635978af6bdde4188a7ba4f69395404d0091
   branch: 0.17-unregistered-surveys
   specs:
@@ -453,7 +453,7 @@ GEM
     invisible_captcha (0.10.0)
       rails (>= 3.2.0)
     ipaddress (0.8.3)
-    jaro_winkler (1.5.2)
+    jaro_winkler (1.5.3)
     jquery-rails (4.3.5)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)

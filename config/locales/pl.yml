@@ -1,11 +1,24 @@
 ---
 pl:
+  activemodel:
+    attributes:
+      assembly:
+        twitter: Twitter
+      user:
+        nickname: Alias
   decidim:
     accountability:
       results:
         show:
           stats:
             votes: Pomoc
+    admin:
+      officializations:
+        index:
+          nickname: Alias
+      organization:
+        form:
+          twitter: Twitter
     authorization_handlers:
       help: Pomoc
     blogs:
@@ -14,13 +27,42 @@ pl:
     budgets:
       actions:
         edit: Edytuj
+    conferences:
+      conferences:
+        show:
+          register: Zarejestruj się
     debates:
       actions:
         edit: Edytuj
     devise:
+      omniauth_registrations:
+        new:
+          nickname_help: Twój alias (@alias) w %{organization}
+          username_help: Informacja publiczna wyświetlana w Twoich postach. W celu
+            zagwarantowania anonimowości może to być dowolna nazwa.
       registrations:
         new:
+          newsletter: Chcę otrzymywać okazjonalne newslettery
+          newsletter_title: Zgoda na subskrybcję
+          nickname_help: Twój alias (@alias) w %{organization}
           sign_up: Zarejestruj się
+          subtitle: Zarejstruj się, aby wziąć udział w dysusjach i móc wspierać propozycje.
+          tos_agreement: Rejestrując się, zgadzasz się na %{link}.
+          tos_title: Warunki korzystania
+          username_help: Informacja publiczna wyświetlana w Twoich postach. W celu
+            zagwarantowania anonimowości może to być dowolna nazwa.
+    forms:
+      admin:
+        models:
+          components:
+            tos: Warunki korzystania
+    gamification:
+      badges:
+        index:
+          page_description: Odznaki są wyrazem uznania dla działań uczestników i rozwoju
+            platformy.Gdy zaczniesz odkrywać, uczestniczyć i wchodzić w interakcje
+            na platformie, otrzymasz różne odznaki. Oto lista odznak i kilka sposobów
+            na ich zdobycie.
     menu:
       help: Pomoc
       home: Strona główna
@@ -31,8 +73,23 @@ pl:
             tematykę debat.
           proposals_explanation: Zgłoś nowe propozycje, wspieraj te zgłoszone oraz
             wskaż zmiany, które chcesz zobaczyć.
+        footer_sub_hero:
+          register: Zarejestruj się
+        sub_hero:
+          register: Zarejestruj się
       index:
         title: Pomoc
+      metrics:
+        headline: Partycypacja w liczbach
+      participatory_space:
+        metrics:
+          headline: Partycypacja w liczbach
+    profiles:
+      user:
+        resend_email_confirmation_instructions: Wyślij ponownie potwierdzenie.
+    registration_types:
+      index:
+        register: Zarejestruj się
     shared:
       links:
         sign_up: Zarejestruj się
@@ -44,17 +101,25 @@ pl:
       actions:
         edit: Edytuj
   devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: Wyślij ponownie potwierdzenie.
     registrations:
       new:
         sign_up: Zarejestruj się
     shared:
       links:
+        didn_t_receive_confirmation_instructions: Nie otrzymałeś(aś) potwierdzenia?
         sign_up: Zarejestruj się
   layouts:
     decidim:
+      conference_hero:
+        register: Zarejestruj się
       edit_link:
         edit: Edytuj
       header:
         sign_up: Zarejestruj się
   locale:
     name: Polski
+  social_share_button:
+    twitter: Twitter
