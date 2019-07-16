@@ -1,5 +1,10 @@
 ---
 pl:
+  oh:
+    footer:
+      eu1: 'Projekt finansowany ze środków Unii Europejskiej w ramach programu Horyzont 2020, numer umowy grantowej: 776766.'
+      eu2: Odpowiedzialność za treść tej publikacji ponoszą wyłącznie autorzy i nie musi ona wyrażać opinii UE.
+      eu3: EASME ani Komisja Europejska nie ponoszą odpowiedzialności za sposób wykorzystania zawartych w niej informacji.
   activemodel:
     attributes:
       assembly:
@@ -39,6 +44,9 @@ pl:
     debates:
       actions:
         edit: Edytuj
+      debates:
+        share:
+          share: Share
     devise:
       omniauth_registrations:
         new:
@@ -98,6 +106,10 @@ pl:
     shared:
       links:
         sign_up: Zarejestruj się
+      share_modal:
+        share: Share
+      embed_modal:
+        embed_link: Embed
     sortitions:
       admin:
         actions:
@@ -105,6 +117,10 @@ pl:
     system:
       actions:
         edit: Edytuj
+    surveys:
+      surveys:
+        answer:
+          success: Twoja ankieta została przesłana.
   devise:
     confirmations:
       new:
