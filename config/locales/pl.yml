@@ -6,6 +6,11 @@ pl:
         twitter: Twitter
       user:
         nickname: Alias
+      organization:
+        send_welcome_notification: Wyślij komunikat powitalny
+        customize_welcome_notification: Dostosuj treść komunikatu powitalnego
+        welcome_notification_subject: Tytuł komunikatu powitalnego
+        welcome_notification_body: Treść komunikatu powitalnego
   decidim:
     accountability:
       results:
@@ -56,13 +61,13 @@ pl:
         models:
           components:
             tos: Warunki korzystania
+      questionnaires:
+        show:
+          tos_agreement: Biorąc udział akceptujesz Warunki korzystania z usługi
     gamification:
       badges:
         index:
-          page_description: Odznaki są wyrazem uznania dla działań uczestników i rozwoju
-            platformy.Gdy zaczniesz odkrywać, uczestniczyć i wchodzić w interakcje
-            na platformie, otrzymasz różne odznaki. Oto lista odznak i kilka sposobów
-            na ich zdobycie.
+          page_description: Odznaki są wyrazem uznania dla działań uczestników i rozwoju platformy. Gdy zaczniesz odkrywać, uczestniczyć i wchodzić w interakcje na platformie, otrzymasz różne odznaki. Oto lista odznak i kilka sposobów na ich zdobycie.
     menu:
       help: Pomoc
       home: Strona główna
@@ -119,6 +124,9 @@ pl:
         edit: Edytuj
       header:
         sign_up: Zarejestruj się
+      process_header_steps:
+        step: Etap %{current} z %{total}
+        view_steps: Pokaż etapy
   locale:
     name: Polski
   social_share_button:
