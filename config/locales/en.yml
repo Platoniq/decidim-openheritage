@@ -31,6 +31,9 @@
 
 en:
   oh:
+    admin:
+      hints:
+        hide_prefix: "HINT: Start the text with '--' in order to hide system pages that cannot be deleted."
     footer:
       eu1: This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 776766.
       eu2: The sole responsibility for the content of this publication lies with the authors. It does not necessarily represent the opinion of the European Union.

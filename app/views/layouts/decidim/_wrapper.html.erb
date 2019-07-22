@@ -108,6 +108,7 @@ end
                   <% end %>
 
                   <% current_organization.static_pages.where(show_in_footer: true).each do |page| %>
+                    <% next if page.title[current_organization.default_locale].start_with? "--" %>
                     <li><%= link_to translated_attribute(page.title), decidim.page_path(page) %></li>
                   <% end %>
                 <% end %>
