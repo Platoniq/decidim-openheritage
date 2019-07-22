@@ -59,7 +59,7 @@ pl:
           newsletter_title: Zgoda na subskrybcję
           nickname_help: Twój alias (@alias) w %{organization}
           sign_up: Zarejestruj się
-          subtitle: Zarejstruj się, aby wziąć udział w dysusjach i móc wspierać propozycje.
+          subtitle: Zarejstruj się, aby wziąć udział w dyskusjach i móc wspierać propozycje.
           tos_agreement: Rejestrując się, zgadzasz się na %{link}.
           tos_title: Warunki korzystania
           username_help: Informacja publiczna wyświetlana w Twoich postach. W celu
@@ -132,17 +132,50 @@ pl:
       links:
         didn_t_receive_confirmation_instructions: Nie otrzymałeś(aś) potwierdzenia?
         sign_up: Zarejestruj się
+  follows:
+    create:
+      button: Obserwuj
   layouts:
     decidim:
+      assemblies:
+        assembly:
+          take_part: weź udział
+        promoted_assembly:
+          take_part: weź udział
+      assembly_widgets:
+        show:
+          take_part: weź udział
       conference_hero:
         register: Zarejestruj się
+      conference_widgets:
+        show:
+          take_part: weź udział
+      conferences:
+        conference:
+          take_part: weź udział
+        promoted_conference:
+          take_part: weź udział
+      consultations:
+        question:
+          take_part: weź udział
+      participatory_process_widgets:
+        show:
+          take_part: weź udział
+      participatory_processes:
+        participatory_process:
+          take_part: weź udział
+        promoted_process:
+          take_part: weź udział
       edit_link:
         edit: Edytuj
       header:
         sign_up: Zarejestruj się
+        sign_in: Zaloguj się
       process_header_steps:
         step: Etap %{current} z %{total}
         view_steps: Pokaż etapy
+      footer:
+        made_with_open_source: Strona internetowa powstała z użyciem <a target="_blank" href="https://github.com/decidim/decidim">free software</a>.
   locale:
     name: Polski
   social_share_button:
