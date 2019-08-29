@@ -7,8 +7,6 @@ module ApplicationHelper
 
 	def is_openheritage
 		return false unless oh = Rails.application.secrets.openheritage
-		puts "OHOHOHOHOHOHOH"
-		puts oh
 		oh.include? current_organization&.host.to_str
 	end
 end
