@@ -4,4 +4,11 @@ module ApplicationHelper
 		id = matomo[:tenants][current_organization&.host.to_sym] if matomo[:tenants].present?
 		id || matomo[:id]
 	end
+
+	def is_openheritage
+		return false unless oh = Rails.application.secrets.openheritage
+		puts "OHOHOHOHOHOHOH"
+		puts oh
+		oh.include? current_organization&.host.to_str
+	end
 end

@@ -119,36 +119,13 @@ end
         </div>
       </div>
 
-      <%= render partial: "layouts/openheritage/eu_footer" %>
+      <% if is_openheritage %>
+        <%= render partial: "layouts/openheritage/eu_footer" %>
+        <%= render partial: "layouts/openheritage/oh_minifooter" %>
+      <% else %>
+        <%= render partial: "layouts/platoniq/minifooter" %>
+      <% end %>
 
-      <div class="mini-footer">
-        <div class="row">
-          <div class="medium-6 large-6 column">
-            <a rel="license" class="cc-badge"
-               href="http://creativecommons.org/licenses/by-sa/4.0/"
-               target="_blank">
-              <%= image_tag("decidim/cc-badge.png", alt: "Creative Commons License" ) %>
-            </a>
-            <%= t("layouts.decidim.footer.made_with_open_source").html_safe %>
-          </div>
-          <div class="medium-6 large-4 column">
-            <% if current_organization.official_img_footer? %>
-              <div class="decidim-logo">
-              <%= link_to  current_organization.official_url do %>
-                <%= image_tag current_organization.official_img_footer.url.to_s , alt: current_organization.name %>
-              <% end %>
-            </div>
-            <% end %>
-            <div class="decidim-logo">
-              <a rel="decidim"
-                 href="https://openheritage.eu/"
-                 target="_blank">
-                 <%= image_tag "openheritage/oh-logo-white.jpg", alt: "OpenHeritage" %>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div><!--/.off-canvas-content-->
   </div><!--/.off-canvas-wrapper-inner-->
 </div><!--/.off-canvas-wrapper-->
