@@ -37,6 +37,9 @@ pl:
     budgets:
       actions:
         edit: Edytuj
+    consultations:
+      question:
+        take_part: weź udział
     conferences:
       conferences:
         show:
@@ -64,6 +67,9 @@ pl:
           tos_title: Warunki korzystania
           username_help: Informacja publiczna wyświetlana w Twoich postach. W celu
             zagwarantowania anonimowości może to być dowolna nazwa.
+    follows:
+      create:
+        button: Obserwuj
     forms:
       admin:
         models:
@@ -132,9 +138,6 @@ pl:
       links:
         didn_t_receive_confirmation_instructions: Nie otrzymałeś(aś) potwierdzenia?
         sign_up: Zarejestruj się
-  follows:
-    create:
-      button: Obserwuj
   layouts:
     decidim:
       assemblies:
@@ -147,13 +150,13 @@ pl:
           take_part: weź udział
       conference_hero:
         register: Zarejestruj się
-      conference_widgets:
-        show:
-          take_part: weź udział
       conferences:
         conference:
           take_part: weź udział
         promoted_conference:
+          take_part: weź udział
+      conference_widgets:
+        show:
           take_part: weź udział
       consultations:
         question:
