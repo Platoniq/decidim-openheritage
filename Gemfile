@@ -7,7 +7,7 @@ ruby RUBY_VERSION
 
 # DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim.git", :branch => "fix/user-account-form", :ref => 'c14109c'}
 # DECIDIM_VERSION={:path => "../decidim"}
-DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.18-unregistered-surveys"}
+DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.18-openheritage"}
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -17,6 +17,7 @@ gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-forms", path: "../decidim/decidim-forms"
 
 gem "decidim-direct_verifications", "~> 0.17"
+gem "jquery-slick-rails"
 
 gem "bootsnap", "~> 1.3"
 

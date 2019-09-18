@@ -1,0 +1,7 @@
+<% if photos.any? %>
+  <div class="proposals-gallery">
+    <% photos.each_with_index do |photo, index| %>
+      <%= image_tag(photo.thumbnail_url, {alt: strip_tags(translated_attribute(photo.title)), data: {lazy:  photo.big_url}}) %>
+    <% end %>
+  </div>
+<% end %>
