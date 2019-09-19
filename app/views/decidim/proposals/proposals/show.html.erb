@@ -95,7 +95,7 @@ edit_link(
 
       <%= render partial: "oh/proposals/gallery", locals: { photos: @proposal.photos } %>
 
-      <%== cell("decidim/proposals/proposal_m", @proposal, full_badge: true).badge %>
+      <%= cell("decidim/proposals/proposal_m", @proposal, full_badge: true).badge %>
       <% unless @proposal.participatory_text_level == "section" || @proposal.participatory_text_level == "subsection" %>
         <%= simple_format present(@proposal).body(links: true, strip_tags: true) %>
       <% end %>

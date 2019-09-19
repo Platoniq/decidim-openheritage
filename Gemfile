@@ -13,11 +13,11 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
-# gem "decidim-surveys", path: "../decidim/decidim-surveys"
-# gem "decidim-forms", path: "../decidim/decidim-forms"
 
 gem "decidim-direct_verifications", "~> 0.17"
+gem 'redcarpet'
 gem "jquery-slick-rails"
+gem 'simplemde-rails'
 
 gem "bootsnap", "~> 1.3"
 
