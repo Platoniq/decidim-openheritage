@@ -27,7 +27,7 @@ gem "uglifier", "~> 4.1"
 gem "faker", "~> 1.9"
 gem "ransack", "~> 2.1.1" # there is a bug in ransack 2.3 https://github.com/activerecord-hackery/ransack/issues/1039
 gem "health_check"
-gem "sidekiq"
+gem "sidekiq", "~> 5.2"
 gem "sidekiq-cron"
 gem "sentry-raven"
 
