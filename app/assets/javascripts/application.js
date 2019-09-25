@@ -13,4 +13,4 @@
 //= require rails-ujs
 //= require activestorage
 //= require decidim
-//= require_tree ./oh/public
+//= require_tree ./oh/partials
