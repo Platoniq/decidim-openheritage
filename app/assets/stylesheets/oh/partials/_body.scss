@@ -1,29 +1,35 @@
 @import "variables";
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Roboto:400,700');
 
-body {
-    font-family: 'Roboto', sans-serif;
-    color: $body-font-color
+body{
+  font-family: 'Roboto', sans-serif;
+  color: $body-font-color;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6{
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizeLegibility;
-  letter-spacing: -0.5px;
+  letter-spacing: -.5px;
 }
 
-a {
-	color: $primary-gold;
-	&:hover {
-		color: $primary-pink;
-	}
+a{
+  color: $primary-gold;
+
+  &:hover{
+    color: $primary-pink;
+  }
 }
