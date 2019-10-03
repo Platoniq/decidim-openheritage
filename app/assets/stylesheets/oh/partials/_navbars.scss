@@ -29,6 +29,17 @@
   .main-nav__link a:hover{
     box-shadow: inset 4px 0 0 0 lighten($primary-pink, 10%);
   }
+
+  .topbar__user__login{
+    a{
+      color: $medium-gray;
+      font-weight: 600;
+
+      &:hover{
+        color: $anchor-color;
+      }
+    }
+  }
 }
 
 .off-canvas .close-button{
