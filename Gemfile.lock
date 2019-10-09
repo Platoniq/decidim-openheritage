@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Platoniq/decidim.git
-  revision: 6da6172efefe3db19b44367c658a9b0907a14be5
+  revision: a3978f61f7dac2a2fceed597eff81f5c0f668325
   branch: 0.18-openheritage
   specs:
     decidim (0.18.0)
@@ -505,7 +505,7 @@ GEM
     method_source (0.9.2)
     mime-types (3.3)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.0904)
+    mime-types-data (3.2019.1009)
     mimemagic (0.3.3)
     mini_magick (4.9.5)
     mini_mime (1.0.2)
