@@ -26,6 +26,7 @@ gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.9"
 gem "ransack", "~> 2.1.1" # there is a bug in ransack 2.3 https://github.com/activerecord-hackery/ransack/issues/1039
+gem "sprockets", "~> 3.7.2" # sprockets 4.0 brokes decidim
 gem "health_check"
 gem "sidekiq"
 gem "sidekiq-cron"
