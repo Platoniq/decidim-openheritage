@@ -13,11 +13,11 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
-# gem "decidim-surveys", path: "../decidim/decidim-surveys"
-# gem "decidim-forms", path: "../decidim/decidim-forms"
 
 gem "decidim-direct_verifications", "~> 0.17"
+gem 'redcarpet'
 gem "jquery-slick-rails"
+gem 'simplemde-rails'
 
 gem "bootsnap", "~> 1.3"
 
@@ -28,7 +28,7 @@ gem "faker", "~> 1.9"
 gem "ransack", "~> 2.1.1" # there is a bug in ransack 2.3 https://github.com/activerecord-hackery/ransack/issues/1039
 gem "sprockets", "~> 3.7.2" # sprockets 4.0 brokes decidim
 gem "health_check"
-gem "sidekiq"
+gem "sidekiq", "~> 5.2"
 gem "sidekiq-cron"
 gem "sentry-raven"
 

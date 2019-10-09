@@ -1,57 +1,66 @@
 @import "_variables";
 
-.mini-footer {
-	background: #fff;
-	color: $body-font-color;
+.mini-footer{
+  background: #fff;
+  color: $body-font-color;
 }
 
-.decidim-logo {
-	// width: 100px;
+.decidim-logo{
+  // width: 100px;
   display: inline-block;
   padding-left: 1em;
 }
 
 //Main footer
-.main-footer {
+.main-footer{
   background-color: $main-footer-bg;
   color: #fff;
-  a {
-  	color: #fff;
+
+  a{
+    color: #fff;
   }
 }
 
-.eu-footer {
+.eu-footer{
   background-color: $secondary-blue;
   color: #fff;
-  padding:2em;
-  font-size: 0.9em;
-  .flag-container {
+  padding: 2em;
+  font-size: .9em;
+
+  .flag-container{
     margin-left: 1em;
-    img {
+
+    img{
       max-width: none;
     }
   }
-  .disclaimer {
+
+  .disclaimer{
     float: left;
     width: 90%;
-    .column {
+
+    .column{
       margin-top: 1em;
     }
   }
-  @media screen and (min-width: 40em) {
+
+  @media screen and (min-width: 40em){
     display: flex;
-    .flag-container {
+
+    .flag-container{
       margin: 0 1em;
       text-align: center;
     }
-    .disclaimer .column {
-      margin-top:0;
+
+    .disclaimer .column{
+      margin-top: 0;
     }
   }
-  .flag {
+
+  .flag{
     border: 3px white solid;
     height: 80px;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0;
     display: inline-block;
   }
 }

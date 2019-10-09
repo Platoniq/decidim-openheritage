@@ -12,18 +12,5 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require_tree .
 //= require decidim
-//= require jquery.slick
-
-
-$(document).ready(function(){
-  $('.proposals-gallery').slick({
-    // setting-name: setting-value
-    adaptiveHeight: true,
-    dots: true,
-    // centerMode: true,
-    // centerPadding: "30px",
-    lazyLoad: 'ondemand'
-  });
-});
+//= require_tree ./oh/partials

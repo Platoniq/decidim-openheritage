@@ -1,0 +1,110 @@
+@import "variables";
+@import "foundation";
+@import "decidim/utils/settings";
+
+// Overide background default bar
+.title-bar{
+  background-color: $title-bar-bg;
+}
+
+.navbar{
+  background-color: $navbar-bg;
+}
+
+.main-nav__link a{
+  color: $navbar-fg;
+
+  &:hover{
+    color: $navbar-fg-hover;
+  }
+}
+
+.show-for-medium{
+  .main-nav__link a:hover{
+    box-shadow: inset 0 4px 0 0 lighten($primary-pink, 10%);
+  }
+}
+
+.hide-for-medium{
+  .main-nav__link a:hover{
+    box-shadow: inset 4px 0 0 0 lighten($primary-pink, 10%);
+  }
+}
+
+.off-canvas .close-button{
+  color: $primary-blue;
+}
+
+.dropdown.menu .is-active > a{
+  color: $link-color;
+}
+
+.topbar_{
+  &_menu{
+    padding: .125rem .5rem 0;
+    background: rgba(48, 65, 93, .1);
+    border-radius: 12.5%;
+
+    [data-toggle]{
+      margin-bottom: 0;
+    }
+
+    .icon--menu{
+      fill: $primary-blue;
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  &_edit__link a{
+    padding-left: 5px;
+    color: $link-color;
+
+    &:hover{
+      color: $link-color;
+    }
+  }
+
+  &_user__login{
+    a{
+      color: $link-color;
+      font-weight: 400;
+    }
+  }
+
+  &_dropmenu{
+    > ul > li > a{
+      color: $link-color;
+    }
+
+    .is-dropdown-submenu-parent{
+      > a,
+      &.is-active > a{
+        @include breakpoint(smallmedium down){
+          color: white;
+        }
+      }
+    }
+
+    .is-dropdown-submenu li a{
+      color: $link-color;
+    }
+  }
+
+  &_search{
+    input,
+    input:focus{
+      background-color: $navbar-bg;
+      color: $navbar-fg;
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+      color: $navbar-fg;
+    }
+
+    svg{
+      color: $navbar-fg;
+    }
+  }
+}
