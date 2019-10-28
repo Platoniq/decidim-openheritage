@@ -12,6 +12,7 @@ DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.18-openheritage"}
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
+gem "decidim-navigation_maps", git: "https://github.com/Platoniq/decidim-module-navigation_maps"
 # gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "decidim-direct_verifications", "~> 0.17"

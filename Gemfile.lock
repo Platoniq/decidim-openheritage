@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/Platoniq/decidim-module-navigation_maps
+  revision: ad41c73173050250495722424880722a6674ae89
+  specs:
+    decidim-navigation_maps (0.19.0alpha)
+      decidim-admin (>= 0.18.0)
+      decidim-core (>= 0.18.0)
+
+GIT
   remote: https://github.com/Platoniq/decidim.git
   revision: a3978f61f7dac2a2fceed597eff81f5c0f668325
   branch: 0.18-openheritage
@@ -800,6 +808,7 @@ DEPENDENCIES
   decidim-consultations!
   decidim-dev!
   decidim-direct_verifications (~> 0.17)
+  decidim-navigation_maps!
   dotenv-rails
   faker (~> 1.9)
   fog-aws
