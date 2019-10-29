@@ -1,13 +1,5 @@
 GIT
-  remote: https://github.com/Platoniq/decidim-module-navigation_maps
-  revision: ad41c73173050250495722424880722a6674ae89
-  specs:
-    decidim-navigation_maps (0.19.0alpha)
-      decidim-admin (>= 0.18.0)
-      decidim-core (>= 0.18.0)
-
-GIT
-  remote: https://github.com/Platoniq/decidim.git
+  remote: git://github.com/Platoniq/decidim.git
   revision: a3978f61f7dac2a2fceed597eff81f5c0f668325
   branch: 0.18-openheritage
   specs:
@@ -205,6 +197,14 @@ GIT
       sassc-rails (~> 1.3)
     decidim-verifications (0.18.0)
       decidim-core (= 0.18.0)
+
+GIT
+  remote: https://github.com/Platoniq/decidim-module-navigation_maps
+  revision: d345f59bc44755f17f203b29f87960f01d70b5d1
+  specs:
+    decidim-navigation_maps (0.19.0alpha)
+      decidim-admin (>= 0.18.0)
+      decidim-core (>= 0.18.0)
 
 GEM
   remote: https://rubygems.org/
@@ -436,7 +436,7 @@ GEM
     hashie (3.6.0)
     health_check (3.0.0)
       railties (>= 5.0)
-    highline (2.0.2)
+    highline (2.0.3)
     html_tokenizer (0.0.7)
     htmlentities (4.3.4)
     http-accept (1.7.0)
@@ -729,7 +729,7 @@ GEM
     smart_properties (1.15.0)
     social-share-button (1.2.1)
       coffee-rails
-    spreadsheet (1.2.4)
+    spreadsheet (1.2.5)
       ruby-ole (>= 1.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
@@ -791,7 +791,7 @@ GEM
     websocket-extensions (0.1.4)
     wicked_pdf (1.4.0)
       activesupport
-    wisper (2.0.0)
+    wisper (2.0.1)
     wisper-rspec (1.1.0)
     wkhtmltopdf-binary (0.12.4)
     xpath (3.2.0)
@@ -830,7 +830,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.6.5p114
 
 BUNDLED WITH
    1.17.3
