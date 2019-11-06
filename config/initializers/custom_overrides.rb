@@ -18,12 +18,19 @@ Rails.application.config.to_prepare do
   # Parse markdown content if official proposals
   Decidim::Proposals::ProposalPresenter.class_eval do
     def body(links: false, extras: true, strip_tags: false)
-      renderer = Decidim::ContentRenderers::HashtagRenderer.new(proposal.body)
-      body = renderer.render(links: links, extras: extras, strip_tags: strip_tags).html_safe
+      text = proposal.body
+      text = strip_tags(text) if strip_tags
+
+      renderer = Decidim::ContentRenderers::HashtagRenderer.new(text)
+      text = renderer.render(links: links, extras: extras).html_safe
+
       if proposal.try(:official?)
-        body = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(body)
+        text = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text)
+      else
+        text = Decidim::ContentRenderers::LinkRenderer.new(text).render if links
       end
-      body
+
+      text
     end
   end
 end

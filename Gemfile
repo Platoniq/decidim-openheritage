@@ -7,7 +7,7 @@ ruby RUBY_VERSION
 
 # DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim.git", :branch => "fix/user-account-form", :ref => 'c14109c'}
 # DECIDIM_VERSION={:path => "../decidim"}
-DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.18-openheritage"}
+DECIDIM_VERSION={:github => "Platoniq/decidim", :branch => "0.19-openheritage"}
 NAVIGATION_MAPS={git: "https://github.com/Platoniq/decidim-module-navigation_maps"}
 # NAVIGATION_MAPS={path: "../decidim-module-navigation_maps"}
 
@@ -22,22 +22,19 @@ gem 'redcarpet'
 gem "jquery-slick-rails"
 gem 'simplemde-rails'
 
-gem "bootsnap", "~> 1.3"
+gem "bootsnap", "~> 1.4"
 
-gem "puma", "~> 3.0"
+gem "puma", "~> 3.12"
 gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.9"
-gem "ransack", "~> 2.1.1" # there is a bug in ransack 2.3 https://github.com/activerecord-hackery/ransack/issues/1039
-gem "sprockets", "~> 3.7.2" # sprockets 4.0 brokes decidim
 gem "health_check"
 gem "sidekiq", "~> 5.2"
 gem "sidekiq-cron"
 gem "sentry-raven"
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
-  gem 'dotenv-rails'
+  gem "byebug", "~> 11.0", platform: :mri
 
   gem "decidim-dev", DECIDIM_VERSION
 end

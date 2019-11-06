@@ -95,30 +95,8 @@ end
           <%= display_flash_messages %>
           <%= yield %>
         </main>
-      </div><!-- /.footer-separator -->
-      <div class="main-footer">
-        <div class="row">
-          <div class="medium-8 large-6 large-offset-3 column main__footer__nav">
-              <ul class="footer-nav">
-                <% if current_organization.static_pages.any? %>
-                  <% current_organization.static_page_topics.where(show_in_footer: true).each do |page_topic| %>
-                    <% if page_topic.pages.any? %>
-                      <li><%= link_to translated_attribute(page_topic.title), decidim.page_path(page_topic.pages.first) %></li>
-                    <% end %>
-                  <% end %>
-
-                  <% current_organization.static_pages.where(show_in_footer: true).each do |page| %>
-                    <% next if page.title[current_organization.default_locale].start_with? "--" %>
-                    <li><%= link_to translated_attribute(page.title), decidim.page_path(page) %></li>
-                  <% end %>
-                <% end %>
-                <li><%= link_to t("layouts.decidim.footer.download_open_data"), decidim.open_data_download_path %></li>
-              </ul>
-          </div>
-          <%= render partial: "layouts/decidim/social_media_links" %>
-        </div>
       </div>
-
+      <%= render partial: "layouts/decidim/main_footer" %>
       <% if is_openheritage %>
         <%= render partial: "layouts/openheritage/eu_footer" %>
         <%= render partial: "layouts/openheritage/oh_minifooter" %>
@@ -126,6 +104,6 @@ end
         <%= render partial: "layouts/platoniq/minifooter" %>
       <% end %>
 
-    </div><!--/.off-canvas-content-->
-  </div><!--/.off-canvas-wrapper-inner-->
-</div><!--/.off-canvas-wrapper-->
+    </div>
+  </div>
+</div>
