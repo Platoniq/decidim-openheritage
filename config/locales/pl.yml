@@ -29,6 +29,8 @@ pl:
       organization:
         form:
           twitter: Twitter
+      actions:
+        browse: Sprawdź
     authorization_handlers:
       help: Pomoc
     blogs:
@@ -92,6 +94,7 @@ pl:
             tematykę debat.
           proposals_explanation: Zgłoś nowe propozycje, wspieraj te zgłoszone oraz
             wskaż zmiany, które chcesz zobaczyć.
+          how_to_participate: Jak weź udział w procesie?
         footer_sub_hero:
           register: Zarejestruj się
         sub_hero:
@@ -169,6 +172,9 @@ pl:
           take_part: weź udział
         promoted_process:
           take_part: weź udział
+      participatory_process_groups:
+        participatory_process_group:
+          browse: Sprawdź
       edit_link:
         edit: Edytuj
       header:
