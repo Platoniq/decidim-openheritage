@@ -33,7 +33,9 @@ const addMarkers = (markersData, markerClusters, map) => {
     $.tmpl(popupTemplateId, markerData).appendTo(node);
 
     marker.bindPopup(node, {
-      maxwidth: 640,
+      maxHeight: 400,
+      // autoPan: false,
+      maxWidth: 640,
       minWidth: 500,
       keepInView: true,
       className: "map-info"
