@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_100309) do
+ActiveRecord::Schema.define(version: 2019_11_27_192836) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1002,12 +1002,28 @@ ActiveRecord::Schema.define(version: 2019_11_06_100309) do
     t.index ["report_count"], name: "decidim_moderations_report_count"
   end
 
+  create_table "decidim_navigation_maps_blueprint_areas", force: :cascade do |t|
+    t.jsonb "area"
+    t.bigint "decidim_navigation_maps_blueprint_id", null: false
+    t.jsonb "title", default: {}
+    t.jsonb "description", default: {}
+    t.string "area_type"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "link_type"
+    t.string "area_id"
+    t.string "color"
+    t.index ["decidim_navigation_maps_blueprint_id"], name: "decidim_navigation_maps_constraint_blueprint_id"
+  end
+
   create_table "decidim_navigation_maps_blueprints", force: :cascade do |t|
-    t.jsonb "blueprint"
     t.string "image"
     t.bigint "decidim_organization_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.jsonb "title", default: {}
+    t.jsonb "description", default: {}
     t.index ["decidim_organization_id"], name: "decidim_navigation_maps_constraint_organization"
   end
 
@@ -1601,6 +1617,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_100309) do
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_response_groups"
   add_foreign_key "decidim_consultations_votes", "decidim_consultations_responses"
   add_foreign_key "decidim_identities", "decidim_organizations"
+  add_foreign_key "decidim_navigation_maps_blueprint_areas", "decidim_navigation_maps_blueprints"
   add_foreign_key "decidim_navigation_maps_blueprints", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
