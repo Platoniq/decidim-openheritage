@@ -24,7 +24,7 @@ Rails.application.config.to_prepare do
       renderer = Decidim::ContentRenderers::HashtagRenderer.new(text)
       text = renderer.render(links: links, extras: extras).html_safe
 
-      if proposal.try(:official?)
+      if proposal.try(:official?) or proposal.try(:official_meeting?)
         text = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text)
       else
         text = Decidim::ContentRenderers::LinkRenderer.new(text).render if links
