@@ -1,14 +1,6 @@
 GIT
-  remote: https://github.com/Platoniq/decidim-module-navigation_maps
-  revision: 2d93c83663b6761135012ab425506078d5df0028
-  specs:
-    decidim-navigation_maps (1.0)
-      decidim-admin (>= 0.18.0)
-      decidim-core (>= 0.18.0)
-
-GIT
-  remote: https://github.com/Platoniq/decidim.git
-  revision: 988c63a31d06c7d452931dca6bc690bc82d6969d
+  remote: git://github.com/Platoniq/decidim.git
+  revision: 6db459dc4759cde3ef44a6a3d2f9c89430ba732d
   branch: 0.19-openheritage
   specs:
     decidim (0.19.0)
@@ -207,6 +199,14 @@ GIT
       sassc-rails (~> 1.3)
     decidim-verifications (0.19.0)
       decidim-core (= 0.19.0)
+
+GIT
+  remote: https://github.com/Platoniq/decidim-module-navigation_maps
+  revision: 3ef73083571e67f01b7c02275903f130824a6fec
+  specs:
+    decidim-navigation_maps (1.0)
+      decidim-admin (>= 0.18.0)
+      decidim-core (>= 0.18.0)
 
 GEM
   remote: https://rubygems.org/
@@ -826,7 +826,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.6.5p114
 
 BUNDLED WITH
    1.17.3
