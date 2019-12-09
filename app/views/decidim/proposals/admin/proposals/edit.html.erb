@@ -1,5 +1,7 @@
-<%= stylesheet_link_tag    "oh/admin/proposals", media: "all" %>
-<%= javascript_include_tag "oh/admin/proposals" %>
+<% unless @form.component.settings.participatory_texts_enabled? %>
+	<%= stylesheet_link_tag    "oh/admin/proposals", media: "all" %>
+	<%= javascript_include_tag "oh/admin/proposals" %>
+<% end %>
 
 <%= decidim_form_for(@form, html: { class: "form edit_proposal proposal_form_admin" })  do |f| %>
   <%= render partial: "form", object: f, locals: { title: t(".title") } %>
