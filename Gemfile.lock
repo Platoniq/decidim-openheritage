@@ -202,7 +202,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-navigation_maps
-  revision: 57e6caae541c8a31a703c2b31c6f8c213ca430ef
+  revision: ee07e3b0685ffcc06ccd0e7697c08538ac8d2f54
   specs:
     decidim-navigation_maps (1.0)
       decidim-admin (>= 0.18.0)
@@ -348,8 +348,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise-i18n (1.8.2)
-      devise (>= 4.6)
+    devise-i18n (1.9.0)
+      devise (>= 4.7.1)
     devise_invitable (1.7.5)
       actionmailer (>= 4.1.0)
       devise (>= 4.0.0)
@@ -525,11 +525,11 @@ GEM
     multi_json (1.14.1)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    mustache (1.1.0)
+    mustache (1.1.1)
     netrc (0.11.0)
     nio4r (2.5.2)
     nobspw (0.6.1)
-    nokogiri (1.10.5)
+    nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
     oauth2 (1.4.2)
