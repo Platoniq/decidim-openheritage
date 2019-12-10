@@ -1,6 +1,6 @@
 Decidim.menu :menu do |menu|
-  if Rails.application.secrets.menu.respond_to? :each
-    Rails.application.secrets.menu.each do |key, item|
+  if Rails.application.secrets.menu[current_organization.host.to_sym].respond_to? :each
+    Rails.application.secrets.menu[current_organization.host.to_sym].each do |tenant, item|
       options = {}
       options[:position] = item[:position].to_i if item[:position]
       options[:active] = item[:active].to_sym if item[:active]
