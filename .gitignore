@@ -38,3 +38,5 @@ public/uploads
 !.elasticbeanstalk/*.global.yml
 
 .rbenv-vars
+
+spec/decidim_dummy_app/*
