@@ -34,24 +34,19 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
 
-      - name: Setup Database
-        run: bundle exec rake decidim:generate_external_test_app
-        env:
-          RAILS_ENV: test
-          DATABASE_USERNAME: postgres
-          DATABASE_PASSWORD: postgres
-
-      - name: Create Database
-        run: bundle exec rails db:create db:schema:load
+      - name: Setup & create Database
+        run: |
+          bundle exec rake decidim:generate_external_test_app
+          bundle exec rails db:create db:schema:load
         env:
           RAILS_ENV: test
           DATABASE_USERNAME: postgres
           DATABASE_PASSWORD: postgres
 
       - name: Precompile assets
-          run: bundle exec rake assets:precompile
-          env:
-            RAILS_ENV: test
+        run: bundle exec rake assets:precompile
+        env:
+          RAILS_ENV: test
 
       - name: Setup Code Climate test-reporter
         run: |
