@@ -1,24 +1,6 @@
 GIT
-  remote: https://github.com/Platoniq/decidim-module-comparative_stats
-  revision: 67d7fed45d7be790d992057bc8537bf7f8503288
-  specs:
-    decidim-comparative_stats (1.0)
-      chartkick (~> 3.3)
-      decidim-admin (>= 0.18.0)
-      decidim-core (>= 0.18.0)
-      graphlient (~> 0.3)
-
-GIT
-  remote: https://github.com/Platoniq/decidim-module-navigation_maps
-  revision: 4800178303d77c29259b9d81829d91672ddfd1be
-  specs:
-    decidim-navigation_maps (1.0)
-      decidim-admin (>= 0.18.0)
-      decidim-core (>= 0.18.0)
-
-GIT
-  remote: https://github.com/Platoniq/decidim.git
-  revision: 2bbee6fd71c4fa61ecc3c8a5821fa53ff3422682
+  remote: git://github.com/Platoniq/decidim.git
+  revision: cc0bbb910bb96133039f6ce03286b9180faabf3a
   branch: master
   specs:
     decidim (0.21.0.pre.dev)
@@ -78,6 +60,7 @@ GIT
     decidim-comments (0.21.0.pre.dev)
       decidim-core (= 0.21.0.pre.dev)
       jquery-rails (~> 4.3)
+      redcarpet (~> 3.4)
     decidim-conferences (0.21.0.pre.dev)
       decidim-core (= 0.21.0.pre.dev)
       decidim-meetings (= 0.21.0.pre.dev)
@@ -220,6 +203,24 @@ GIT
       sassc-rails (~> 1.3)
     decidim-verifications (0.21.0.pre.dev)
       decidim-core (= 0.21.0.pre.dev)
+
+GIT
+  remote: https://github.com/Platoniq/decidim-module-comparative_stats
+  revision: 67d7fed45d7be790d992057bc8537bf7f8503288
+  specs:
+    decidim-comparative_stats (1.0)
+      chartkick (~> 3.3)
+      decidim-admin (>= 0.18.0)
+      decidim-core (>= 0.18.0)
+      graphlient (~> 0.3)
+
+GIT
+  remote: https://github.com/Platoniq/decidim-module-navigation_maps
+  revision: 4800178303d77c29259b9d81829d91672ddfd1be
+  specs:
+    decidim-navigation_maps (1.0)
+      decidim-admin (>= 0.18.0)
+      decidim-core (>= 0.18.0)
 
 GEM
   remote: https://rubygems.org/
@@ -376,7 +377,7 @@ GEM
     docile (1.3.2)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    doorkeeper (5.3.0)
+    doorkeeper (5.3.1)
       railties (>= 5)
     doorkeeper-i18n (4.0.1)
     equalizer (0.0.11)
@@ -465,7 +466,7 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    httparty (0.17.3)
+    httparty (0.18.0)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     i18n (1.8.2)
@@ -553,10 +554,10 @@ GEM
     netrc (0.11.0)
     nio4r (2.5.2)
     nobspw (0.6.1)
-    nokogiri (1.10.7)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
-    oauth2 (1.4.3)
+    oauth2 (1.4.4)
       faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
@@ -662,7 +663,7 @@ GEM
       wisper (>= 1.6.1)
     redcarpet (3.5.0)
     redis (4.1.3)
-    regexp_parser (1.6.0)
+    regexp_parser (1.7.0)
     request_store (1.5.0)
       rack (>= 1.4)
     responders (3.0.0)
@@ -712,7 +713,7 @@ GEM
     rubocop-rails (2.0.1)
       rack (>= 1.1)
       rubocop (>= 0.70.0)
-    rubocop-rspec (1.37.1)
+    rubocop-rspec (1.38.1)
       rubocop (>= 0.68.1)
     ruby-ole (1.2.12.2)
     ruby-progressbar (1.10.1)
@@ -806,7 +807,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webmock (3.8.1)
+    webmock (3.8.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -817,7 +818,7 @@ GEM
       activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
-    wkhtmltopdf-binary (0.12.5.1)
+    wkhtmltopdf-binary (0.12.5.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
