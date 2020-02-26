@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_26_085651) do
+ActiveRecord::Schema.define(version: 2020_02_26_090639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -358,6 +358,17 @@ ActiveRecord::Schema.define(version: 2020_02_26_085651) do
     t.index ["decidim_author_id"], name: "decidim_comments_comment_author"
     t.index ["decidim_commentable_type", "decidim_commentable_id"], name: "decidim_comments_comment_commentable"
     t.index ["decidim_root_commentable_type", "decidim_root_commentable_id"], name: "decidim_comments_comment_root_commentable"
+  end
+
+  create_table "decidim_comparative_stats_endpoints", force: :cascade do |t|
+    t.string "endpoint"
+    t.boolean "active"
+    t.bigint "decidim_organization_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "api_version"
+    t.index ["decidim_organization_id"], name: "decidim_comparative_stats_constraint_organization"
   end
 
   create_table "decidim_components", id: :serial, force: :cascade do |t|
@@ -1630,6 +1641,7 @@ ActiveRecord::Schema.define(version: 2020_02_26_085651) do
   add_foreign_key "decidim_attachments", "decidim_attachment_collections", column: "attachment_collection_id", name: "fk_decidim_attachments_attachment_collection_id", on_delete: :nullify
   add_foreign_key "decidim_authorizations", "decidim_users"
   add_foreign_key "decidim_categorizations", "decidim_categories"
+  add_foreign_key "decidim_comparative_stats_endpoints", "decidim_organizations"
   add_foreign_key "decidim_consultations_response_groups", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_response_groups"
