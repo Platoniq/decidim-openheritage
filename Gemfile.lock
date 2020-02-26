@@ -206,7 +206,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-comparative_stats
-  revision: 5f68cd79e65f65f7b6efc50f5c19464142dbab83
+  revision: b5d366ad6e95a2d61651aa95185eb1056898c36c
   specs:
     decidim-comparative_stats (1.0)
       chartkick (~> 3.3)
