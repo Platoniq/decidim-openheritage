@@ -15,3 +15,7 @@
 </script>
 <!-- End Matomo Code -->
 <% end %>
+
+<% if timetracker_survey %>
+  <%= javascript_include_tag "oh/survey_hacks/timetracker" %>
+<% end %>
