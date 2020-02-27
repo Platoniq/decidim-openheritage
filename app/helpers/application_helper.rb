@@ -18,4 +18,10 @@ module ApplicationHelper
 
 		Decidim::Surveys::Survey.find_by(component: current_component)
 	end
+
+	def timetracker_hacked_surveys
+		return [] unless timetracker = Rails.application.secrets.timetracker
+
+		Decidim::Surveys::Survey.where(component: timetracker[:components])
+	end
 end
