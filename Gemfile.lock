@@ -206,13 +206,14 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-comparative_stats
-  revision: b5d366ad6e95a2d61651aa95185eb1056898c36c
+  revision: 6202e984f11837e009f1310e5c23d49b1a968be0
   specs:
     decidim-comparative_stats (1.0)
       chartkick (~> 3.3)
-      decidim-admin (>= 0.18.0)
-      decidim-core (>= 0.18.0)
+      decidim-admin (>= 0.21.0.pre.dev)
+      decidim-core (>= 0.21.0.pre.dev)
       graphlient (~> 0.3)
+      jquery-tmpl-rails (~> 1.1)
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-navigation_maps
@@ -456,7 +457,7 @@ GEM
     graphql-client (0.16.0)
       activesupport (>= 3.0)
       graphql (~> 1.8)
-    hashdiff (1.0.0)
+    hashdiff (1.0.1)
     hashie (3.6.0)
     health_check (3.0.0)
       railties (>= 5.0)
