@@ -14,28 +14,4 @@ Rails.application.config.to_prepare do
       model.photos.first.thumbnail_url
     end
   end
-
-  # Parse markdown content if official proposals
-  Decidim::Proposals::ProposalPresenter.class_eval do
-    def body(links: false, extras: true, strip_tags: false)
-      text = proposal.body
-      text = strip_tags(text) if strip_tags
-
-      renderer = Decidim::ContentRenderers::HashtagRenderer.new(text)
-      text = renderer.render(links: links, extras: extras).html_safe
-
-      if use_markdown? proposal
-        text = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true).render(text)
-      else
-        text = Decidim::ContentRenderers::LinkRenderer.new(text).render if links
-      end
-
-      text
-    end
-
-    def use_markdown?(proposal)
-      return false if proposal.component.settings.participatory_texts_enabled?
-      proposal.try(:official?) or proposal.try(:official_meeting?)
-    end
-  end
 end
