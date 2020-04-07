@@ -219,7 +219,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-decidim_awesome
-  revision: 92ef80498de3c3f7303c473bfde10d1bcdc02090
+  revision: a32c276ec4df4aae71df24f277feed4fd23e5ff3
   specs:
     decidim-decidim_awesome (0.2)
       decidim-admin (>= 0.20.0)
@@ -870,7 +870,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.6.5p114
+   ruby 2.6.3p62
 
 BUNDLED WITH
    1.17.3
