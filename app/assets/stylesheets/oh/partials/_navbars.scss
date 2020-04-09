@@ -115,7 +115,12 @@
     }
 
     svg{
-      color: $navbar-fg;
+      color: white;
+    }
+    button {
+      background-color:lighten($secondary-blue, 10%);
+      border-color:lighten($secondary-blue, 10%);;
     }
   }
 }
+

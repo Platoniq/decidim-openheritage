@@ -5,3 +5,6 @@
 /app/views/decidim/pages/index.html.erb
 /app/views/decidim/pages/application/show.html.erb
 /app/views/decidim/static_pages/index.html.erb
+/app/cells/decidim/proposals/proposal_m_cell.rb
+/app/controllers/decidim/surveys/surveys_controller.rb
+/app/queries/decidim/forms/questionnaire_user_answers.rb
