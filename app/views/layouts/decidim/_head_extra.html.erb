@@ -16,6 +16,12 @@
 <!-- End Matomo Code -->
 <% end %>
 
+<script type="text/javascript">
+  window.Decidim = window.Decidim || {};
+  window.Decidim.isOpenheritage=<%= is_openheritage %>;
+  window.Decidim.useOpenStreetMaps=<%= use_openstreetmaps %>;
+</script>
+
 <% if timetracker_survey %>
   <%= javascript_include_tag "oh/survey_hacks/timetracker" %>
   <%= stylesheet_link_tag "oh/survey_hacks/timetracker" %>

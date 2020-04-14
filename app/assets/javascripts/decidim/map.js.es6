@@ -7,7 +7,7 @@
 
 L.DivIcon.SVGIcon.DecidimIcon = L.DivIcon.SVGIcon.extend({
   options: {
-    fillColor: "#cd5360",
+    fillColor: "#ef604d",
     opacity: 0
   },
   _createPathDescription: function() {
@@ -26,16 +26,16 @@ const addMarkers = (markersData, markerClusters, map) => {
 
   markersData.forEach((markerData) => {
     let marker = L.marker([markerData.latitude, markerData.longitude], {
-      icon: new L.DivIcon.SVGIcon.DecidimIcon()
+      icon: new L.DivIcon.SVGIcon.DecidimIcon({
+        fillColor: window.Decidim.mapConfiguration.markerColor
+      })
     });
     let node = document.createElement("div");
 
     $.tmpl(popupTemplateId, markerData).appendTo(node);
 
     marker.bindPopup(node, {
-      maxHeight: 400,
-      // autoPan: false,
-      maxWidth: 640,
+      maxwidth: 640,
       minWidth: 500,
       keepInView: true,
       className: "map-info"
@@ -50,7 +50,6 @@ const addMarkers = (markersData, markerClusters, map) => {
 
 const loadMap = (mapId, markersData) => {
   let markerClusters = L.markerClusterGroup();
-  const { hereAppId, hereAppCode } = window.Decidim.mapConfiguration;
 
   if (window.Decidim.currentMap) {
     window.Decidim.currentMap.remove();
@@ -59,15 +58,14 @@ const loadMap = (mapId, markersData) => {
 
   const map = L.map(mapId);
 
-  // L.tileLayer.here({
-  //   appId: hereAppId,
-  //   appCode: hereAppCode
-  // }).addTo(map);
-
-  // We will use openstreetmaps directly as our site is not a big traffic dealer
-  L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> | <a href="https://www.openstreetmap.org/fixthemap">Improve this map</a>'
-  }).addTo(map);
+  if(window.Decidim.useOpenStreetMaps) {
+    // We will use openstreetmaps directly as our site is not a big traffic dealer
+    L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> | <a href="https://www.openstreetmap.org/fixthemap">Improve this map</a>'
+    }).addTo(map);
+  } else {
+    L.tileLayer.here(window.Decidim.mapConfiguration).addTo(map);
+  }
 
   if (markersData.length > 0) {
     addMarkers(markersData, markerClusters, map);
@@ -93,8 +91,25 @@ $(() => {
   const markersData = $map.data("markers-data");
   const hereAppId = $map.data("here-app-id");
   const hereAppCode = $map.data("here-app-code");
+  const hereApiKey = $map.data("here-api-key");
 
-  window.Decidim.mapConfiguration = { hereAppId, hereAppCode };
+  let markerColor = getComputedStyle(document.documentElement).getPropertyValue("--primary");
+  if (!markerColor || markerColor.length < 1) {
+    markerColor = "#ef604d";
+  }
+
+  let mapApiConfig = null;
+  if (hereApiKey) {
+    mapApiConfig = { apiKey: hereApiKey };
+  } else {
+    mapApiConfig = {
+      appId: hereAppId,
+      appCode: hereAppCode
+    };
+  }
+  window.Decidim.mapConfiguration = $.extend({
+    markerColor: markerColor
+  }, mapApiConfig);
 
   if ($map.length > 0) {
     window.Decidim.currentMap = loadMap(mapId, markersData);

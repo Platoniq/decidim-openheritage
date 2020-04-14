@@ -10,6 +10,11 @@ module ApplicationHelper
 		oh.include? current_organization&.host.to_str
 	end
 
+	def use_openstreetmaps
+		return false unless osm = Rails.application.secrets.openstreetmaps
+		osm.include? current_organization&.host.to_str
+	end
+
 	def timetracker_survey
 		return unless timetracker = Rails.application.secrets.timetracker
 		return unless timetracker[:components].respond_to? :include?
