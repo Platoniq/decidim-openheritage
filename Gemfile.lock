@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Platoniq/decidim
-  revision: 36115200b665b962a3d53ab8bf5fb41e0b13e3dd
+  revision: f7a58e74eaa9bfbe9df8d8a2950875d0c34e8658
   branch: survey-demos
   specs:
     decidim (0.22.0.dev)
@@ -315,7 +315,7 @@ GEM
       msgpack (~> 1.0)
     browser (2.7.1)
     builder (3.2.4)
-    byebug (11.1.1)
+    byebug (11.1.2)
     capybara (3.32.1)
       addressable
       mini_mime (>= 0.1.3)
@@ -466,7 +466,7 @@ GEM
       faraday
       faraday_middleware
       graphql-client
-    graphql (1.10.6)
+    graphql (1.10.7)
     graphql-client (0.16.0)
       activesupport (>= 3.0)
       graphql (~> 1.8)
@@ -602,7 +602,7 @@ GEM
       activerecord (>= 4.2)
       request_store (~> 1.1)
     parallel (1.19.1)
-    parser (2.7.1.0)
+    parser (2.7.1.1)
       ast (~> 2.4.0)
     pg (1.1.4)
     pg_search (2.3.2)
