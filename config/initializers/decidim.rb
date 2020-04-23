@@ -14,6 +14,12 @@ Decidim.configure do |config|
     here_api_key: Rails.application.secrets.geocoder[:here_api_key]
   }
 
+  config.etherpad = {
+    server: Rails.application.secrets.etherpad[:server],
+    api_key: Rails.application.secrets.etherpad[:api_key],
+    api_version: Rails.application.secrets.etherpad[:api_version]
+  }
+
   # Custom resource reference generator method
   # config.reference_generator = lambda do |resource, component|
   #   # Implement your custom method to generate resources references
