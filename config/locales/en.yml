@@ -41,7 +41,33 @@ en:
     layouts:
       footer:
         made_by_platoniq: Website made with <a target="_blank" href="https://github.com/decidim/decidim">free software</a> by <a target="_blank" href="http://platoniq.net">Platoniq</a>.
+  activerecord:
+    models:
+      decidim/conference:
+        one: Calendar
+        other: Calendars
+  layouts:
+    decidim:
+      conferences:
+        index:
+          promoted_conferences: Highlighted calendars
+        order_by_conferences:
+          conferences:
+            one: "%{count} calendar"
+            other: "%{count} calendars"
   decidim:
+    conferences:
+      pages:
+        home:
+          highlighted_conferences:
+            active_conferences: Active calendars
+            see_all_conferences: See all calendars
+      index:
+        title: Calendars
+      statistics:
+        conference_count: Calendars
+    menu:
+      conferences: Calendars
     admin:
       filters:
         state_eq:
@@ -49,3 +75,7 @@ en:
           values:
             accepted: Accepted
             rejected: Rejected
+      menu:
+        conferences: Calendars
+      titles:
+        conferences: Calendars
