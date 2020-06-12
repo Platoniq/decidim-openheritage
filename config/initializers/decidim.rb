@@ -20,6 +20,8 @@ Decidim.configure do |config|
     api_version: Rails.application.secrets.etherpad[:api_version]
   }
 
+  config.maximum_attachment_size = 25.megabytes
+
   # Custom resource reference generator method
   # config.reference_generator = lambda do |resource, component|
   #   # Implement your custom method to generate resources references
