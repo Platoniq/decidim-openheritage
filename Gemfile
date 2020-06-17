@@ -17,6 +17,7 @@ gem "decidim-navigation_maps", NAVIGATION_MAPS
 gem "decidim-comparative_stats", COMPARATIVE_STATS
 gem "decidim-decidim_awesome", DECIDIM_AWESOME
 # gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
 
 gem "decidim-direct_verifications", "~> 0.17"
 gem 'redcarpet'
