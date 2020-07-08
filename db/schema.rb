@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_09_173441) do
+ActiveRecord::Schema.define(version: 2020_07_08_202257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -153,8 +153,6 @@ ActiveRecord::Schema.define(version: 2020_04_09_173441) do
     t.integer "children_count", default: 0
     t.jsonb "purpose_of_action"
     t.jsonb "composition"
-    t.string "assembly_type"
-    t.jsonb "assembly_type_other"
     t.date "creation_date"
     t.string "created_by"
     t.jsonb "created_by_other"

@@ -5,7 +5,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # DECIDIM_VERSION={:path => "../decidim"}
-DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim", :branch => "survey-demos"}
+DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim", :branch => "temp/0.22-surveys"}
 NAVIGATION_MAPS={git: "https://github.com/Platoniq/decidim-module-navigation_maps"}
 COMPARATIVE_STATS={git: "https://github.com/Platoniq/decidim-module-comparative_stats"}
 DECIDIM_AWESOME={git: "https://github.com/Platoniq/decidim-module-decidim_awesome"}
