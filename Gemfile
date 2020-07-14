@@ -18,6 +18,7 @@ gem "decidim-comparative_stats", COMPARATIVE_STATS
 gem "decidim-decidim_awesome", DECIDIM_AWESOME
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
+gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.22"
 
 gem "decidim-direct_verifications", "~> 0.17"
 gem 'redcarpet'
