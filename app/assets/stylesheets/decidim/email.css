@@ -1364,7 +1364,7 @@ body.outlook p {
 /* 2 - Custom styles ---------*/
 
 table.body th.decidim-bar, table.body td.decidim-bar{
-  padding: 10px 0;
+  padding: 5px 5px;
   background-color: #f2f2f2;
 }
 
@@ -1419,4 +1419,17 @@ table.body{
 
 table.container.main {
   background: #fefefe;
+}
+
+table.container.main > tr > td.decidim-bar a {
+  color: #fff;
+}
+
+table.content {
+  width: 96%;
+  margin: 0 2%;
+}
+table.content > tr > th.first {
+  padding-left: 0;
+  padding-right: 0;
 }
