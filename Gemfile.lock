@@ -247,11 +247,12 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-time_tracker
-  revision: 7d627b6cac63ef547e6c70e36062df2c831370e8
+  revision: 8abab84fba4b8283b91a71d16a620f17997bad3f
   specs:
-    decidim-time_tracker (0.2)
-      decidim-admin (>= 0.21)
-      decidim-core (>= 0.21)
+    decidim-time_tracker (0.3)
+      decidim-accountability (>= 0.22)
+      decidim-admin (>= 0.22)
+      decidim-core (>= 0.22)
 
 GEM
   remote: https://rubygems.org/
@@ -626,7 +627,7 @@ GEM
       activerecord (>= 4.2)
       request_store (~> 1.1)
     parallel (1.19.2)
-    parser (2.7.1.5)
+    parser (2.7.2.0)
       ast (~> 2.4.1)
     pg (1.1.4)
     pg_search (2.3.3)
@@ -900,7 +901,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.6.6p146
 
 BUNDLED WITH
    1.17.3
