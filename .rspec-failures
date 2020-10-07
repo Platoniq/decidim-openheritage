@@ -1,6 +1,0 @@
-example_id                             | status | run_time      |
--------------------------------------- | ------ | ------------- |
-./spec/system/homepage_spec.rb[1:1]    | passed | 43.39 seconds |
-./spec/system/proposals_spec.rb[1:1]   | passed | 7.59 seconds  |
-./spec/system/proposals_spec.rb[1:2:1] | passed | 3.94 seconds  |
-./spec/system/proposals_spec.rb[1:2:2] | passed | 3.82 seconds  |

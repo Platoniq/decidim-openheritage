@@ -5,25 +5,25 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # DECIDIM_VERSION={:path => "../decidim"}
-DECIDIM_VERSION={:git => "https://github.com/Platoniq/decidim", :branch => "temp/0.22-surveys"}
-NAVIGATION_MAPS={git: "https://github.com/Platoniq/decidim-module-navigation_maps"}
-COMPARATIVE_STATS={git: "https://github.com/Platoniq/decidim-module-comparative_stats"}
-DECIDIM_AWESOME={git: "https://github.com/Platoniq/decidim-module-decidim_awesome"}
+DECIDIM_VERSION = { git: "https://github.com/Platoniq/decidim", branch: "temp/0.22-surveys" }.freeze
+NAVIGATION_MAPS = { git: "https://github.com/Platoniq/decidim-module-navigation_maps" }.freeze
+COMPARATIVE_STATS = { git: "https://github.com/Platoniq/decidim-module-comparative_stats" }.freeze
+DECIDIM_AWESOME = { git: "https://github.com/Platoniq/decidim-module-decidim_awesome" }.freeze
 
 gem "decidim", DECIDIM_VERSION
+gem "decidim-comparative_stats", COMPARATIVE_STATS
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
-gem "decidim-navigation_maps", NAVIGATION_MAPS
-gem "decidim-comparative_stats", COMPARATIVE_STATS
 gem "decidim-decidim_awesome", DECIDIM_AWESOME
+gem "decidim-navigation_maps", NAVIGATION_MAPS
 # gem "decidim-initiatives", DECIDIM_VERSION
-gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
 gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.22"
+gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
 
 gem "decidim-direct_verifications", "~> 0.17"
-gem 'redcarpet'
 gem "jquery-slick-rails"
-gem 'simplemde-rails'
+gem "redcarpet"
+gem "simplemde-rails"
 
 gem "bootsnap", "~> 1.4"
 
@@ -32,10 +32,10 @@ gem "uglifier", "~> 4.1"
 
 gem "faker", "~> 1.9"
 gem "health_check"
+gem "rspec"
+gem "sentry-raven"
 gem "sidekiq", "~> 5.2"
 gem "sidekiq-cron"
-gem "sentry-raven"
-gem "rspec"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri

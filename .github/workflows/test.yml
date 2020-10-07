@@ -1,4 +1,4 @@
-name: Build
+name: Test
 
 on:
   push:
@@ -6,8 +6,13 @@ on:
       - master
   pull_request:
 
+env:
+  RUBY_VERSION: 2.6.6
+  NODE_VERSION: 12.9.1
+    
 jobs:
-  build:
+  test:
+    name: Test
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -21,19 +26,14 @@ jobs:
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
 
     steps:
-      - uses: actions/checkout@v1
-
-      - uses: actions/setup-ruby@v1
+      - uses: actions/checkout@v2
         with:
-          ruby-version: 2.6.x
+          fetch-depth: 1
 
-      - name: Install dependent libraries
-        run: sudo apt-get install libpq-dev
-
-      - name: Bundle install
-        run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
 
       - name: Setup & create Database
         run: |
