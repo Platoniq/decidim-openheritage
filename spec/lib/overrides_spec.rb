@@ -15,7 +15,7 @@ checksums = [
   {
     package: "decidim-forms",
     files: {
-      "/app/queries/decidim/forms/questionnaire_user_answers.rb" => "c307cf850ae7790aa4cea2255066ca9d",
+      "/app/queries/decidim/forms/questionnaire_user_answers.rb" => "c307cf850ae7790aa4cea2255066ca9d"
     }
   },
   {
@@ -34,7 +34,7 @@ checksums = [
   {
     package: "decidim-surveys",
     files: {
-      "/app/controllers/decidim/surveys/surveys_controller.rb" => "b45acea279a9308a4dc234a76e238bba",
+      "/app/controllers/decidim/surveys/surveys_controller.rb" => "b45acea279a9308a4dc234a76e238bba"
     }
   },
   {
