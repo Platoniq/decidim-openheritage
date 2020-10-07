@@ -8,7 +8,7 @@ module ApplicationHelper
     id || matomo[:id]
   end
 
-  def is_openheritage
+  def openheritage_site?
     return false unless oh = Rails.application.secrets.openheritage
 
     oh.include? current_organization&.host.to_str
