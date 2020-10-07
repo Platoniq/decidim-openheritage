@@ -7,9 +7,12 @@ describe 'Visit a proposal', type: :system, perform_enqueued: true do
   let(:participatory_process) { create :participatory_process, organization: organization }
   let(:proposals_component) { create :component, manifest_name: :proposals, participatory_space: participatory_process }
   let!(:proposal) { create :proposal, component: proposals_component }
+  let!(:awesome_config) { create :awesome_config, organization: organization, var: :use_markdown_editor, value: true }
 
   before do
     switch_to_host(organization.host)
+    # page.visit main_component_path(proposals_component)
+    # execute_script("window.DecidimAwesome.use_markdown_editor = true;")
     page.visit main_component_path(proposals_component)
     click_link proposal.title
   end
