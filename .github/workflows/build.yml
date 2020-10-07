@@ -1,5 +1,7 @@
 name: Build
 
+needs: lint
+
 on:
   push:
     branches:
