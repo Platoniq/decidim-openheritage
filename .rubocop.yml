@@ -12,8 +12,7 @@ AllCops:
     - "**/Rakefile"
   Exclude:
     - "**/vendor/**/*"
-    - "development_app/**/*"
-    - "spec/decidim_dummy_app/**/*"
+    - "db/**/*"
     - "node_modules/**/*"
   # Default formatter will be used if no -f/--format option is given.
   DefaultFormatter: progress
