@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_time_tracker (originally 20200302115654)
 
 class CreateDecidimTimeTrackerTasks < ActiveRecord::Migration[5.2]

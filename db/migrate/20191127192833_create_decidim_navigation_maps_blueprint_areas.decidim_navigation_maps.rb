@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_navigation_maps (originally 20191125142751)
 
 class CreateDecidimNavigationMapsBlueprintAreas < ActiveRecord::Migration[5.2]
