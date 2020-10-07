@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  def get_matomo_id
+  def matomo_id
     return unless matomo = Rails.application.secrets.matomo
 
     id = matomo[:tenants][current_organization&.host.to_sym] if matomo[:tenants].present?
