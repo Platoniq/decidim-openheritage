@@ -13,6 +13,12 @@ checksums = [
     }
   },
   {
+    package: "decidim-forms",
+    files: {
+      "/app/queries/decidim/forms/questionnaire_user_answers.rb" => "c307cf850ae7790aa4cea2255066ca9d",
+    }
+  },
+  {
     package: "decidim-pages",
     files: {
       "/app/views/decidim/pages/application/show.html.erb" => "69a1ceb1bcb6b241ec68d7c81dcf6551"
@@ -23,6 +29,12 @@ checksums = [
     files: {
       "/app/views/decidim/proposals/proposals/show.html.erb" => "21073b15ab629598b5cb241a1a3013b0",
       "/app/cells/decidim/proposals/proposal_m_cell.rb" => "2f0fe2181a5fdb132cae48780e823ce0" # (config/initializers/custom_overrides.rb)
+    }
+  },
+  {
+    package: "decidim-surveys",
+    files: {
+      "/app/controllers/decidim/surveys/surveys_controller.rb" => "b45acea279a9308a4dc234a76e238bba",
     }
   },
   {
