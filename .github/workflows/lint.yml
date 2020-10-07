@@ -24,7 +24,7 @@ jobs:
           fetch-depth: 1
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ env.RUBY_VERSION }}
+          ruby-version: 2.6.x
           bundler-cache: true
       - uses: actions/setup-node@master
         with:
