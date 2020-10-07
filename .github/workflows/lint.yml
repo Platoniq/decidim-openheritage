@@ -8,13 +8,6 @@ on:
       - release/*
       - "*-stable"
   pull_request:
-    branches-ignore:
-      - "chore/l10n*"
-
-env:
-  CI: "true"
-  RUBY_VERSION: 2.6.6
-  NODE_VERSION: 12.9.1
 
 jobs:
   lint:

@@ -1,6 +1,4 @@
-name: Build
-
-needs: lint
+name: Test
 
 on:
   push:
@@ -9,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     services:
       postgres:
