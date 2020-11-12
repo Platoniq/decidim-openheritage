@@ -221,7 +221,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-decidim_awesome
-  revision: e55440aaa01d6b7b2f56942d9c9bd45e1aa32100
+  revision: 62962fb17246eb86f3ba20bd2328e81d46795bfa
   specs:
     decidim-decidim_awesome (0.4)
       decidim-admin (>= 0.21.0)
@@ -382,7 +382,7 @@ GEM
     db-query-matchers (0.9.0)
       activesupport (>= 4.0, <= 6.0)
       rspec (~> 3.0)
-    decidim-direct_verifications (0.22)
+    decidim-direct_verifications (0.22.1)
       decidim-admin (>= 0.22.0)
       decidim-core (>= 0.22.0)
     declarative-builder (0.1.0)
