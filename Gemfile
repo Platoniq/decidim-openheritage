@@ -20,7 +20,7 @@ gem "decidim-navigation_maps", NAVIGATION_MAPS
 gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.22"
 gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
 
-gem "decidim-direct_verifications", "~> 0.17"
+gem "decidim-direct_verifications", "~> 0.22"
 gem "jquery-slick-rails"
 gem "redcarpet"
 gem "simplemde-rails"

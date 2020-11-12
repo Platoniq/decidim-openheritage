@@ -1007,6 +1007,10 @@ ActiveRecord::Schema.define(version: 2020_10_08_075942) do
     t.bigint "organizer_id"
     t.jsonb "services", default: []
     t.boolean "registration_form_enabled", default: false
+    t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
+    t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
+    t.index ["decidim_scope_id"], name: "index_decidim_meetings_meetings_on_decidim_scope_id"
+    t.index ["organizer_id"], name: "index_decidim_meetings_meetings_on_organizer_id"
   end
 
   create_table "decidim_meetings_minutes", force: :cascade do |t|
@@ -1824,7 +1828,23 @@ ActiveRecord::Schema.define(version: 2020_10_08_075942) do
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
+  add_foreign_key "decidim_area_types", "decidim_organizations"
+  add_foreign_key "decidim_areas", "decidim_area_types", column: "area_type_id"
+  add_foreign_key "decidim_areas", "decidim_organizations"
+  add_foreign_key "decidim_assemblies", "decidim_assemblies_types"
   add_foreign_key "decidim_assemblies_settings", "decidim_organizations"
+  add_foreign_key "decidim_attachments", "decidim_attachment_collections", column: "attachment_collection_id", name: "fk_decidim_attachments_attachment_collection_id", on_delete: :nullify
+  add_foreign_key "decidim_authorizations", "decidim_users"
+  add_foreign_key "decidim_awesome_config_constraints", "decidim_awesome_config"
+  add_foreign_key "decidim_awesome_editor_images", "decidim_organizations"
+  add_foreign_key "decidim_awesome_editor_images", "decidim_users", column: "decidim_author_id"
+  add_foreign_key "decidim_categorizations", "decidim_categories"
+  add_foreign_key "decidim_comparative_stats_endpoints", "decidim_organizations"
+  add_foreign_key "decidim_consultations_response_groups", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
+  add_foreign_key "decidim_consultations_responses", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
+  add_foreign_key "decidim_consultations_responses", "decidim_consultations_response_groups"
+  add_foreign_key "decidim_consultations_votes", "decidim_consultations_responses"
+  add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_navigation_maps_blueprint_areas", "decidim_navigation_maps_blueprints"
   add_foreign_key "decidim_navigation_maps_blueprints", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
