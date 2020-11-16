@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Platoniq/decidim
-  revision: 07842c99147c775fb021b7898d9c617e146f98ff
+  revision: 25087f1b2ec1c3f5615f6f21bf3902b24876e772
   branch: temp/0.22-surveys
   specs:
     decidim (0.22.0)
@@ -221,9 +221,10 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-decidim_awesome
-  revision: 6afea8965f45595191df763bd07d638ef2fba8a5
+  revision: 29313f85fdb07ca3f43ec1d21d8ec93513397d04
+  branch: feat/intergram
   specs:
-    decidim-decidim_awesome (0.4)
+    decidim-decidim_awesome (0.5)
       decidim-admin (>= 0.21.0)
       decidim-core (>= 0.21.0)
       redcarpet (~> 3.4)
