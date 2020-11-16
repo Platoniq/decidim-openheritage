@@ -48,6 +48,8 @@ Decidim.configure do |config|
   # take over user accounts.
   #
   config.enable_html_header_snippets = false
+
+  config.unconfirmed_access_for = 0.days
 end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales

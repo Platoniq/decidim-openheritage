@@ -221,7 +221,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-decidim_awesome
-  revision: 62962fb17246eb86f3ba20bd2328e81d46795bfa
+  revision: 6afea8965f45595191df763bd07d638ef2fba8a5
   specs:
     decidim-decidim_awesome (0.4)
       decidim-admin (>= 0.21.0)
@@ -247,7 +247,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-time_tracker
-  revision: 3f6a9fbb3174f7f9478951e83bbfca013670ae57
+  revision: 02098529e76e3143806f623e2902c5647bf63ddd
   specs:
     decidim-time_tracker (0.3)
       decidim-accountability (>= 0.22)
@@ -422,7 +422,7 @@ GEM
       smart_properties
     erbse (0.1.4)
       temple
-    erubi (1.9.0)
+    erubi (1.10.0)
     et-orbi (1.2.4)
       tzinfo
     etherpad-lite (0.3.0)
@@ -555,7 +555,7 @@ GEM
       actionmailer (>= 3.2)
       letter_opener (~> 1.0)
       railties (>= 3.2)
-    listen (3.3.0)
+    listen (3.3.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.3.1)
@@ -583,7 +583,7 @@ GEM
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
       tomlrb
-    mixlib-shellout (3.1.7)
+    mixlib-shellout (3.2.0)
       chef-utils
     msgpack (1.3.3)
     multi_json (1.15.0)
