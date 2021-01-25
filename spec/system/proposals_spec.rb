@@ -14,15 +14,16 @@ describe "Visit a proposal", type: :system, perform_enqueued: true do
     # page.visit main_component_path(proposals_component)
     # execute_script("window.DecidimAwesome.use_markdown_editor = true;")
     page.visit main_component_path(proposals_component)
-    click_link proposal.title
+    click_link proposal.title["en"]
   end
 
   it "allows viewing a single proposal" do
-    expect(page).to have_content(proposal.title)
-    expect(page).to have_content(strip_tags(proposal.body).strip)
+    expect(page).to have_content(proposal.title["en"])
+    expect(page).to have_content(strip_tags(proposal.body["en"]).strip)
   end
 
   context "when has markdown" do
+    # due to awesome
     let!(:proposal) { create :proposal, :official, body: "## title\n\n**bold**", component: proposals_component }
 
     it "is a official proposal" do
@@ -30,9 +31,14 @@ describe "Visit a proposal", type: :system, perform_enqueued: true do
     end
 
     it "renders markdown" do
-      expect(page).to have_content(proposal.title)
+      expect(page).to have_content(proposal.title["en"])
       expect(page.html).to include("<h2>title</h2>")
       expect(page.html).to include("<strong>bold</strong>")
+    end
+  end
+
+  context "when has images" do
+    it "shows image gallery slideshow" do
     end
   end
 end
