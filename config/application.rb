@@ -21,7 +21,6 @@ module DecidimOpenheritage
   end
 end
 
-
 unless ENV["DISABLE_SENTRY"]
   Sentry.init do |config|
     config.dsn = ENV["SENTRY_DSN"]

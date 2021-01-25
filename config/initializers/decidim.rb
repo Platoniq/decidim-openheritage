@@ -13,14 +13,26 @@ Decidim.configure do |config|
     static_map_url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview",
     here_api_key: Rails.application.secrets.geocoder[:here_api_key]
   }
+  config.maps = {
+    provider: :here,
+    api_key: Rails.application.secrets.geocoder[:here_api_key],
+    static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" },
+    # try to use tiles from openstreet map
+    dynamic: {
+      tile_layer: {
+        url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png?key={apiKey}&{foo}",
+        attribution: %(
+          <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a> contributors
+        ).strip
+      }
+    }
+  }
 
   config.etherpad = {
     server: Rails.application.secrets.etherpad[:server],
     api_key: Rails.application.secrets.etherpad[:api_key],
     api_version: Rails.application.secrets.etherpad[:api_version]
   }
-
-  config.maximum_attachment_size = 25.megabytes
 
   # Custom resource reference generator method
   # config.reference_generator = lambda do |resource, component|

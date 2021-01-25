@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/Platoniq/decidim-module-decidim_awesome
+  revision: c76888740fd96e15848d7af21d686d597945f70e
+  branch: fix/release-0.23
+  specs:
+    decidim-decidim_awesome (0.6.1)
+      decidim-admin (>= 0.23.1, < 0.24)
+      decidim-core (>= 0.23.1, < 0.24)
+      redcarpet (~> 3.4)
+
+GIT
   remote: https://github.com/Platoniq/decidim-module-term_customizer
   revision: 161bcbb4364cd265af8eeceed3f393f196136564
   branch: temp/0.23
@@ -22,7 +32,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: a7e41da363219198c5e4ad6262b7176662d01e42
+  revision: 49db1763a7b4435d63ffde96bc770e781cb39cbd
   branch: release/0.23-stable
   specs:
     decidim (0.23.1)
@@ -366,10 +376,6 @@ GEM
       decidim-core (>= 0.23.0)
       graphlient (~> 0.3)
       jquery-tmpl-rails (~> 1.1)
-    decidim-decidim_awesome (0.6.1)
-      decidim-admin (>= 0.22.0, < 0.24)
-      decidim-core (>= 0.22.0, < 0.24)
-      redcarpet (~> 3.4)
     decidim-direct_verifications (0.22.1)
       decidim-admin (>= 0.22.0)
       decidim-core (>= 0.22.0)
@@ -879,7 +885,7 @@ DEPENDENCIES
   decidim-comparative_stats (~> 1.1.0)
   decidim-conferences!
   decidim-consultations!
-  decidim-decidim_awesome (~> 0.6.1)
+  decidim-decidim_awesome!
   decidim-dev!
   decidim-direct_verifications (~> 0.22)
   decidim-navigation_maps (~> 1.1.1)
