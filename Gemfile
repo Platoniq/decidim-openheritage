@@ -5,19 +5,17 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 # DECIDIM_VERSION={:path => "../decidim"}
-DECIDIM_VERSION = { git: "https://github.com/Platoniq/decidim", branch: "temp/0.22-surveys" }.freeze
-NAVIGATION_MAPS = { git: "https://github.com/Platoniq/decidim-module-navigation_maps" }.freeze
-COMPARATIVE_STATS = { git: "https://github.com/Platoniq/decidim-module-comparative_stats" }.freeze
+DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.23-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-comparative_stats", COMPARATIVE_STATS
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
-gem "decidim-decidim_awesome", "~> 0.5.1"
-gem "decidim-navigation_maps", NAVIGATION_MAPS
+gem "decidim-comparative_stats", "~> 1.1.0"
+gem "decidim-decidim_awesome", "~> 0.6.1"
+gem "decidim-navigation_maps", "~> 1.1.1"
 # gem "decidim-initiatives", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.22"
-gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
+gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.23"
+gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker", branch: "develop"
 
 gem "decidim-direct_verifications", "~> 0.22"
 gem "jquery-slick-rails"
@@ -32,7 +30,8 @@ gem "uglifier", "~> 4.1"
 gem "faker", "~> 1.9"
 gem "health_check"
 gem "rspec"
-gem "sentry-raven"
+gem "sentry-rails"
+gem "sentry-ruby"
 gem "sidekiq", "~> 5.2"
 gem "sidekiq-cron"
 
