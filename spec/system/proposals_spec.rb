@@ -23,6 +23,7 @@ describe "Visit a proposal", type: :system, perform_enqueued: true do
   end
 
   context "when has markdown" do
+    # due to awesome
     let!(:proposal) { create :proposal, :official, body: "## title\n\n**bold**", component: proposals_component }
 
     it "is a official proposal" do
@@ -33,6 +34,11 @@ describe "Visit a proposal", type: :system, perform_enqueued: true do
       expect(page).to have_content(proposal.title)
       expect(page.html).to include("<h2>title</h2>")
       expect(page.html).to include("<strong>bold</strong>")
+    end
+  end
+
+  context "when has images" do
+    it "shows image gallery slideshow" do
     end
   end
 end
