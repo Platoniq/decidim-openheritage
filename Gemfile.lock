@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-time_tracker
-  revision: e720aec729b5dd4716f17b5b3480e3f407519173
+  revision: a277e53803915c3328392f59138f40c7483bcc1c
   branch: develop
   specs:
     decidim-time_tracker (0.3)
@@ -485,7 +485,7 @@ GEM
       faraday (>= 1.0)
       faraday_middleware
       graphql-client
-    graphql (1.12.1)
+    graphql (1.12.3)
     graphql-client (0.16.0)
       activesupport (>= 3.0)
       graphql (~> 1.8)
