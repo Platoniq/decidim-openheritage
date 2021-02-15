@@ -11,7 +11,7 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-comparative_stats", "~> 1.1.0"
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
-gem "decidim-decidim_awesome", "~> 0.6.2"
+gem "decidim-decidim_awesome", "~> 0.6.3"
 gem "decidim-navigation_maps", "~> 1.1.1"
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "temp/0.23"

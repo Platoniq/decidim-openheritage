@@ -9,23 +9,19 @@ Decidim.configure do |config|
   config.available_locales = [:en, :ca, :es, :fr, :pt, :de, :fi, :nl, :eu, :ca, :gl, :hu, :it, :pl, :sv]
 
   # Geocoder configuration
-  config.geocoder = {
-    static_map_url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview",
-    here_api_key: Rails.application.secrets.geocoder[:here_api_key]
-  }
   config.maps = {
     provider: :here,
     api_key: Rails.application.secrets.geocoder[:here_api_key],
-    static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" },
+    static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" }
     # try to use tiles from openstreet map
-    dynamic: {
-      tile_layer: {
-        url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png?key={apiKey}&{foo}",
-        attribution: %(
-          <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a> contributors
-        ).strip
-      }
-    }
+    # dynamic: {
+    #   tile_layer: {
+    #     url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png?key={apiKey}&{foo}",
+    #     attribution: %(
+    #       <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a> contributors
+    #     ).strip
+    #   }
+    # }
   }
 
   config.etherpad = {
