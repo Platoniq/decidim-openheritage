@@ -1,5 +1,7 @@
 # decidim-openheritage
 
+![Test](https://github.com/Platoniq/decidim-openheritage/workflows/Test/badge.svg)
+
 Free Open-Source participatory democracy, citizen participation and open government for cities and organizations
 
 This is the open-source repository for decidim-openheritage, based on [Decidim](https://github.com/decidim/decidim).
