@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RemoveOldTimeTracker < ActiveRecord::Migration[5.2]
   def up
     drop_table(:decidim_time_tracker_events, if_exists: true)
