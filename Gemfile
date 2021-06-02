@@ -11,7 +11,7 @@ gem "decidim", DECIDIM_VERSION
 gem "decidim-comparative_stats", "~> 1.1.0"
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
-gem "decidim-decidim_awesome", "~> 0.7.0"
+gem "decidim-decidim_awesome", git: "https://github.com/Platoniq/decidim-module-decidim_awesome", branch: "custom-fields"
 gem "decidim-navigation_maps", "~> 1.2.0"
 gem "decidim-templates", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
