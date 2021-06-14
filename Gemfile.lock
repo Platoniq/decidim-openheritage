@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/Platoniq/decidim-module-alternative_landing
+  revision: 4c674de57c4709281a9ad4979bc7b94e20cb6b97
+  branch: main
+  specs:
+    decidim-alternative_landing (0.1.0)
+      decidim-admin (= 0.24.3)
+      decidim-core (= 0.24.3)
+      redcarpet (~> 3.4)
+      sassc (~> 2.3)
+
+GIT
   remote: https://github.com/Platoniq/decidim-module-decidim_awesome
   revision: 432023730eb10ab364d523c25d9e4eb4dde6fcb9
   branch: custom-fields
@@ -416,7 +427,7 @@ GEM
     docile (1.4.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    doorkeeper (5.5.1)
+    doorkeeper (5.5.2)
       railties (>= 5)
     doorkeeper-i18n (4.0.1)
     em-http-request (1.1.7)
@@ -608,6 +619,7 @@ GEM
     mime-types-data (3.2021.0225)
     mini_magick (4.11.0)
     mini_mime (1.1.0)
+    mini_portile2 (2.5.3)
     minitest (5.14.4)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.9)
@@ -622,6 +634,9 @@ GEM
     netrc (0.11.0)
     nio4r (2.5.7)
     nobspw (0.6.2)
+    nokogiri (1.11.7)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     oauth (0.5.6)
@@ -739,7 +754,7 @@ GEM
       virtus (~> 1.0.5)
       wisper (>= 1.6.1)
     redcarpet (3.5.1)
-    redis (4.2.5)
+    redis (4.3.1)
     regexp_parser (2.1.1)
     request_store (1.5.0)
       rack (>= 1.4)
@@ -926,12 +941,14 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES
   bootsnap (~> 1.4)
   byebug (~> 11.0)
   decidim!
+  decidim-alternative_landing!
   decidim-comparative_stats (~> 1.1.0)
   decidim-conferences!
   decidim-consultations!
