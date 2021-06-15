@@ -1,3 +1,33 @@
+$border: 2px dashed var(--secondary);
+
+.alternative-landing .button.button--sc {
+  border-radius: 0;
+}
+
 .navbar.transparent {
-  background-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.cover-half {
+  .heading1 {
+    color: var(--secondary);
+  }
+}
+
+.stack-horizontal {
+  .heading1 {
+    color: var(--primary);
+  }
+  .stack-item {
+    border: $border;
+  }
+
+  max-width: 70em;
+  margin: auto;
+}
+
+#content > section::after {
+  width: 100vw;
+  height: 1px;
+  border-bottom: $border;
 }
