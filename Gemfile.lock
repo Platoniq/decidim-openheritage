@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Platoniq/decidim-module-alternative_landing
-  revision: a8287e0dfef95f90a2cef95f893fcc21ec76ca22
+  revision: 02181114659015522d6f7996ef2fbc26a409a2d2
   branch: main
   specs:
     decidim-alternative_landing (0.1.0)
