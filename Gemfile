@@ -9,6 +9,7 @@ DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: "main"
+# gem "decidim-alternative_landing", path: "../landing"
 gem "decidim-comparative_stats", "~> 1.1.0"
 gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION

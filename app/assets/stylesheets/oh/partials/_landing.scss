@@ -14,6 +14,15 @@ $border: 2px dashed var(--secondary);
   }
 }
 
+.cover-full {
+  background-color: unset;
+
+  .cover-text {
+    color: #484848;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
 .stack-horizontal {
   .heading1 {
     color: var(--primary);
