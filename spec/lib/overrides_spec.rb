@@ -13,6 +13,13 @@ checksums = [
     }
   },
   {
+    package: "decidim-conferences",
+    files: {
+      "/app/views/layouts/decidim/_conference_hero.html.erb" => "80a466727d353089e21988a5c72e52bd",
+      "/app/views/decidim/conferences/conferences/show.html.erb" => "746ca5f3192ba14095431691b766430a"
+    }
+  },
+  {
     package: "decidim-forms",
     files: {
       "/app/queries/decidim/forms/questionnaire_user_answers.rb" => "95f4f9e7c82f6c37f9c07f8c53f438b7"
