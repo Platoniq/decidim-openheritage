@@ -10,10 +10,10 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-decidim_awesome
-  revision: 809185aefead7b699ec65301f51c01dc010031d0
+  revision: a6610e6531b1b41474aa2a2e78e61cd5fa12c877
   branch: custom-fields
   specs:
-    decidim-decidim_awesome (0.7.1)
+    decidim-decidim_awesome (0.7.2)
       decidim-admin (>= 0.23.0, < 0.25)
       decidim-core (>= 0.23.0, < 0.25)
       sassc (~> 2.3)
@@ -426,7 +426,7 @@ GEM
     docile (1.4.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    doorkeeper (5.5.2)
+    doorkeeper (5.5.3)
       railties (>= 5)
     doorkeeper-i18n (4.0.1)
     em-http-request (1.1.7)
@@ -875,7 +875,7 @@ GEM
     smart_properties (1.16.3)
     social-share-button (1.2.4)
       coffee-rails
-    spreadsheet (1.2.9)
+    spreadsheet (1.3.0)
       ruby-ole
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
