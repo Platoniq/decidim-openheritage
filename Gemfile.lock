@@ -1000,7 +1000,7 @@ DEPENDENCIES
   decidim-term_customizer!
   decidim-time_tracker!
   faker (~> 2.14)
-  figaro
+  figaro (~> 1.2)
   fog-aws
   health_check
   jquery-slick-rails
