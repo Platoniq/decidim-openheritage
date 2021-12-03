@@ -506,6 +506,8 @@ GEM
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
     ffi (1.15.4)
+    figaro (1.2.0)
+      thor (>= 0.14.0, < 2)
     file_validators (2.3.0)
       activemodel (>= 3.2)
       mime-types (>= 1.0)
@@ -998,6 +1000,7 @@ DEPENDENCIES
   decidim-term_customizer!
   decidim-time_tracker!
   faker (~> 2.14)
+  figaro
   fog-aws
   health_check
   jquery-slick-rails
