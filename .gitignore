@@ -41,3 +41,8 @@ public/uploads
 .rbenv-vars
 
 spec/decidim_dummy_app
+
+config/deploy
+config/deploy.rb
+config/application.yml
+Capfile
