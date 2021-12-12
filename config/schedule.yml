@@ -5,3 +5,7 @@ metrics_job:
   class: "MetricsGenerationWorker"
   queue: metrics
 
+data_job:
+  cron: "3 3 * * *"
+  class: "DataPortabilityWorker"
+  queue: default
