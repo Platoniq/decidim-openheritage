@@ -11,6 +11,6 @@ This Application is being developed in the context of the OpenHeritage project w
 
 <div style="display: flex">
 <img height=100 src="app/assets/images/openheritage/europe-flag.png"/>
-<img height=100 src="app/assets/images/openheritage/oh-logo-white.png"/>
+<img height=100 src="app/assets/images/openheritage/oh-logo-white.jpg"/>
 </div>
 P
