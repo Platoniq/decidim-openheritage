@@ -51,9 +51,18 @@ group :development do
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 3.5"
+
+  gem "capistrano", "~> 3.14"
+  gem "capistrano-rails-console"
+  gem "capistrano-bundler"
+  gem "capistrano-passenger"
+  gem "capistrano-rails"
+  gem "capistrano-rbenv"
+  gem 'capistrano-sidekiq'
 end
 
 group :production do
+  gem "figaro", "~> 1.2"
   gem "fog-aws"
   gem "sidekiq", "~> 6.0"
   gem "sidekiq-cron"
