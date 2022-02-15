@@ -421,6 +421,9 @@ GEM
     decidim-navigation_maps (1.2.0)
       decidim-admin (>= 0.24, < 0.25)
       decidim-core (>= 0.24, < 0.25)
+    decidim-notify (0.4)
+      decidim-admin (>= 0.21)
+      decidim-core (>= 0.21)
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
@@ -1000,6 +1003,7 @@ DEPENDENCIES
   decidim-dev!
   decidim-direct_verifications (~> 0.22)
   decidim-navigation_maps (~> 1.2.0)
+  decidim-notify (~> 0.4.0)
   decidim-templates!
   decidim-term_customizer!
   decidim-time_tracker!
