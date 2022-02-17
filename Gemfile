@@ -17,9 +17,9 @@ gem "decidim-decidim_awesome", "~> 0.7.2"
 gem "decidim-navigation_maps", "~> 1.2.0"
 gem "decidim-templates", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-notify", "~> 0.4.0"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer"
 gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
-gem "decidim-notify", "~> 0.4.0"
 
 gem "decidim-direct_verifications", "~> 0.22"
 gem "jquery-slick-rails"
@@ -54,12 +54,12 @@ group :development do
   gem "web-console", "~> 3.5"
 
   gem "capistrano", "~> 3.14"
-  gem "capistrano-rails-console"
   gem "capistrano-bundler"
   gem "capistrano-passenger"
   gem "capistrano-rails"
+  gem "capistrano-rails-console"
   gem "capistrano-rbenv"
-  gem 'capistrano-sidekiq'
+  gem "capistrano-sidekiq"
 end
 
 group :production do
