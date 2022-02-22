@@ -732,7 +732,7 @@ GEM
       eventmachine_httpserver
       http_parser.rb (~> 0.6.0)
       multi_json
-    puma (5.6.0)
+    puma (5.6.2)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.6.0)
@@ -1030,7 +1030,7 @@ DEPENDENCIES
   wicked_pdf (~> 1.4)
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.2.33
