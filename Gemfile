@@ -18,9 +18,9 @@ gem "decidim-navigation_maps", "~> 1.2.0"
 gem "decidim-templates", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-notify", "~> 0.4.0"
+gem "decidim-social_crowdfunding", git: "https://github.com/Platoniq/decidim-module-social_crowdfunding"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "0.24-stable"
 gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker"
-gem "decidim-social_crowdfunding", git: "https://github.com/Platoniq/decidim-module-social_crowdfunding"
 
 gem "decidim-direct_verifications", "~> 0.22"
 gem "jquery-slick-rails"
