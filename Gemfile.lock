@@ -226,6 +226,14 @@ GIT
       redcarpet (~> 3.4)
 
 GIT
+  remote: https://github.com/Platoniq/decidim-module-social_crowdfunding
+  revision: e99db3fbc726203095e156261855339c29f2a3b5
+  specs:
+    decidim-social_crowdfunding (0.0.1)
+      decidim-admin (= 0.24.3)
+      decidim-core (= 0.24.3)
+
+GIT
   remote: https://github.com/Platoniq/decidim-module-time_tracker
   revision: 80b1ec0c35125607e1f99ca2a589a32d4c160bc3
   specs:
@@ -1003,6 +1011,7 @@ DEPENDENCIES
   decidim-direct_verifications (~> 0.22)
   decidim-navigation_maps (~> 1.2.0)
   decidim-notify (~> 0.4.0)
+  decidim-social_crowdfunding!
   decidim-templates!
   decidim-term_customizer!
   decidim-time_tracker!
@@ -1029,7 +1038,7 @@ DEPENDENCIES
   wicked_pdf (~> 1.4)
 
 RUBY VERSION
-   ruby 2.7.4p191
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.2.33
