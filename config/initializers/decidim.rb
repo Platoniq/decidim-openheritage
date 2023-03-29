@@ -60,5 +60,7 @@ Decidim.configure do |config|
   config.unconfirmed_access_for = 0.days
 end
 
+Decidim::Api::Schema.max_complexity 30_000
+
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
