@@ -32,6 +32,12 @@ checksums = [
     }
   },
   {
+    package: "decidim-participatory_processes",
+    files: {
+      "/app/models/decidim/participatory_process.rb" => "a2ba2bdbde85f24703f132562ae23b26"
+    }
+  },
+  {
     package: "decidim-proposals",
     files: {
       "/app/views/decidim/proposals/proposals/show.html.erb" => "e95e244e99bba07303e6b94856d42cb4"
