@@ -11,8 +11,6 @@ Bootsnap.setup(
   cache_dir: File.expand_path(File.join("..", "tmp", "cache"), __dir__),
   development_mode: env == "development",
   load_path_cache: true,
-  autoload_paths_cache: true,
-  disable_trace: true,
   compile_cache_iseq: false,
   compile_cache_yaml: true
 )

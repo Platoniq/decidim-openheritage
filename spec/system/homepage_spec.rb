@@ -4,7 +4,7 @@ require "rails_helper"
 require "decidim/surveys/test/factories"
 
 describe "Visit the home page", type: :system, perform_enqueued: true do
-  let(:organization) { create :organization }
+  let(:organization) { create :organization, external_domain_whitelist: ["decidim.org", "openheritage.eu", "wikipedia.org"] }
   let(:menu) do
     {
       organization.host.to_sym =>
@@ -44,7 +44,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
   it "has a custom menu" do
     within ".main-nav" do
-      expect(page).to have_link("translation missing: en.i18n_key", href: "http://www.wikipedia.org")
+      expect(page).to have_link("Translation missing: en.i18n_key", href: "http://www.wikipedia.org")
     end
   end
 

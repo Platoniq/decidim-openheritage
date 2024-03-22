@@ -1,0 +1,6 @@
+@import "variables";
+
+.slick-prev::before,
+.slick-next::before{
+  color: $primary;
+}
