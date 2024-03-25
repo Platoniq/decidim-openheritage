@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "~> 0.25.2"
+DECIDIM_VERSION = "~> 0.26.0"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -12,13 +12,13 @@ gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: "release/0.26-stable"
-gem "decidim-comparative_stats", git: "https://github.com/Platoniq/decidim-module-comparative_stats", branch: "release/0.25-stable"
-gem "decidim-decidim_awesome", "~> 0.8"
-gem "decidim-direct_verifications", git: "https://github.com/Platoniq/decidim-verifications-direct_verifications", branch: "release/0.25-stable"
+gem "decidim-comparative_stats", git: "https://github.com/Platoniq/decidim-module-comparative_stats", branch: "release/0.26-stable"
+gem "decidim-decidim_awesome", "~> 0.9"
+gem "decidim-direct_verifications", git: "https://github.com/Platoniq/decidim-verifications-direct_verifications", branch: "release/0.26-stable"
 gem "decidim-navigation_maps", git: "https://github.com/Platoniq/decidim-module-navigation_maps", branch: "release/0.26-stable"
 gem "decidim-notify", "~> 0.5"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.25-stable"
-gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker", branch: "release/0.25-stable"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.26-stable"
+gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker", branch: "release/0.26-stable"
 
 gem "bootsnap", "~> 1.4"
 gem "health_check"
