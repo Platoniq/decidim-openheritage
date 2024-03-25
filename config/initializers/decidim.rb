@@ -57,7 +57,7 @@ Decidim.configure do |config|
   #
   config.enable_html_header_snippets = false
 
-  config.unconfirmed_access_for = 0.days
+  config.unconfirmed_access_for = 2.days
 end
 
 # Inform Decidim about the assets folder
