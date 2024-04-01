@@ -57,5 +57,14 @@ yarn-debug.log*
 /public/packs-test
 
 .rubocop-*
+/.rubocop.yml
+.rubocop-https*
 
-.idea/
+public/sw.js
+public/sw.js.map
+public/sw.js.br
+public/sw.js.map.br
+public/sw.js.gz
+public/sw.js.map.gz
+
+coverage/
