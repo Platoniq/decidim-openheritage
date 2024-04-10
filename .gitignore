@@ -57,3 +57,5 @@ yarn-debug.log*
 /public/packs-test
 
 .rubocop-*
+
+.idea/
