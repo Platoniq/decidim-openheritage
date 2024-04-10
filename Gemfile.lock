@@ -958,17 +958,17 @@ DEPENDENCIES
   capistrano-rails-console
   capistrano-rbenv
   capistrano-sidekiq
-  decidim (~> 0.25.0)
+  decidim (~> 0.25.2)
   decidim-alternative_landing!
   decidim-comparative_stats!
-  decidim-conferences (~> 0.25.0)
-  decidim-consultations (~> 0.25.0)
+  decidim-conferences (~> 0.25.2)
+  decidim-consultations (~> 0.25.2)
   decidim-decidim_awesome (~> 0.8)
-  decidim-dev (~> 0.25.0)
+  decidim-dev (~> 0.25.2)
   decidim-direct_verifications!
   decidim-navigation_maps!
   decidim-notify (~> 0.5)
-  decidim-templates (~> 0.25.0)
+  decidim-templates (~> 0.25.2)
   decidim-term_customizer!
   decidim-time_tracker!
   faker (~> 2.14)
