@@ -11,7 +11,7 @@ end
 
 # Setup CarrierWave to use Amazon S3. Add `gem "fog-aws" to your Gemfile.
 
-if Rails.application.secrets.aws_access_key_id.present?
+if Rails.application.secrets.dig(:aws, :access_key_id).present?
   require "carrierwave/storage/fog"
 
   CarrierWave.configure do |config|
