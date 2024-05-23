@@ -46,3 +46,16 @@ config/deploy
 config/deploy.rb
 config/application.yml
 Capfile
+
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+/public/decidim-packs
+/public/packs
+/public/packs-test
+
+.rubocop-*
+
+.idea/

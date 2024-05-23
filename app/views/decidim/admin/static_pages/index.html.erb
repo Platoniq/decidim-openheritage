@@ -2,7 +2,7 @@
   <%= render partial: "topic", locals: { pages: topic.pages, topic: topic } %>
 <% end %>
 
-<p><em><%= t 'oh.admin.hints.hide_prefix' %></em></p>
+<p><em><%= t("oh.admin.hints.hide_prefix") %></em></p>
 
 <% if @orphan_pages.any? %>
   <%= render partial: "topic", locals: { pages: @orphan_pages, topic: nil } %>

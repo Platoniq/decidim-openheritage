@@ -60,6 +60,9 @@ Decidim.configure do |config|
   config.unconfirmed_access_for = 0.days
 end
 
+# Inform Decidim about the assets folder
+Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
+
 Decidim::Api::Schema.max_complexity 30_000
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales

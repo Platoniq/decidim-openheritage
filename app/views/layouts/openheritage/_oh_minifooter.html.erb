@@ -4,23 +4,23 @@
       <a rel="license" class="cc-badge"
          href="http://creativecommons.org/licenses/by-sa/4.0/"
          target="_blank">
-        <%= image_tag("decidim/cc-badge.png", alt: "Creative Commons License" ) %>
+        <%= image_pack_tag("media/images/cc-badge.png", alt: "Creative Commons License" ) %>
       </a>
       <%= t("oh.layouts.footer.made_by_platoniq").html_safe %>
     </div>
     <div class="medium-6 large-4 column">
-      <% if current_organization.official_img_footer? %>
+      <% if current_organization.official_img_footer.attached? %>
         <div class="decidim-logo">
-        <%= link_to  current_organization.official_url do %>
-          <%= image_tag current_organization.official_img_footer.url.to_s , alt: current_organization.name %>
-        <% end %>
-      </div>
+          <%= link_to current_organization.official_url do %>
+            <%= image_tag current_organization.attached_uploader(:official_img_footer).url(host: current_organization.host), alt: "current_organization.name"%>
+          <% end %>
+        </div>
       <% end %>
       <div class="decidim-logo">
         <a rel="decidim"
            href="https://openheritage.eu/"
            target="_blank">
-           <%= image_tag "openheritage/oh-logo-white.jpg", alt: "OpenHeritage" %>
+           <%= image_pack_tag "media/images/oh-logo-white.jpg", alt: "OpenHeritage" %>
         </a>
       </div>
     </div>
