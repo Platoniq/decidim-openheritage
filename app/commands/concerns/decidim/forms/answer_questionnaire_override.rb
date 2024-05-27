@@ -6,9 +6,8 @@ module Decidim
       extend ActiveSupport::Concern
 
       included do
-        # Answers a questionnaire if it is valid
-        #
-        # Broadcasts :ok if successful, :invalid otherwise.
+        # Allow users to answer a survey multiple times
+        # Necessary for timetracker functionality
         def call
           return broadcast(:invalid) if @form.invalid?
 
