@@ -68,3 +68,5 @@ public/sw.js.gz
 public/sw.js.map.gz
 
 coverage/
+
+.idea/

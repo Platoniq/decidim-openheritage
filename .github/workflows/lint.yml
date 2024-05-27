@@ -8,8 +8,8 @@ on:
 
 env:
   RUBY_VERSION: 3.0.6
-  NODE_VERSION: 12.9.1
-    
+  NODE_VERSION: 16.9.1
+
 jobs:
   lint:
     name: Lint code
