@@ -13,7 +13,7 @@ describe "Visit the signup page", type: :system, perform_enqueued: true do
   end
 
   it "renders the dashboard page" do
-    expect(page).to have_content("Welcome to the Decidim Admin Panel")
+    expect(page).to have_content("Welcome to the Admin Panel")
   end
 
   it "renders the processes page" do
@@ -34,7 +34,7 @@ describe "Visit the signup page", type: :system, perform_enqueued: true do
   it "renders global moderations" do
     click_link "Global moderations"
     within ".layout-content" do
-      expect(page).to have_content("Moderations")
+      expect(page).to have_content("Reported content")
     end
   end
 

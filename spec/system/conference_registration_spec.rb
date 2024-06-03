@@ -7,7 +7,7 @@ describe "Visit a conference", type: :system, perform_enqueued: true do
   let!(:organization) { create :organization }
   let!(:conference) { create :conference, organization: organization, slug: slug, registrations_enabled: true }
   let(:slug) { "bla-bla" }
-  let(:user) { create(:user, organization: organization) }
+  let(:user) { create(:user, :confirmed, organization: organization) }
 
   CUSTOM_PATH = "/bla"
 
