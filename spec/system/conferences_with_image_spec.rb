@@ -15,6 +15,6 @@ describe "conference with images", type: :system do
   end
 
   it "shows the image" do
-    expect(page).to have_selector('img src=')
+    expect(page).to have_selector("img src=")
   end
 end
