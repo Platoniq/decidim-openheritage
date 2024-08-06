@@ -8,7 +8,7 @@ module CustomConferenceRegistrationHelper
   end
 
   def custom_registration_path(conference)
-    ENV[[ENV_PREFIX, constantize_slug(conference.slug)].join("_")]
+    ENV.fetch([ENV_PREFIX, constantize_slug(conference.slug)].join("_"), nil)
   end
 
   def conference_registration_path(conference)
