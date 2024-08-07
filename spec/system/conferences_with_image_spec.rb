@@ -5,6 +5,7 @@ require "decidim/conferences/test/factories"
 
 describe "Conference with images", type: :system do
   include_context "with a component"
+  let(:manifest_name) { "conferences" }
   let!(:organization) { create :organization }
   let(:slug) { "bla-bla" }
   let(:short_description) { { en: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><img src=\"img.png\">" } }
