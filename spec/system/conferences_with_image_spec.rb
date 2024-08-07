@@ -3,10 +3,12 @@
 require "rails_helper"
 require "decidim/conferences/test/factories"
 
-describe "Conference with images", type: :system, perform_enqueued: true do
+describe "Conference with images", type: :system do
+  include_context "with a component"
   let!(:organization) { create :organization }
-  let!(:conference) { create :conference, organization: organization, slug: slug, registrations_enabled: true }
   let(:slug) { "bla-bla" }
+  let(:body) { { en: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><img src=\"img.png\">" } }
+  let!(:conference) { create :conference, organization: organization, slug: slug, registrations_enabled: true, component: component, body: body }
   let(:user) { create(:user, :confirmed, organization: organization) }
 
   before do
