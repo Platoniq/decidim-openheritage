@@ -1,21 +1,15 @@
 # frozen_string_literal: true
 
 require "rails_helper"
-require "decidim/conferences/test/factories"
 
 describe "Conference with images", type: :system do
-  include_context "with a component"
   let(:organization) { create :organization }
-  let(:manifest_name) { :conferences }
-  let(:slug) { "bla-bla" }
   let(:short_description) { { en: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><img src=\"img.png\">" } }
-  let(:conference) { create :conference, organization: organization, slug: slug, registrations_enabled: true, component: component, short_description: short_description }
-  let(:user) { create(:user, :confirmed, organization: organization) }
+  let(:conference) { create :conference, organization: organization, short_description: short_description }
 
   before do
-    visit_component
-    page.execute_script("$('#dc-modal-accept').click()")
-    page.visit "/conferences/bla-bla"
+    switch_to_host(organization.host)
+    page.visit "/conferences/#{conference.slug}"
   end
 
   it "shows the image" do
