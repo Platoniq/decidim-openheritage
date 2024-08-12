@@ -4,7 +4,7 @@ require "rails_helper"
 
 describe "Conference with images", type: :system do
   let(:organization) { create :organization }
-  let(:short_description) { { en: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" } }
+  let(:short_description) { { en: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><img src=\"/favicon.ico\">" } }
   let!(:conference) { create :conference, organization: organization, short_description: short_description }
 
   before do
@@ -13,6 +13,8 @@ describe "Conference with images", type: :system do
   end
 
   it "shows the image" do
-    expect(page).to have_selector("img")
+    within "#content" do
+      expect(page).to have_xpath("//img[contains(@src,'favicon.ico')]")
+    end
   end
 end
