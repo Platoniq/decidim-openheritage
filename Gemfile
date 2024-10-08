@@ -60,6 +60,7 @@ group :production do
   gem "aws-sdk-s3", require: false
   gem "figaro", "~> 1.2"
   gem "fog-aws"
+  gem "redis", "~> 4.8"
   gem "sidekiq", "~> 6.0"
   gem "sidekiq-cron"
 end
