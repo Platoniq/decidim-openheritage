@@ -1,152 +1,24 @@
 <div class="content"><h1>
-<a id="consultation" class="anchor" href="#consultation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Consultation</h1>
-<p>A consultation</p>
+<a id="participatoryprocessfilter" class="anchor" href="#participatoryprocessfilter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ParticipatoryProcessFilter</h1>
+<p>A type used for filtering participatory processes</p>
 <h2>
-<a id="implements" class="anchor" href="#implements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Implements</h2>
-<ul>
-   <li><code><a href="/api/docs/interface/participatoryspaceinterface">ParticipatorySpaceInterface</a></code></li>
-</ul>
-<h2>
-<a id="fields" class="anchor" href="#fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fields</h2>
+<a id="input-fields" class="anchor" href="#input-fields" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input Fields</h2>
 <div class="field-entry ">
-  <span id="id" class="field-name anchored">id (<code><a href="/api/docs/scalar/id">ID!</a></code>)</span>
+  <span id="publishedbefore" class="field-name anchored">publishedBefore (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The participatory space's unique ID</p>
+   <p>List result published <strong>before</strong> (and <strong>excluding</strong>) this date. Expected format <code>YYYY-MM-DD</code></p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="title" class="field-name anchored">title (<code><a href="/api/docs/object/translatedfield">TranslatedField!</a></code>)</span>
+  <span id="publishedsince" class="field-name anchored">publishedSince (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The graphql_name of this participatory space.</p>
+   <p>List result published after (and <strong>including</strong>) this date. Expected format <code>YYYY-MM-DD</code></p>
   </div>
 </div>
 <div class="field-entry ">
-  <span id="type" class="field-name anchored">type (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
+  <span id="hashtag" class="field-name anchored">hashtag (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
   <div class="description-wrapper">
-   <p>The participatory space class name. i.e. Decidim::ParticipatoryProcess</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="components" class="field-name anchored">components (<code><a href="/api/docs/interface/componentinterface">[ComponentInterface!]</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Lists the components this space contains.</p>
-     <table class="arguments">
-  <thead>
-  <tr>
-    <th>Argument</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-  <td><code class="anchored">filter</code></td>
-  <td>
-    <code><a href="/api/docs/input_object/componentfilter">ComponentFilter</a></code>
-  </td>
-  <td>
-    <p>Provides several methods to filter the results</p>
-   </td>
-  </tr>
-  <tr>
-  <td><code class="anchored">order</code></td>
-  <td>
-    <code><a href="/api/docs/input_object/componentsort">ComponentSort</a></code>
-  </td>
-  <td>
-    <p>Provides several methods to order the results</p>
-   </td>
-  </tr>
-  </tbody>
-</table>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="stats" class="field-name anchored">stats (<code><a href="/api/docs/object/statistic">[Statistic]</a></code>)</span>
-  <div class="description-wrapper">
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="subtitle" class="field-name anchored">subtitle (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The subtitle of this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="description" class="field-name anchored">description (<code><a href="/api/docs/object/translatedfield">TranslatedField</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The description of this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="slug" class="field-name anchored">slug (<code><a href="/api/docs/scalar/string">String!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Slug of this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="createdat" class="field-name anchored">createdAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this consultation was created</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="updatedat" class="field-name anchored">updatedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this consultation was updated</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="publishedat" class="field-name anchored">publishedAt (<code><a href="/api/docs/scalar/datetime">DateTime!</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The time this consultation was published</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="introductoryvideourl" class="field-name anchored">introductoryVideoUrl (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The introductory video url for this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="introductoryimage" class="field-name anchored">introductoryImage (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The introductory image for this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="bannerimage" class="field-name anchored">bannerImage (<code><a href="/api/docs/scalar/string">String</a></code>)</span>
-  <div class="description-wrapper">
-   <p>The banner image for this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="highlightedscope" class="field-name anchored">highlightedScope (<code><a href="/api/docs/object/scope">Scope</a></code>)</span>
-  <div class="description-wrapper">
-   <p>This is the highlighted scope of this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="startvotingdate" class="field-name anchored">startVotingDate (<code><a href="/api/docs/scalar/date">Date</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Start date of the voting for this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="endvotingdate" class="field-name anchored">endVotingDate (<code><a href="/api/docs/scalar/date">Date</a></code>)</span>
-  <div class="description-wrapper">
-   <p>End date of the voting for this consultation</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="resultspublishedat" class="field-name anchored">resultsPublishedAt (<code><a href="/api/docs/scalar/date">Date</a></code>)</span>
-  <div class="description-wrapper">
-   <p>Date when the results have been published</p>
-  </div>
-</div>
-<div class="field-entry ">
-  <span id="questions" class="field-name anchored">questions (<code><a href="/api/docs/object/consultationquestion">[ConsultationQuestion]</a></code>)</span>
-  <div class="description-wrapper">
+   <p>List result having this hashtag</p>
   </div>
 </div></div>
 <div id="sidebar"><ul class="categories">
@@ -291,8 +163,22 @@
       
         
       <li>
-        <a href="/api/docs/object/component/" class="sidebar-link">
-          Component
+        <a href="/api/docs/object/commentmutation/" class="sidebar-link">
+          CommentMutation
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/commentable/" class="sidebar-link">
+          Commentable
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/commentablemutation/" class="sidebar-link">
+          CommentableMutation
         </a>
       </li>
       
@@ -321,20 +207,6 @@
       <li>
         <a href="/api/docs/object/conferencespeaker/" class="sidebar-link">
           ConferenceSpeaker
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/consultation/" class="sidebar-link">
-          Consultation
-        </a>
-      </li>
-      
-        
-      <li>
-        <a href="/api/docs/object/consultationquestion/" class="sidebar-link">
-          ConsultationQuestion
         </a>
       </li>
       
@@ -375,8 +247,22 @@
       
         
       <li>
+        <a href="/api/docs/object/decidim/" class="sidebar-link">
+          Decidim
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/fingerprint/" class="sidebar-link">
           Fingerprint
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/hashtagtype/" class="sidebar-link">
+          HashtagType
         </a>
       </li>
       
@@ -438,6 +324,27 @@
       
         
       <li>
+        <a href="/api/docs/object/metric/" class="sidebar-link">
+          Metric
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/metrichistory/" class="sidebar-link">
+          MetricHistory
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/organization/" class="sidebar-link">
+          Organization
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/page/" class="sidebar-link">
           Page
         </a>
@@ -494,6 +401,13 @@
       
         
       <li>
+        <a href="/api/docs/object/participatoryprocesstype/" class="sidebar-link">
+          ParticipatoryProcessType
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/participatoryspace/" class="sidebar-link">
           ParticipatorySpace
         </a>
@@ -503,6 +417,13 @@
       <li>
         <a href="/api/docs/object/participatoryspacelink/" class="sidebar-link">
           ParticipatorySpaceLink
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/participatoryspacemanifest/" class="sidebar-link">
+          ParticipatorySpaceManifest
         </a>
       </li>
       
@@ -564,6 +485,13 @@
       
         
       <li>
+        <a href="/api/docs/object/quantifiabletranslatedfield/" class="sidebar-link">
+          QuantifiableTranslatedField
+        </a>
+      </li>
+      
+        
+      <li>
         <a href="/api/docs/object/question/" class="sidebar-link">
           Question
         </a>
@@ -601,6 +529,13 @@
       <li>
         <a href="/api/docs/object/scope/" class="sidebar-link">
           Scope
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/api/docs/object/session/" class="sidebar-link">
+          Session
         </a>
       </li>
       
@@ -977,6 +912,20 @@
       
       
       <li>
+        <a href="/api/docs/input_object/participatoryprocessfilter/" class="sidebar-link">
+          ParticipatoryProcessFilter
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/input_object/participatoryprocesssort/" class="sidebar-link">
+          ParticipatoryProcessSort
+        </a>
+      </li>
+      
+      
+      <li>
         <a href="/api/docs/input_object/postfilter/" class="sidebar-link">
           PostFilter
         </a>
@@ -1000,6 +949,20 @@
       <li>
         <a href="/api/docs/input_object/proposalsort/" class="sidebar-link">
           ProposalSort
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/input_object/userentityfilter/" class="sidebar-link">
+          UserEntityFilter
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/input_object/userentitysort/" class="sidebar-link">
+          UserEntitySort
         </a>
       </li>
       
@@ -1084,6 +1047,13 @@
       <li>
         <a href="/api/docs/directive/include/" class="sidebar-link">
           include
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/api/docs/directive/oneof/" class="sidebar-link">
+          oneOf
         </a>
       </li>
       
