@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_03_04_125046) do
+ActiveRecord::Schema.define(version: 2025_03_13_083448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1894,6 +1894,26 @@ ActiveRecord::Schema.define(version: 2025_03_04_125046) do
     t.boolean "allow_public_access", default: false, null: false
     t.index ["decidim_organization_id"], name: "index_decidim_static_pages_on_decidim_organization_id"
     t.index ["topic_id"], name: "index_decidim_static_pages_on_topic_id"
+  end
+
+  create_table "decidim_superspaces_superspaces", force: :cascade do |t|
+    t.bigint "decidim_organization_id", null: false
+    t.jsonb "title"
+    t.string "locale"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "description"
+    t.index ["decidim_organization_id"], name: "index_decidim_superspaces_superspaces_on_decidim_organization"
+  end
+
+  create_table "decidim_superspaces_superspaces_participatory_spaces", force: :cascade do |t|
+    t.bigint "decidim_superspaces_superspace_id", null: false
+    t.string "participatory_space_type"
+    t.bigint "participatory_space_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["decidim_superspaces_superspace_id"], name: "decidim_superspaces_participatory_space_superspace"
+    t.index ["participatory_space_type", "participatory_space_id"], name: "decidim_superspaces_participatory_space_participatory_space"
   end
 
   create_table "decidim_surveys_surveys", id: :serial, force: :cascade do |t|

@@ -11,14 +11,15 @@ gem "decidim-conferences", DECIDIM_VERSION
 # gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
-# gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: "release/0.27-stable"
+gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: "release/0.28-stable"
 # gem "decidim-comparative_stats", git: "https://github.com/Platoniq/decidim-module-comparative_stats"
-# gem "decidim-decidim_awesome", "~> 0.10.2"
-# gem "decidim-direct_verifications", git: "https://github.com/Platoniq/decidim-verifications-direct_verifications", branch: "release/0.27-stable"
-# gem "decidim-navigation_maps", git: "https://github.com/Platoniq/decidim-module-navigation_maps", branch: "release/0.27-stable"
-# gem "decidim-notify", git: "https://github.com/Platoniq/decidim-module-notify", branch: "main"
-# gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
-# gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker", branch: "main"
+gem "decidim-decidim_awesome", "~> 0.11.4"
+gem "decidim-direct_verifications", git: "https://github.com/Platoniq/decidim-verifications-direct_verifications", branch: "main"
+gem "decidim-navigation_maps", git: "https://github.com/Platoniq/decidim-module-navigation_maps.git", ref: "7fd50e1368bae4c7955c0ba8ec5ee395273a5329"
+gem "decidim-notify", git: "https://github.com/Platoniq/decidim-module-notify", branch: "main"
+gem "decidim-superspaces", git: "https://github.com/Platoniq/decidim-superspace", branch: "main"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
+gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker", branch: "main"
 
 gem "bootsnap", "~> 1.4"
 gem "health_check"
