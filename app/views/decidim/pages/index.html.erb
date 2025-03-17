@@ -21,7 +21,7 @@ edit_link(
   <% if @topics.any? %>
     <div class="row">
       <h3 class="section-heading"><%= t ".topics" %></h3>
-      <div class="row collapse">
+      <div class="row">
         <div class="row small-up-1 smallmedium-up-2 mediumlarge-up-2 large-up-3 card-grid">
           <% @topics.each do |topic| %>
             <% if topic.pages.any? %>
@@ -55,7 +55,7 @@ edit_link(
   <% if @orphan_pages.any? %>
     <div class="row">
       <h3 class="section-heading"><%= t ".standalone_pages" %></h3>
-      <div class="row collapse">
+      <div class="row">
         <div class="row small-up-1 smallmedium-up-2 mediumlarge-up-2 large-up-3 card-grid">
           <% @orphan_pages.each do |page| %>
             <% next if page.title[current_organization.default_locale].start_with? "--" %>

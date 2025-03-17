@@ -1,14 +1,16 @@
-<div class="mini-footer">
-  <div class="row">
-    <div class="medium-6 large-6 column">
+<div class="mini-footer flex justify-center">
+  <div class="row flex">
+    <div class="flex pl-4 pr-4 items-center">
       <a rel="license" class="cc-badge"
          href="http://creativecommons.org/licenses/by-sa/4.0/"
          target="_blank" rel="noopener">
         <%= image_pack_tag("media/images/cc-badge.png", alt: "Creative Commons License" ) %>
       </a>
-      <%= t("oh.layouts.footer.made_by_platoniq").html_safe %>
+      <div class="pl-4">
+        <%= t("oh.layouts.footer.made_by_platoniq").html_safe %>
+      </div>
     </div>
-    <div class="medium-6 large-4 column">
+    <div class="flex">
       <% if current_organization.official_img_footer.attached? %>
         <div class="decidim-logo">
           <%= link_to current_organization.official_url do %>
