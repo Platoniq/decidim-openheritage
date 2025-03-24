@@ -2,9 +2,9 @@
 
 require "rails_helper"
 
-describe "Visit the signup page", type: :system, perform_enqueued: true do
-  let(:organization) { create :organization }
-  let(:user) { create :user, :admin, :confirmed, organization: organization }
+describe "Visit the signup page", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
+  let(:organization) { create(:organization) }
+  let(:user) { create(:user, :admin, :confirmed, organization: organization) }
 
   before do
     switch_to_host(organization.host)
@@ -17,14 +17,14 @@ describe "Visit the signup page", type: :system, perform_enqueued: true do
   end
 
   it "renders the processes page" do
-    click_link "Processes"
+    click_on "Processes"
     within ".layout-content" do
       expect(page).to have_content("Participatory processes")
     end
   end
 
   it "renders the assemblies page" do
-    click_link "Assemblies"
+    click_on "Assemblies"
     within "#assemblies" do
       expect(page).to have_content("Assemblies")
       expect(page).to have_content("New assembly")
@@ -32,49 +32,49 @@ describe "Visit the signup page", type: :system, perform_enqueued: true do
   end
 
   it "renders global moderations" do
-    click_link "Global moderations"
+    click_on "Global moderations"
     within ".layout-content" do
       expect(page).to have_content("Reported content")
     end
   end
 
   it "renders pages" do
-    click_link "Pages"
+    click_on "Pages"
     within ".layout-content" do
       expect(page).to have_content("Pages")
     end
   end
 
   it "renders newsletters" do
-    click_link "Newsletters"
+    click_on "Newsletters"
     within ".layout-content" do
       expect(page).to have_content("Newsletters")
     end
   end
 
   it "renders settings" do
-    click_link "Settings"
+    click_on "Settings"
     within ".layout-content" do
       expect(page).to have_content("Edit organization")
     end
   end
 
   it "renders Decidim awesome" do
-    click_link "Decidim awesome"
+    click_on "Decidim awesome"
     within ".layout-content" do
       expect(page).to have_content("Tweaks for editors")
     end
   end
 
   it "renders admin activity log" do
-    click_link "Admin activity log"
+    click_on "Admin activity log"
     within ".layout-content" do
       expect(page).to have_content("Admin log")
     end
   end
 
   it "renders templates" do
-    click_link "Templates"
+    click_on "Templates"
     within ".layout-content" do
       expect(page).to have_content("Templates")
     end

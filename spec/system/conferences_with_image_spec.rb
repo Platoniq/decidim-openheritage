@@ -2,10 +2,10 @@
 
 require "rails_helper"
 
-describe "Conference with images", type: :system do
-  let(:organization) { create :organization }
+describe "Conference with images" do # rubocop:disable RSpec/DescribeClass
+  let(:organization) { create(:organization) }
   let(:short_description) { { en: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><img src=\"/favicon.ico\">" } }
-  let!(:conference) { create :conference, organization: organization, short_description: short_description }
+  let!(:conference) { create(:conference, organization: organization, short_description: short_description) }
 
   before do
     switch_to_host(organization.host)

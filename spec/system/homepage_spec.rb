@@ -3,8 +3,8 @@
 require "rails_helper"
 require "decidim/surveys/test/factories"
 
-describe "Visit the home page", type: :system, perform_enqueued: true do
-  let(:organization) { create :organization, external_domain_whitelist: ["decidim.org", "openheritage.eu", "wikipedia.org"] }
+describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
+  let(:organization) { create(:organization, external_domain_whitelist: ["decidim.org", "openheritage.eu", "wikipedia.org"]) }
   let(:menu) do
     {
       organization.host.to_sym =>
@@ -31,10 +31,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
   before do
     switch_to_host(organization.host)
-    allow(Rails.application.secrets).to receive(:menu).and_return(menu)
-    allow(Rails.application.secrets).to receive(:matomo).and_return(matomo)
-    allow(Rails.application.secrets).to receive(:openheritage).and_return(openheritage)
-    allow(Rails.application.secrets).to receive(:timetracker).and_return(timetracker)
+    allow(Rails.application.secrets).to receive_messages(menu: menu, matomo: matomo, openheritage: openheritage, timetracker: timetracker)
     visit decidim.root_path
   end
 
@@ -89,7 +86,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
   context "when platoniq tenant" do
     it "has platoniq footer" do
-      expect(page).not_to have_css(".eu-footer")
+      expect(page).to have_no_css(".eu-footer")
       within ".mini-footer" do
         expect(page).to have_link(href: "https://decidim.org/")
       end
@@ -127,7 +124,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
       check "questionnaire_tos_agreement"
 
       accept_confirm do
-        click_button "Submit"
+        click_on "Submit"
       end
 
       within ".success.flash" do
@@ -158,7 +155,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
         check "questionnaire_tos_agreement"
 
         accept_confirm do
-          click_button "Submit"
+          click_on "Submit"
         end
 
         within ".success.flash" do
@@ -167,7 +164,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
         visit_component
 
-        expect(page).not_to have_content("You have already answered this form.")
+        expect(page).to have_no_content("You have already answered this form.")
         expect(page).to have_i18n_content(question.body)
 
         fill_in question.body["en"], with: "My first answer"
@@ -175,7 +172,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
         check "questionnaire_tos_agreement"
 
         accept_confirm do
-          click_button "Submit"
+          click_on "Submit"
         end
 
         within ".success.flash" do

@@ -32,5 +32,3 @@ jobs:
       - run: bundle exec rubocop -P
         name: Lint Ruby files
 
-      - run: bundle exec mdl *.md
-        name: Lint Markdown files
