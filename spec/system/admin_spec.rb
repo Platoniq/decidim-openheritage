@@ -13,20 +13,23 @@ describe "Visit the signup page", :perform_enqueued do # rubocop:disable RSpec/D
   end
 
   it "renders the dashboard page" do
-    expect(page).to have_content("Welcome to the Admin Panel")
+    expect(page).to have_content("Dashboard")
+    expect(page).to have_content("See site")
   end
 
   it "renders the processes page" do
     click_on "Processes"
     within ".layout-content" do
-      expect(page).to have_content("Participatory processes")
+      expect(page).to have_content("Processes")
     end
   end
 
   it "renders the assemblies page" do
     click_on "Assemblies"
-    within "#assemblies" do
+    within ".process-title-content-breadcrumb" do
       expect(page).to have_content("Assemblies")
+    end
+    within ".process-title-content-breadcrumb-container-right-link" do
       expect(page).to have_content("New assembly")
     end
   end
@@ -62,7 +65,7 @@ describe "Visit the signup page", :perform_enqueued do # rubocop:disable RSpec/D
   it "renders Decidim awesome" do
     click_on "Decidim awesome"
     within ".layout-content" do
-      expect(page).to have_content("Tweaks for editors")
+      expect(page).to have_content("Tweaks for Editor Hacks")
     end
   end
 

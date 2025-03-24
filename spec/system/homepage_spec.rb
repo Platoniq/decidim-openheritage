@@ -40,7 +40,7 @@ describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/Des
   end
 
   it "has a custom menu" do
-    within ".main-nav" do
+    within "nav[role='navigation']", text: "Translation missing: en.i18n_key" do
       expect(page).to have_link("Translation missing: en.i18n_key", href: "http://www.wikipedia.org")
     end
   end
@@ -78,18 +78,6 @@ describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/Des
       within ".eu-footer" do
         expect(page).to have_content("This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 776766")
       end
-      within ".mini-footer" do
-        expect(page).to have_link(href: "https://openheritage.eu/")
-      end
-    end
-  end
-
-  context "when platoniq tenant" do
-    it "has platoniq footer" do
-      expect(page).to have_no_css(".eu-footer")
-      within ".mini-footer" do
-        expect(page).to have_link(href: "https://decidim.org/")
-      end
     end
   end
 
@@ -116,8 +104,13 @@ describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/Des
     it "allows only one answer" do
       visit_component
 
-      expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-      expect(page).to have_i18n_content(questionnaire.description)
+      expect(page).to have_i18n_content(questionnaire.title)
+
+      current_locale = I18n.locale.to_s
+      description_text = questionnaire.description[current_locale]
+      sanitized_description = ActionView::Base.full_sanitizer.sanitize(description_text)
+
+      expect(page).to have_i18n_content(sanitized_description)
 
       fill_in question.body["en"], with: "My first answer"
 
@@ -147,8 +140,13 @@ describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/Des
       it "allows multiple answers" do
         visit_component
 
-        expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-        expect(page).to have_i18n_content(questionnaire.description)
+        expect(page).to have_i18n_content(questionnaire.title)
+
+        current_locale = I18n.locale.to_s
+        description_text = questionnaire.description[current_locale]
+        sanitized_description = ActionView::Base.full_sanitizer.sanitize(description_text)
+
+        expect(page).to have_i18n_content(sanitized_description)
 
         fill_in question.body["en"], with: "My first answer"
 

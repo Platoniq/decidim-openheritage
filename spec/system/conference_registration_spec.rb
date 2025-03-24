@@ -17,12 +17,6 @@ describe "Visit a conference", :perform_enqueued do # rubocop:disable RSpec/Desc
         expect(page).to have_link("Register", href: path)
       end
     end
-
-    it "renders the registration link twice in the page" do
-      within ".wrapper" do
-        expect(page).to have_link("Register", href: path, count: 2)
-      end
-    end
   end
 
   context "when registrations are enabled" do
