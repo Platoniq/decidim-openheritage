@@ -9,14 +9,14 @@ checksums = [
   {
     package: "decidim-admin",
     files: {
-      "/app/views/decidim/admin/static_pages/index.html.erb" => "397b264a6627abd514b90f3b2d1cd1a9"
+      "/app/views/decidim/admin/static_pages/index.html.erb" => "debf4d3ae461c4c827f8e3242c6e8727"
     }
   },
   {
     package: "decidim-conferences",
     files: {
-      "/app/views/decidim/conferences/conferences/_conference_hero.html.erb" => "7bf25408e38deeb9c975476ef8c1d219",
-      "/app/views/decidim/conferences/conferences/show.html.erb" => "93fa0d48a6117d3b1cb210ad1f17da7e"
+      "/app/views/decidim/conferences/conferences/_conference_hero.html.erb" => "da4e86d29cf4272356d4bed6130d641f",
+      "/app/views/decidim/conferences/conferences/show.html.erb" => "eb94f807d798fe1ed4d1404dd1dfcad9"
     }
   },
   {
@@ -35,7 +35,7 @@ checksums = [
   {
     package: "decidim-proposals",
     files: {
-      "/app/views/decidim/proposals/proposals/show.html.erb" => "1c43824df4e84de47111e86d3193efd1"
+      "/app/views/decidim/proposals/proposals/show.html.erb" => "9e64332b4be2d5c67e13875317f2c0fe"
     }
   },
   {
@@ -48,7 +48,7 @@ checksums = [
     package: "decidim-core",
     files: {
       # footer
-      "/app/views/layouts/decidim/footer/_mini.html.erb" => "cf7e273390b5a94b7df7167e37038ec4",
+      "/app/views/layouts/decidim/footer/_mini.html.erb" => "ccead2f5f20557ea4db1501de943f82b",
 
       # views
       "/app/views/decidim/pages/index.html.erb" => "ab24999a330e6ff34b1851a01ce56cc6",
