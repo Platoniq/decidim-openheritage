@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.28.0"
+DECIDIM_VERSION = "0.28.4"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -44,8 +44,6 @@ end
 group :development do
   gem "letter_opener_web", "~> 1.3"
   gem "listen", "~> 3.1"
-  gem "spring", "~> 4.0"
-  gem "spring-watcher-listen", "~> 2.1"
   gem "web-console", "~> 3.5"
 
   gem "capistrano", "~> 3.14"
