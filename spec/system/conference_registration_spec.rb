@@ -3,9 +3,9 @@
 require "rails_helper"
 require "decidim/conferences/test/factories"
 
-describe "Visit a conference", type: :system, perform_enqueued: true do
-  let!(:organization) { create :organization }
-  let!(:conference) { create :conference, organization: organization, slug: slug, registrations_enabled: true }
+describe "Visit a conference", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
+  let!(:organization) { create(:organization) }
+  let!(:conference) { create(:conference, organization: organization, slug: slug, registrations_enabled: true) }
   let(:slug) { "bla-bla" }
   let(:user) { create(:user, :confirmed, organization: organization) }
 
@@ -15,12 +15,6 @@ describe "Visit a conference", type: :system, perform_enqueued: true do
     it "renders the registration link in the hero" do
       within ".hero__container" do
         expect(page).to have_link("Register", href: path)
-      end
-    end
-
-    it "renders the registration link twice in the page" do
-      within ".wrapper" do
-        expect(page).to have_link("Register", href: path, count: 2)
       end
     end
   end

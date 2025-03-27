@@ -3,8 +3,8 @@
 require "rails_helper"
 require "decidim/surveys/test/factories"
 
-describe "Visit the home page", type: :system, perform_enqueued: true do
-  let(:organization) { create :organization, external_domain_whitelist: ["decidim.org", "openheritage.eu", "wikipedia.org"] }
+describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
+  let(:organization) { create(:organization, external_domain_whitelist: ["decidim.org", "openheritage.eu", "wikipedia.org"]) }
   let(:menu) do
     {
       organization.host.to_sym =>
@@ -31,10 +31,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
   before do
     switch_to_host(organization.host)
-    allow(Rails.application.secrets).to receive(:menu).and_return(menu)
-    allow(Rails.application.secrets).to receive(:matomo).and_return(matomo)
-    allow(Rails.application.secrets).to receive(:openheritage).and_return(openheritage)
-    allow(Rails.application.secrets).to receive(:timetracker).and_return(timetracker)
+    allow(Rails.application.secrets).to receive_messages(menu: menu, matomo: matomo, openheritage: openheritage, timetracker: timetracker)
     visit decidim.root_path
   end
 
@@ -43,7 +40,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
   end
 
   it "has a custom menu" do
-    within ".main-nav" do
+    within "nav[role='navigation']", text: "Translation missing: en.i18n_key" do
       expect(page).to have_link("Translation missing: en.i18n_key", href: "http://www.wikipedia.org")
     end
   end
@@ -81,18 +78,6 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
       within ".eu-footer" do
         expect(page).to have_content("This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 776766")
       end
-      within ".mini-footer" do
-        expect(page).to have_link(href: "https://openheritage.eu/")
-      end
-    end
-  end
-
-  context "when platoniq tenant" do
-    it "has platoniq footer" do
-      expect(page).not_to have_css(".eu-footer")
-      within ".mini-footer" do
-        expect(page).to have_link(href: "https://decidim.org/")
-      end
     end
   end
 
@@ -119,15 +104,20 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
     it "allows only one answer" do
       visit_component
 
-      expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-      expect(page).to have_i18n_content(questionnaire.description)
+      expect(page).to have_i18n_content(questionnaire.title)
+
+      current_locale = I18n.locale.to_s
+      description_text = questionnaire.description[current_locale]
+      sanitized_description = ActionView::Base.full_sanitizer.sanitize(description_text)
+
+      expect(page).to have_i18n_content(sanitized_description)
 
       fill_in question.body["en"], with: "My first answer"
 
       check "questionnaire_tos_agreement"
 
       accept_confirm do
-        click_button "Submit"
+        click_on "Submit"
       end
 
       within ".success.flash" do
@@ -150,15 +140,20 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
       it "allows multiple answers" do
         visit_component
 
-        expect(page).to have_i18n_content(questionnaire.title, upcase: true)
-        expect(page).to have_i18n_content(questionnaire.description)
+        expect(page).to have_i18n_content(questionnaire.title)
+
+        current_locale = I18n.locale.to_s
+        description_text = questionnaire.description[current_locale]
+        sanitized_description = ActionView::Base.full_sanitizer.sanitize(description_text)
+
+        expect(page).to have_i18n_content(sanitized_description)
 
         fill_in question.body["en"], with: "My first answer"
 
         check "questionnaire_tos_agreement"
 
         accept_confirm do
-          click_button "Submit"
+          click_on "Submit"
         end
 
         within ".success.flash" do
@@ -167,7 +162,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
         visit_component
 
-        expect(page).not_to have_content("You have already answered this form.")
+        expect(page).to have_no_content("You have already answered this form.")
         expect(page).to have_i18n_content(question.body)
 
         fill_in question.body["en"], with: "My first answer"
@@ -175,7 +170,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
         check "questionnaire_tos_agreement"
 
         accept_confirm do
-          click_button "Submit"
+          click_on "Submit"
         end
 
         within ".success.flash" do

@@ -1,7 +1,7 @@
 @import "_variables";
 
 .mini-footer{
-  background: #fff;
+  background-color: #fff !important;
   color: $body-font-color;
 }
 
@@ -9,15 +9,24 @@
   // width: 100px;
   display: inline-block;
   padding-left: 1em;
+  max-width: 35%;
+}
+
+.oh-logo {
+  display: inline-block;
+  padding-left: 1em;
+  max-width: 35%;
 }
 
 //Main footer
 .main-footer{
   background-color: $main-footer-bg;
   color: #fff;
+}
 
-  a{
-    color: #fff;
+.mini-footer {
+  a {
+    color: #30415d;
   }
 }
 
