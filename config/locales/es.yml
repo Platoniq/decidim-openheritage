@@ -1,0 +1,19 @@
+es:
+  devise:
+    mailer:
+      invitation_instructions:
+        hello: |-
+          ¡Hola, Critical Friend!<br /> <br /> 
+          Te damos la bienvenida a la plataforma Open Spaces de la Escuela de Creatividad y Democracia (ECD),  un espacio digital para acompañar a la primera cohorte en su proceso de aprendizaje y reflexión.
+        invited_you_as_private_user: |-
+          Este es un correo automático para comunicarte que tu usuario ya ha sido creado y verificado. Este link te redirigirá directamente a cambiar tu contraseña, para que puedas personalizarla y comenzar a explorar:<br/><br/> 
+            <ul>
+              <li>El programa completo del curso.</li>
+              <li>Las sesiones semanales y los materiales asociados.</li>
+              <li>Un espacio para interactuar con los participantes, resolver (o hacer) preguntas y compartir recursos.</li>
+              <li>Un espacio cerrado para Critical Friends, donde intercambiar proyectos, compartir críticas, programar las actividades, y revisar los entregables.</li>
+            </ul>
+        ignore: |-
+          Si tienes algún problema para acceder, puedes escribirnos a ecd@platoniq.net y te ayudamos a configurarlo.<br/><br/> 
+          ¡Muchísimas gracias por ser parte de esta experiencia!<br/><br/> 
+          ¡Un abrazo y nos vemos pronto!<br/><br/> 
