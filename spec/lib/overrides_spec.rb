@@ -55,7 +55,8 @@ checksums = [
 
       # layouts
       "/app/views/layouts/decidim/_head_extra.html.erb" => "1b8237357754cf519f4e418135f78440",
-      "/app/views/layouts/decidim/mailer.html.erb" => "4e308c82acd8b1dac405ff71963d8743"
+      "/app/views/layouts/decidim/mailer.html.erb" => "4e308c82acd8b1dac405ff71963d8743",
+      "/app/views/devise/mailer/invite_private_user.html.erb" => "8edaafee967943d3d1b51b6a912b89c8"
     }
   }
 ]
