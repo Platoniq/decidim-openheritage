@@ -91,11 +91,10 @@
                   </th>
                 </tr>
                 <tr>
-                  <th class="small-4 columns eu-logo">
-                    <%= image_pack_tag 'media/images/europe-flag.png', alt: "Europe flag", border: "2" %>
+                  <th class="columns">
                   </th>
-                  <th class="small-8 columns eu-logo" align="left">
-                    <%= t("oh.footer.eu1") %>
+                  <th class="columns" align="left">
+                    <%= t("devise.mailer.invitation_instructions.footer").html_safe %>
                   </th>
                 </tr>
               </table>
