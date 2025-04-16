@@ -3,20 +3,21 @@ es:
     mailer:
       invitation_instructions:
         hello: |-
-          ¡Hola, Critical Friend!<br /> <br /> 
-          Te damos la bienvenida a la plataforma Open Spaces de la Escuela de Creatividad y Democracia (ECD),  un espacio digital para acompañar a la primera cohorte en su proceso de aprendizaje y reflexión.
+          ¡Hola, %{email}!<br /> <br /> 
+          ¡Bienvenida a la Escuela de Creatividad y Democracia!
         invited_you_as_private_user: |-
           Este es un correo automático para comunicarte que tu usuario ya ha sido creado y verificado. Este link te redirigirá directamente a cambiar tu contraseña, para que puedas personalizarla y comenzar a explorar:<br/><br/> 
             <ul>
-              <li>El programa completo del curso.</li>
-              <li>Las sesiones semanales y los materiales asociados.</li>
-              <li>Un espacio para interactuar con los participantes, resolver (o hacer) preguntas y compartir recursos.</li>
-              <li>Un espacio cerrado para Critical Friends, donde intercambiar proyectos, compartir críticas, programar las actividades, y revisar los entregables.</li>
+              <li>Los materiales de cada módulo (te recomendamos ir mirando los webinars del Módulo 0).</li>
+              <li>El espacio de "La Barra", donde podrás compartir tus ideas, preguntas o reflexiones.</li>
+              <li>Cada semana, se pubicará el enlace para que puedas conectarte a las sesiones online dentro de cada módulo.</li>
+              <li>También usaremos OpenSpaces para que entregues tus actividades y participes en algunas votaciones o ejercicios colaborativos.</li>
             </ul>
         ignore: |-
-          Si tienes algún problema para acceder, puedes escribirnos a ecd@platoniq.net y te ayudamos a configurarlo.<br/><br/> 
-          ¡Muchísimas gracias por ser parte de esta experiencia!<br/><br/> 
-          ¡Un abrazo y nos vemos pronto!<br/><br/> 
+          Te recomendamos guardar el enlace en tus marcadores y entrar cada semana para estar al día con todo lo que vamos compartiendo.<br/><br/> 
+          Sabemos que es mucha información y puede ser un poco complejo acostumbrarse al principio. Si tienes cualquier problema técnico o duda sobre cómo usar la plataforma, no dudes en escribirnos a ecd@platoniq.net. 
+          De todas maneras, en nuestra primera sesión del 22 de abril, expicaremos un poco mejor cómo funciona la plataforma.<br/><br/> 
+          ¡Un abrazo y nos vemos pronto!<br/><br/>
         footer: 
           <br /> Platoniq cc-by-sa. Con el apoyo de Open Society Foundations.
 
