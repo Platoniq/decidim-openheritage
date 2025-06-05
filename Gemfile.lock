@@ -9,6 +9,17 @@ GIT
       redcarpet (~> 3.4)
 
 GIT
+  remote: https://github.com/Platoniq/decidim-module-comparative_stats
+  revision: f6a73ba2e291e624da7b39624cd96297495b5daf
+  branch: deps/decidim-0.28
+  specs:
+    decidim-comparative_stats (1.4.0)
+      chartkick (~> 5.0)
+      decidim-admin (>= 0.28.0, < 0.29)
+      decidim-core (>= 0.28.0, < 0.29)
+      graphlient (< 0.6)
+
+GIT
   remote: https://github.com/Platoniq/decidim-module-navigation_maps
   revision: 7fd50e1368bae4c7955c0ba8ec5ee395273a5329
   branch: release/0.28-stable
@@ -230,6 +241,7 @@ GEM
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
     charlock_holmes (0.7.9)
+    chartkick (5.1.5)
     childprocess (5.1.0)
       logger (~> 1.5)
     commonmarker (0.23.11)
@@ -525,6 +537,7 @@ GEM
       csv (>= 3.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    graphlient (0.0.5)
     graphql (2.0.32)
       base64
     graphql-docs (3.0.1)
@@ -995,6 +1008,7 @@ DEPENDENCIES
   capistrano-sidekiq
   decidim (= 0.28.6)
   decidim-alternative_landing!
+  decidim-comparative_stats!
   decidim-conferences (= 0.28.6)
   decidim-decidim_awesome (~> 0.11.4)
   decidim-dev (= 0.28.6)
@@ -1024,7 +1038,7 @@ DEPENDENCIES
   wicked_pdf (~> 2.1)
 
 RUBY VERSION
-   ruby 3.1.1p18
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.6.5
