@@ -1096,7 +1096,6 @@ ActiveRecord::Schema.define(version: 2025_03_24_105356) do
     t.boolean "visible"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "position"
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_agendas_on_decidim_meeting_id"
   end
 
