@@ -10,8 +10,8 @@ GIT
 
 GIT
   remote: https://github.com/Platoniq/decidim-module-comparative_stats
-  revision: f6a73ba2e291e624da7b39624cd96297495b5daf
-  branch: deps/decidim-0.28
+  revision: 43f61c4aef8d777a37169f433799b2cbbcd80d7a
+  branch: master
   specs:
     decidim-comparative_stats (1.4.0)
       chartkick (~> 5.0)
