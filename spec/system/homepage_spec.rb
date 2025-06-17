@@ -4,7 +4,7 @@ require "rails_helper"
 require "decidim/surveys/test/factories"
 
 describe "Visit the home page", :perform_enqueued do
-  let(:organization) { create(:organization, external_domain_whitelist: ["decidim.org", "openheritage.eu", "wikipedia.org"]) }
+  let(:organization) { create(:organization, external_domain_allowlist: ["decidim.org", "openheritage.eu", "wikipedia.org"]) }
   let(:menu) do
     {
       organization.host.to_sym =>
