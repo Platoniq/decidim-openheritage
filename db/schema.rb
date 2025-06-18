@@ -1101,6 +1101,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_06_12_080045) do
     t.boolean "visible"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.bigint "position"
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_agendas_on_decidim_meeting_id"
   end
 
