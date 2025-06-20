@@ -2,9 +2,9 @@ es:
   devise:
     mailer:
       invitation_instructions:
-        hello!!html: |-
-          ¡Hola, %{email}!<br /> <br />
-          ¡Bienvenida a la Escuela de Creatividad y Democracia!
+        hello: |-
+          ¡Hola, %{email}!
+            ¡Bienvenida a la Escuela de Creatividad y Democracia!
         invited_you_as_private_user: |-
           Este es un correo automático para comunicarte que tu usuario ya ha sido creado y verificado. Este link te redirigirá directamente a cambiar tu contraseña, para que puedas personalizarla y comenzar a explorar:<br/><br/>
             <ul>
