@@ -2,7 +2,8 @@ es:
   devise:
     mailer:
       invitation_instructions:
-        hello: ¡Hola, %{email}! ¡Bienvenida a la Escuela de Creatividad y Democracia!
+        hello: |-
+          ¡Hola, %{email}!  ¡Bienvenida a la Escuela de Creatividad y Democracia!
         invited_you_as_private_user: |-
           Este es un correo automático para comunicarte que tu usuario ya ha sido creado y verificado. Este link te redirigirá directamente a cambiar tu contraseña, para que puedas personalizarla y comenzar a explorar:<br/><br/>
             <ul>
@@ -17,6 +18,6 @@ es:
           De todas maneras, en nuestra primera sesión del 22 de abril, expicaremos un poco mejor cómo funciona la plataforma.<br/><br/>
           ¡Un abrazo y nos vemos pronto!<br/><br/>
         footer:
-          Platoniq cc-by-sa. Con el apoyo de Open Society Foundations.
+          <br /> Platoniq cc-by-sa. Con el apoyo de Open Society Foundations.
 
 
