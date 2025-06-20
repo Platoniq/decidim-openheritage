@@ -2,11 +2,11 @@ es:
   devise:
     mailer:
       invitation_instructions:
-        hello: |-
-          ¡Hola, %{email}!<br /> <br /> 
+        hello!!html: |-
+          ¡Hola, %{email}!<br /> <br />
           ¡Bienvenida a la Escuela de Creatividad y Democracia!
         invited_you_as_private_user: |-
-          Este es un correo automático para comunicarte que tu usuario ya ha sido creado y verificado. Este link te redirigirá directamente a cambiar tu contraseña, para que puedas personalizarla y comenzar a explorar:<br/><br/> 
+          Este es un correo automático para comunicarte que tu usuario ya ha sido creado y verificado. Este link te redirigirá directamente a cambiar tu contraseña, para que puedas personalizarla y comenzar a explorar:<br/><br/>
             <ul>
               <li>Los materiales de cada módulo (te recomendamos ir mirando los webinars del Módulo 0).</li>
               <li>El espacio de "La Barra", donde podrás compartir tus ideas, preguntas o reflexiones.</li>
@@ -14,11 +14,11 @@ es:
               <li>También usaremos OpenSpaces para que entregues tus actividades y participes en algunas votaciones o ejercicios colaborativos.</li>
             </ul>
         ignore: |-
-          Te recomendamos guardar el enlace en tus marcadores y entrar cada semana para estar al día con todo lo que vamos compartiendo.<br/><br/> 
-          Sabemos que es mucha información y puede ser un poco complejo acostumbrarse al principio. Si tienes cualquier problema técnico o duda sobre cómo usar la plataforma, no dudes en escribirnos a ecd@platoniq.net. 
-          De todas maneras, en nuestra primera sesión del 22 de abril, expicaremos un poco mejor cómo funciona la plataforma.<br/><br/> 
+          Te recomendamos guardar el enlace en tus marcadores y entrar cada semana para estar al día con todo lo que vamos compartiendo.<br/><br/>
+          Sabemos que es mucha información y puede ser un poco complejo acostumbrarse al principio. Si tienes cualquier problema técnico o duda sobre cómo usar la plataforma, no dudes en escribirnos a ecd@platoniq.net.
+          De todas maneras, en nuestra primera sesión del 22 de abril, expicaremos un poco mejor cómo funciona la plataforma.<br/><br/>
           ¡Un abrazo y nos vemos pronto!<br/><br/>
-        footer: 
+        footer:
           <br /> Platoniq cc-by-sa. Con el apoyo de Open Society Foundations.
 
 
