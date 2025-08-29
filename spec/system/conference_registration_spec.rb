@@ -3,11 +3,11 @@
 require "rails_helper"
 require "decidim/conferences/test/factories"
 
-describe "Visit a conference", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
+describe "Visit a conference", :perform_enqueued do
   let!(:organization) { create(:organization) }
-  let!(:conference) { create(:conference, organization: organization, slug: slug, registrations_enabled: true) }
+  let!(:conference) { create(:conference, organization:, slug:, registrations_enabled: true) }
   let(:slug) { "bla-bla" }
-  let(:user) { create(:user, :confirmed, organization: organization) }
+  let(:user) { create(:user, :confirmed, organization:) }
 
   CUSTOM_PATH = "/bla"
 

@@ -3,8 +3,8 @@
 require "rails_helper"
 require "decidim/surveys/test/factories"
 
-describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
-  let(:organization) { create(:organization, external_domain_whitelist: ["decidim.org", "openheritage.eu", "wikipedia.org"]) }
+describe "Visit the home page", :perform_enqueued do
+  let(:organization) { create(:organization, external_domain_allowlist: ["decidim.org", "openheritage.eu", "wikipedia.org"]) }
   let(:menu) do
     {
       organization.host.to_sym =>
@@ -22,7 +22,7 @@ describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/Des
     {
       id: 123,
       url: "http://matomo.lvh.me/",
-      tenants: tenants
+      tenants:
     }
   end
   let(:tenants) { nil }
@@ -31,7 +31,7 @@ describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/Des
 
   before do
     switch_to_host(organization.host)
-    allow(Rails.application.secrets).to receive_messages(menu: menu, matomo: matomo, openheritage: openheritage, timetracker: timetracker)
+    allow(Rails.application.secrets).to receive_messages(menu:, matomo:, openheritage:, timetracker:)
     visit decidim.root_path
   end
 
@@ -86,8 +86,8 @@ describe "Visit the home page", :perform_enqueued do # rubocop:disable RSpec/Des
 
     let(:user) { create(:user, :confirmed, organization: component.organization) }
     let!(:questionnaire) { create(:questionnaire) }
-    let!(:survey) { create(:survey, component: component, questionnaire: questionnaire) }
-    let!(:question) { create(:questionnaire_question, questionnaire: questionnaire, position: 0) }
+    let!(:survey) { create(:survey, component:, questionnaire:) }
+    let!(:question) { create(:questionnaire_question, questionnaire:, position: 0) }
 
     include_context "with a component"
     before do

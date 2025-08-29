@@ -3,9 +3,9 @@
 require "rails_helper"
 require "decidim/notify/test/factories"
 
-describe "Visit a notify component", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
+describe "Visit a notify component", :perform_enqueued do
   let(:organization) { create(:organization) }
-  let(:participatory_process) { create(:participatory_process, organization: organization) }
+  let(:participatory_process) { create(:participatory_process, organization:) }
   let(:component) { create(:notify_component, participatory_space: participatory_process) }
 
   before do

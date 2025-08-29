@@ -2,9 +2,9 @@
 
 require "rails_helper"
 
-describe "Visit a proposal", :perform_enqueued do # rubocop:disable RSpec/DescribeClass
+describe "Visit a proposal", :perform_enqueued do
   let(:organization) { create(:organization) }
-  let(:participatory_process) { create(:participatory_process, organization: organization) }
+  let(:participatory_process) { create(:participatory_process, organization:) }
   let(:proposals_component) { create(:component, manifest_name: :proposals, participatory_space: participatory_process) }
   let!(:proposal) { create(:proposal, component: proposals_component) }
 

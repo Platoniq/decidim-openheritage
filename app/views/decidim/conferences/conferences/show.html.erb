@@ -1,4 +1,5 @@
 <% add_decidim_meta_tags({
+                           title: translated_attribute(current_participatory_space.title),
                            image_url: current_participatory_space.attached_uploader(:hero_image).url,
                            description: translated_attribute(current_participatory_space.short_description),
                            url: conference_url(current_participatory_space),
@@ -13,6 +14,8 @@
     conference: current_participatory_space
   )
 %>
+
+<%= render partial: "layouts/decidim/header/follow_space_menu_bar_button", locals: { participatory_space: current_participatory_space } %>
 
 <%# NOTE: This page is wrapped within a main tag, in order to
     include the hero inside the two-column layout.
