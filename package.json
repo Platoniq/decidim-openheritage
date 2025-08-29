@@ -28,10 +28,10 @@
     "jsviews": "^1.0.13",
     "leaflet.featuregroup.subgroup": "^1.0.2",
     "marked": "^5.1.2",
-    "select2": "^4.1.0-rc.0",
-    "slick-carousel": "^1.8.1",
     "react": "^18.0.1",
     "react-dom": "^18.0.1",
+    "select2": "^4.1.0-rc.0",
+    "slick-carousel": "^1.8.1",
     "tom-select": "^2.2.2",
     "uc.micro": "^2.1.0"
   },
@@ -54,6 +54,7 @@
     "@decidim/prettier-config": "^0.29.4",
     "@decidim/stylelint-config": "^0.29.4",
     "@tarekraafat/autocomplete.js": "^10.2.7",
+    "esbuild": "^0.25.5",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-config-standard": "^17.1.0",
@@ -65,7 +66,7 @@
     "webpack-dev-server": "^4"
   },
   "optionalDependencies": {
-    "sass-embedded-linux-arm64": "^1.90.0",
-    "sass-embedded-darwin-arm64": "^1.90.0"
+    "sass-embedded-darwin-arm64": "^1.90.0",
+    "sass-embedded-linux-arm64": "^1.90.0"
   }
 }
