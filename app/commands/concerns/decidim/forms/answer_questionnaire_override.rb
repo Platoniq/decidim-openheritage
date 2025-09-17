@@ -11,7 +11,9 @@ module Decidim
         def call
           return broadcast(:invalid) if @form.invalid?
 
-          answer_questionnaire
+          with_events do
+            answer_questionnaire
+          end
 
           if @errors
             reset_form_attachments
