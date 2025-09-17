@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim (originally 20180611121852)
-
+# This file has been modified by `decidim upgrade:migrations` task on 2025-09-16 15:07:33 UTC
 class ChangeNewsletterNotificationTypeValue < ActiveRecord::Migration[5.2]
   class User < ApplicationRecord
     self.table_name = :decidim_users

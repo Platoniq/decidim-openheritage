@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_sortitions (originally 20171215161358)
-
+# This file has been modified by `decidim upgrade:migrations` task on 2025-09-16 15:07:35 UTC
 class CreateDecidimModuleSortitionsSortitions < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_module_sortitions_sortitions do |t|
