@@ -82,7 +82,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome
-  revision: ba954a777d0d8a30930d006cd92606df13f10728
+  revision: 33af0f3b62f422d8015ed65decb96beda96c7d46
   branch: main
   specs:
     decidim-decidim_awesome (0.13.0)
@@ -570,7 +570,7 @@ GEM
     fog-xml (0.1.5)
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
-    formatador (1.2.0)
+    formatador (1.2.1)
       reline
     fugit (1.11.2)
       et-orbi (~> 1, >= 1.2.11)
