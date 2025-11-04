@@ -1,4 +1,3 @@
-/app/views/layouts/decidim/_head_extra.html.erb
 /app/views/layouts/decidim/_mini_footer.html.erb
 /app/views/layouts/decidim/mailer.html.erb
 /app/views/decidim/proposals/proposals/show.html.erb
