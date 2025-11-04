@@ -43,7 +43,7 @@ describe "Visit the home page", :perform_enqueued do
     within "nav[role='navigation']", text: "Translation missing: en.i18n_key" do
       expect(page).to have_link("Translation missing: en.i18n_key", href: "http://www.wikipedia.org")
     end
-  end  
+  end
 
   context "when openheritage tenant" do
     let(:openheritage) { [organization.host] }
