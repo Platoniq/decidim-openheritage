@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_assemblies (originally 20180109105917)
-
+# This file has been modified by `decidim upgrade:migrations` task on 2025-09-16 15:07:32 UTC
 class AddAssemblyUserRoles < ActiveRecord::Migration[5.1]
   def change
     create_table :decidim_assembly_user_roles do |t|

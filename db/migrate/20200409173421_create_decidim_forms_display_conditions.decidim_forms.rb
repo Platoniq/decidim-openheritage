@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 # This migration comes from decidim_forms (originally 20200130194123)
-
+# This file has been modified by `decidim upgrade:migrations` task on 2025-09-16 15:07:34 UTC
 class CreateDecidimFormsDisplayConditions < ActiveRecord::Migration[5.1]
   def up
     create_table :decidim_forms_display_conditions do |t|
-      t.integer :decidim_question_id, index: { name: "decidim_forms_display_condition_question" }, null: false
-      t.integer :decidim_condition_question_id, index: { name: "decidim_forms_display_condition_condition_question" }, null: false
-      t.integer :decidim_answer_option_id, index: { name: "decidim_forms_display_condition_answer_option" }
+      t.bigint :decidim_question_id, index: { name: "decidim_forms_display_condition_question" }, null: false
+      t.bigint :decidim_condition_question_id, index: { name: "decidim_forms_display_condition_condition_question" }, null: false
+      t.bigint :decidim_answer_option_id, index: { name: "decidim_forms_display_condition_answer_option" }
       t.integer :condition_type, default: 0, null: false
       t.jsonb :condition_value
       t.boolean :mandatory, default: false

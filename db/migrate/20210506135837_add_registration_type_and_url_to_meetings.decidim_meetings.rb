@@ -1,6 +1,7 @@
 # frozen_string_literal: true
-# This migration comes from decidim_meetings (originally 20201016112641)
 
+# This migration comes from decidim_meetings (originally 20201016112641)
+# This file has been modified by `decidim upgrade:migrations` task on 2025-09-16 15:07:34 UTC
 class AddRegistrationTypeAndUrlToMeetings < ActiveRecord::Migration[5.2]
   class Meetings < ApplicationRecord
     self.table_name = :decidim_meetings_meetings

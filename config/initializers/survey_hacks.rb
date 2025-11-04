@@ -28,9 +28,9 @@ Rails.application.config.to_prepare do
     def query
       answers = Decidim::Forms::Answer.not_separator.joins(:question).where(questionnaire: @questionnaire)
       hacked = timetracker_hacked_surveys.map(&:questionnaire)
-      return answers.sort_by { |answer| answer.question.position }.group_by(&:session_token).values if hacked.include? @questionnaire
+      return answers.sort_by { |answer| answer.question.position.to_i }.group_by(&:session_token).values if hacked.include? @questionnaire
 
-      answers.sort_by { |answer| answer.question.position }.group_by { |a| a.user || a.session_token }.values
+      answers.sort_by { |answer| answer.question.position.to_i }.group_by { |a| a.user || a.session_token }.values
     end
   end
 end

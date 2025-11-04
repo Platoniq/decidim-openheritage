@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = "0.29.4"
+DECIDIM_VERSION = "0.30.1"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-conferences", DECIDIM_VERSION
@@ -18,7 +18,7 @@ gem "decidim-direct_verifications", git: "https://github.com/Platoniq/decidim-ve
 gem "decidim-navigation_maps", git: "https://github.com/Platoniq/decidim-module-navigation_maps", branch: "main"
 gem "decidim-notify", git: "https://github.com/Platoniq/decidim-module-notify", branch: "main"
 gem "decidim-superspaces", git: "https://github.com/Platoniq/decidim-superspace", branch: "main"
-gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "master"
+gem "decidim-term_customizer", git: "https://github.com/Platoniq/decidim-module-term_customizer", branch: "main"
 gem "decidim-time_tracker", git: "https://github.com/Platoniq/decidim-module-time_tracker", branch: "main"
 
 gem "bootsnap", "~> 1.4"

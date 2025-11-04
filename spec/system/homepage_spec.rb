@@ -45,32 +45,6 @@ describe "Visit the home page", :perform_enqueued do
     end
   end
 
-  context "when matomo is configured" do
-    it "has matomo trackers" do
-      within "#matomo-script", visible: false do
-        expect(page.body).to include("var u='http://matomo.lvh.me/'")
-        expect(page.body).to include("_paq.push(['setSiteId', '123']);")
-        expect(page.body).not_to include("_paq.push(['setSiteId', '987']);")
-      end
-    end
-
-    context "when matomo is customized for the tenant" do
-      let(:tenants) do
-        {
-          organization.host.to_sym => 987
-        }
-      end
-
-      it "has matomo trackers" do
-        within "#matomo-script", visible: false do
-          expect(page.body).to include("var u='http://matomo.lvh.me/'")
-          expect(page.body).not_to include("_paq.push(['setSiteId', '123']);")
-          expect(page.body).to include("_paq.push(['setSiteId', '987']);")
-        end
-      end
-    end
-  end
-
   context "when openheritage tenant" do
     let(:openheritage) { [organization.host] }
 
@@ -82,12 +56,16 @@ describe "Visit the home page", :perform_enqueued do
   end
 
   context "when using surveys" do
+    let(:first_type) { "short_answer" }
+    let!(:first) do
+      create(:questionnaire_question, questionnaire:, position: 1, question_type: first_type)
+    end
     let(:manifest_name) { "surveys" }
 
     let(:user) { create(:user, :confirmed, organization: component.organization) }
-    let!(:questionnaire) { create(:questionnaire) }
-    let!(:survey) { create(:survey, component:, questionnaire:) }
-    let!(:question) { create(:questionnaire_question, questionnaire:, position: 0) }
+    let!(:questionnaire) { create(:questionnaire, skip_injection: true) }
+    let!(:survey) { create(:survey, component:, questionnaire:, starts_at: 1.day.ago, ends_at: 1.month.from_now, allow_answers: true, published_at: 1.day.ago, skip_injection: true) }
+    let!(:answer) { create(:answer, questionnaire:, question: first) }
 
     include_context "with a component"
     before do
@@ -110,9 +88,11 @@ describe "Visit the home page", :perform_enqueued do
       description_text = questionnaire.description[current_locale]
       sanitized_description = ActionView::Base.full_sanitizer.sanitize(description_text)
 
+      click_on questionnaire.title[current_locale]
+
       expect(page).to have_i18n_content(sanitized_description)
 
-      fill_in question.body["en"], with: "My first answer"
+      fill_in questionnaire.questions.first.body["en"], with: "My first answer"
 
       check "questionnaire_tos_agreement"
 
@@ -125,9 +105,10 @@ describe "Visit the home page", :perform_enqueued do
       end
 
       visit_component
+      click_on questionnaire.title[current_locale]
 
       expect(page).to have_content("You have already answered this form.")
-      expect(page).to have_no_i18n_content(question.body)
+      expect(page).to have_no_i18n_content(questionnaire.questions.first.body)
     end
 
     context "and is listed as a timetracker" do
@@ -146,9 +127,11 @@ describe "Visit the home page", :perform_enqueued do
         description_text = questionnaire.description[current_locale]
         sanitized_description = ActionView::Base.full_sanitizer.sanitize(description_text)
 
+        click_on questionnaire.title[current_locale]
+
         expect(page).to have_i18n_content(sanitized_description)
 
-        fill_in question.body["en"], with: "My first answer"
+        fill_in questionnaire.questions.first.body["en"], with: "My first answer"
 
         check "questionnaire_tos_agreement"
 
@@ -161,11 +144,12 @@ describe "Visit the home page", :perform_enqueued do
         end
 
         visit_component
+        click_on questionnaire.title[current_locale]
 
         expect(page).to have_no_content("You have already answered this form.")
-        expect(page).to have_i18n_content(question.body)
+        expect(page).to have_i18n_content(questionnaire.questions.first.body)
 
-        fill_in question.body["en"], with: "My first answer"
+        fill_in questionnaire.questions.first.body["en"], with: "My first answer"
 
         check "questionnaire_tos_agreement"
 

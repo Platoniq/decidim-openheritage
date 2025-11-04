@@ -16,32 +16,32 @@ checksums = [
     package: "decidim-conferences",
     files: {
       "/app/views/decidim/conferences/conferences/_conference_hero.html.erb" => "da4e86d29cf4272356d4bed6130d641f",
-      "/app/views/decidim/conferences/conferences/show.html.erb" => "f473d522ddc4c5f3352f3fc55cffdd7d"
+      "/app/views/decidim/conferences/conferences/show.html.erb" => "441608dc88131043a6fcaca81edc18d1"
     }
   },
   {
     package: "decidim-forms",
     files: {
-      "/app/queries/decidim/forms/questionnaire_user_answers.rb" => "fb14ed5f570c6d18e5d0d83808d03b5d",
-      "/app/commands/decidim/forms/answer_questionnaire.rb" => "b4e2523cadbcb16f827c4b3cefa03a98"
+      "/app/queries/decidim/forms/questionnaire_user_answers.rb" => "0036e31fa16df5c13bc36090bfbad17d",
+      "/app/commands/decidim/forms/answer_questionnaire.rb" => "3d6bb923b7146bd0dd0be79f1ecc5f3b"
     }
   },
   {
     package: "decidim-participatory_processes",
     files: {
-      "/app/models/decidim/participatory_process.rb" => "6f19ab033d83404a6f314911b7538fbf"
+      "/app/models/decidim/participatory_process.rb" => "eb5c7945d1090f1bda8999ce37b5ecc2"
     }
   },
   {
     package: "decidim-proposals",
     files: {
-      "/app/views/decidim/proposals/proposals/show.html.erb" => "ec5980ab50a4999b2a6975e61998ec1f"
+      "/app/views/decidim/proposals/proposals/show.html.erb" => "4647b22f8414ad5c60b5f4c3b48716c5"
     }
   },
   {
     package: "decidim-surveys",
     files: {
-      "/app/controllers/decidim/surveys/surveys_controller.rb" => "161ca4167c381f3ba93d86431c10710b"
+      "/app/controllers/decidim/surveys/surveys_controller.rb" => "5da988772bbe4236f803325e72c9d54f"
     }
   },
   {
@@ -54,7 +54,6 @@ checksums = [
       "/app/views/decidim/pages/index.html.erb" => "b84cdfb13960c465e082adfee3a68d8c",
 
       # layouts
-      "/app/views/layouts/decidim/_head_extra.html.erb" => "25642b423f3b3a1ac9c69bf558a6b791",
       "/app/views/layouts/decidim/mailer.html.erb" => "23a555f9c674d7db4b0ea6582525e2d6",
       "/app/views/devise/mailer/invite_private_user.html.erb" => "f978eddb05fa55af2c33ce78c964a2bb"
     }
