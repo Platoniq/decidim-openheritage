@@ -43,33 +43,7 @@ describe "Visit the home page", :perform_enqueued do
     within "nav[role='navigation']", text: "Translation missing: en.i18n_key" do
       expect(page).to have_link("Translation missing: en.i18n_key", href: "http://www.wikipedia.org")
     end
-  end
-
-  context "when matomo is configured" do
-    it "has matomo trackers" do
-      within "#matomo-script", visible: false do
-        expect(page.body).to include("var u='http://matomo.lvh.me/'")
-        expect(page.body).to include("_paq.push(['setSiteId', '123']);")
-        expect(page.body).not_to include("_paq.push(['setSiteId', '987']);")
-      end
-    end
-
-    context "when matomo is customized for the tenant" do
-      let(:tenants) do
-        {
-          organization.host.to_sym => 987
-        }
-      end
-
-      it "has matomo trackers" do
-        within "#matomo-script", visible: false do
-          expect(page.body).to include("var u='http://matomo.lvh.me/'")
-          expect(page.body).not_to include("_paq.push(['setSiteId', '123']);")
-          expect(page.body).to include("_paq.push(['setSiteId', '987']);")
-        end
-      end
-    end
-  end
+  end  
 
   context "when openheritage tenant" do
     let(:openheritage) { [organization.host] }
