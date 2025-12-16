@@ -56,6 +56,7 @@ group :development do
 end
 
 group :production do
+  gem "appsignal"
   gem "aws-sdk-s3", require: false
   gem "figaro", "~> 1.2"
   gem "fog-aws"
