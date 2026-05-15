@@ -930,7 +930,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.integer "decidim_question_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.string "session_token"
+    t.string "session_token", default: "", null: false
     t.string "ip_hash"
     t.index ["decidim_question_id"], name: "index_decidim_forms_answers_question_id"
     t.index ["decidim_questionnaire_id"], name: "index_decidim_forms_answers_on_decidim_questionnaire_id"
@@ -940,9 +940,9 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
   end
 
   create_table "decidim_forms_display_conditions", force: :cascade do |t|
-    t.integer "decidim_question_id", null: false
-    t.integer "decidim_condition_question_id", null: false
-    t.integer "decidim_answer_option_id"
+    t.bigint "decidim_question_id", null: false
+    t.bigint "decidim_condition_question_id", null: false
+    t.bigint "decidim_answer_option_id"
     t.integer "condition_type", default: 0, null: false
     t.jsonb "condition_value"
     t.boolean "mandatory", default: false
@@ -1139,7 +1139,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.boolean "visible"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.bigint "position"
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_agendas_on_decidim_meeting_id"
   end
 
@@ -1247,17 +1246,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_meetings_meetings_on_decidim_scope_id"
     t.index ["deleted_at"], name: "index_decidim_meetings_meetings_on_deleted_at"
-  end
-
-  create_table "decidim_meetings_minutes", force: :cascade do |t|
-    t.bigint "decidim_meeting_id"
-    t.jsonb "description"
-    t.string "video_url"
-    t.string "audio_url"
-    t.boolean "visible"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_minutes_on_decidim_meeting_id"
   end
 
   create_table "decidim_meetings_polls", force: :cascade do |t|
