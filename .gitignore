@@ -71,3 +71,4 @@ coverage/
 
 .idea/
 tailwind.config.js
+/public/sw.js*

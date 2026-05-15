@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
+ActiveRecord::Schema[7.0].define(version: 2026_05_15_091247) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -408,7 +408,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.jsonb "title"
     t.integer "weight", default: 0, null: false
     t.jsonb "description"
-    t.integer "total_budget", default: 0
+    t.bigint "total_budget", default: 0
     t.integer "decidim_component_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
@@ -930,7 +930,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.integer "decidim_question_id"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.string "session_token"
+    t.string "session_token", default: "", null: false
     t.string "ip_hash"
     t.index ["decidim_question_id"], name: "index_decidim_forms_answers_question_id"
     t.index ["decidim_questionnaire_id"], name: "index_decidim_forms_answers_on_decidim_questionnaire_id"
@@ -940,9 +940,9 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
   end
 
   create_table "decidim_forms_display_conditions", force: :cascade do |t|
-    t.integer "decidim_question_id", null: false
-    t.integer "decidim_condition_question_id", null: false
-    t.integer "decidim_answer_option_id"
+    t.bigint "decidim_question_id", null: false
+    t.bigint "decidim_condition_question_id", null: false
+    t.bigint "decidim_answer_option_id"
     t.integer "condition_type", default: 0, null: false
     t.jsonb "condition_value"
     t.boolean "mandatory", default: false
@@ -1139,7 +1139,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.boolean "visible"
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
-    t.bigint "position"
     t.index ["decidim_meeting_id"], name: "index_decidim_meetings_agendas_on_decidim_meeting_id"
   end
 
@@ -1247,17 +1246,6 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
     t.index ["decidim_scope_id"], name: "index_decidim_meetings_meetings_on_decidim_scope_id"
     t.index ["deleted_at"], name: "index_decidim_meetings_meetings_on_deleted_at"
-  end
-
-  create_table "decidim_meetings_minutes", force: :cascade do |t|
-    t.bigint "decidim_meeting_id"
-    t.jsonb "description"
-    t.string "video_url"
-    t.string "audio_url"
-    t.boolean "visible"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.index ["decidim_meeting_id"], name: "index_decidim_meetings_minutes_on_decidim_meeting_id"
   end
 
   create_table "decidim_meetings_polls", force: :cascade do |t|
@@ -1671,7 +1659,8 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.index ["privatable_to_type", "privatable_to_id"], name: "space_privatable_to_privatable_id"
   end
 
-  create_table "decidim_private_exports", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "decidim_private_exports", force: :cascade do |t|
+    t.uuid "uuid", null: false
     t.string "export_type", null: false
     t.string "attached_to_type"
     t.integer "attached_to_id"
@@ -1682,6 +1671,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_09_23_085627) do
     t.jsonb "metadata", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["uuid"], name: "index_decidim_private_exports_on_uuid", unique: true
   end
 
   create_table "decidim_proposals_collaborative_draft_collaborator_requests", force: :cascade do |t|
