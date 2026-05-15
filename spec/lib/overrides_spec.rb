@@ -29,7 +29,7 @@ checksums = [
   {
     package: "decidim-participatory_processes",
     files: {
-      "/app/models/decidim/participatory_process.rb" => "eb5c7945d1090f1bda8999ce37b5ecc2"
+      "/app/models/decidim/participatory_process.rb" => "7144cb6bc518ed426908d624e3788be1"
     }
   },
   {
