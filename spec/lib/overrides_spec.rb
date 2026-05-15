@@ -48,7 +48,7 @@ checksums = [
     package: "decidim-core",
     files: {
       # footer
-      "/app/views/layouts/decidim/footer/_mini.html.erb" => "ccead2f5f20557ea4db1501de943f82b",
+      "/app/views/layouts/decidim/footer/_mini.html.erb" => "c67cc97db27cdcf926f60682e399f688",
 
       # views
       "/app/views/decidim/pages/index.html.erb" => "b84cdfb13960c465e082adfee3a68d8c",
