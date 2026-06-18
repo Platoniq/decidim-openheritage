@@ -26,4 +26,9 @@ if Rails.env.production?
     skip = Rails.application.secrets.rack_attack_skip || "let-me-hack"
     request.params["skip_rack_attack"] == skip
   end
+
+  # Allow ActiveStorage requests to prevent 429 errors when loading multiple images
+  Rack::Attack.safelist("allow active_storage requests") do |request|
+    request.path.start_with?("/rails/active_storage")
+  end
 end
