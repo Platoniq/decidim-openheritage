@@ -28,7 +28,7 @@ if Rails.env.production?
   end
 
   # Allow ActiveStorage requests to prevent 429 errors when loading multiple images
-  Rack::Attack.throttle("req/ip", limit: 300, period: 5.minutes) do |req|
-    req.ip unless req.path.start_with?("/rails/active_storage")
+  Rack::Attack.safelist("allow active_storage reads") do |request|
+    request.get? && request.path.start_with?("/rails/active_storage")
   end
 end
