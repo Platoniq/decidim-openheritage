@@ -29,6 +29,7 @@ gem "sentry-ruby"
 gem "wicked_pdf", "~> 2.1"
 
 gem "puma"
+gem "rack-attack", "~> 6.7"
 gem "uglifier", "~> 4.1"
 
 gem "faker"
