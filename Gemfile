@@ -30,6 +30,7 @@ gem "wicked_pdf", "~> 2.1"
 
 gem "puma"
 gem "uglifier", "~> 4.1"
+gem "rack-attack", "~> 6.7"
 
 gem "faker"
 gem "rspec", "~> 3.10"
