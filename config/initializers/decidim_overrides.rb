@@ -2,5 +2,5 @@
 
 Rails.application.config.to_prepare do
   Decidim::ParticipatoryProcess.include(Decidim::ParticipatoryProcessOverride)
-  Decidim::Forms::AnswerQuestionnaire.include(Decidim::Forms::AnswerQuestionnaireOverride)
+  Decidim::Forms::ResponseQuestionnaire.include(Decidim::Forms::ResponseQuestionnaireOverride)
 end

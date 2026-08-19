@@ -2,17 +2,18 @@
 
 module Decidim
   module Forms
-    module AnswerQuestionnaireOverride
+    module ResponseQuestionnaireOverride
       extend ActiveSupport::Concern
 
       included do
-        # Allow users to answer a survey multiple times
+        # Allow users to respond a survey multiple times
         # Necessary for timetracker functionality
         def call
           return broadcast(:invalid) if @form.invalid?
 
           with_events do
-            answer_questionnaire
+            clear_responses! if allow_editing_responses
+            response_questionnaire
           end
 
           if @errors
