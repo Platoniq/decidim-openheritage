@@ -46,13 +46,13 @@ Full copies of gem templates. Re-copy the 0.31 version and re-apply the local ch
 
 Every guarded file has to be checked against 0.31. Three outcomes:
 
-1. **Upstream unchanged** — only the checksum needs re-recording.
-2. **Upstream renamed** — update the path in the spec as well (0.31 renames Answer→Response across forms/surveys).
-3. **Upstream changed** — diff 0.30.x→0.31.4 and re-apply the local customisation.
+- **Upstream unchanged** — only the checksum needs re-recording.
+- **Upstream renamed** — update the path in the spec as well (0.31 renames Answer→Response across forms/surveys).
+- **Upstream changed** — diff 0.30.x→0.31.4 and re-apply the local customisation.
 
 Compare with:
 
-```
+```console
 gh api repos/decidim/decidim/contents/<package><file>?ref=v0.30.9 -q .sha
 gh api repos/decidim/decidim/contents/<package><file>?ref=v0.31.4 -q .sha
 ```
@@ -63,4 +63,3 @@ Conventions worth following (from [decidim-barcelona](https://github.com/Ajuntam
 
 - `.include` when the concern **adds** methods, `.prepend` when it **replaces** them, so `super` still reaches upstream.
 - decidim_awesome applies Deface overrides by virtual path, so they compose on top of app-level view copies — if a copied view renders differently than it reads, check for a Deface override before hunting a bug.
-
