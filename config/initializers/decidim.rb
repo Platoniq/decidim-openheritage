@@ -418,7 +418,6 @@ if Decidim.module_installed? :meetings
   end
 end
 
-
 if Decidim.module_installed? :consultations
   Decidim::Consultations.configure do |config|
     config.stats_cache_expiration_time = Rails.application.secrets.dig(:decidim, :consultations, :stats_cache_expiration_time).to_i.minutes

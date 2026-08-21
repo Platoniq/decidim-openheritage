@@ -15,33 +15,33 @@ checksums = [
   {
     package: "decidim-conferences",
     files: {
-      "/app/views/decidim/conferences/conferences/_conference_hero.html.erb" => "da4e86d29cf4272356d4bed6130d641f",
-      "/app/views/decidim/conferences/conferences/show.html.erb" => "d803dd234af6690136fb22b56e491f8c"
+      "/app/views/decidim/conferences/conferences/_conference_hero.html.erb" => "c49e3bfd348285ea3fcd6abcd00cf350",
+      "/app/views/decidim/conferences/conferences/show.html.erb" => "16ff68b3c8208f93813f8f6354528c17"
     }
   },
   {
     package: "decidim-forms",
     files: {
-      "/app/queries/decidim/forms/questionnaire_user_answers.rb" => "0036e31fa16df5c13bc36090bfbad17d",
-      "/app/commands/decidim/forms/answer_questionnaire.rb" => "3d6bb923b7146bd0dd0be79f1ecc5f3b"
+      "/app/queries/decidim/forms/questionnaire_user_responses.rb" => "d9a56ef2b9b1e06040143272adf8d7d0",
+      "/app/commands/decidim/forms/response_questionnaire.rb" => "dcac7f5ad0ab6010d6ebdad0e5ae4db2"
     }
   },
   {
     package: "decidim-participatory_processes",
     files: {
-      "/app/models/decidim/participatory_process.rb" => "7144cb6bc518ed426908d624e3788be1"
+      "/app/models/decidim/participatory_process.rb" => "7a5d16b62827f11d3c15719fdb2a068b"
     }
   },
   {
     package: "decidim-proposals",
     files: {
-      "/app/views/decidim/proposals/proposals/show.html.erb" => "4647b22f8414ad5c60b5f4c3b48716c5"
+      "/app/views/decidim/proposals/proposals/show.html.erb" => "e2c0adf5c283f7396d93207e1b7ab740"
     }
   },
   {
     package: "decidim-surveys",
     files: {
-      "/app/controllers/decidim/surveys/surveys_controller.rb" => "5da988772bbe4236f803325e72c9d54f"
+      "/app/controllers/decidim/surveys/surveys_controller.rb" => "78f245485d5c50e6a51a15c30452f5c7"
     }
   },
   {
@@ -51,10 +51,10 @@ checksums = [
       "/app/views/layouts/decidim/footer/_mini.html.erb" => "c67cc97db27cdcf926f60682e399f688",
 
       # views
-      "/app/views/decidim/pages/index.html.erb" => "b84cdfb13960c465e082adfee3a68d8c",
+      "/app/views/decidim/pages/index.html.erb" => "1f4f2c100cd9c24d3368218e6a71a1e5",
 
       # layouts
-      "/app/views/layouts/decidim/mailer.html.erb" => "23a555f9c674d7db4b0ea6582525e2d6",
+      "/app/views/layouts/decidim/mailer.html.erb" => "6a08103c75e5db737a38cd365428a177",
       "/app/views/devise/mailer/invite_private_user.html.erb" => "f978eddb05fa55af2c33ce78c964a2bb"
     }
   }

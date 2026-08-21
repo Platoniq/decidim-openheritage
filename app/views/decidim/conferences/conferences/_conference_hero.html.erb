@@ -4,11 +4,6 @@
       <%= translated_attribute(current_participatory_space.title) %>
     </h1>
     <h3 class="h3 hero_subtitle">
-      <% if current_participatory_space.hashtag.present? %>
-        <span class="h2 hero_hashtag">
-          <%= link_to "##{current_participatory_space.hashtag}", twitter_hashtag_url(current_participatory_space.hashtag), target: "_blank" %>
-        </span>
-      <% end %>
       <%= translated_attribute(current_participatory_space.slogan) %>
     </h3>
     <div class="flex">

@@ -7,12 +7,12 @@
   twitter_handler: current_organization.twitter_handler) %>
 
 <%
-  edit_link(
-    resource_locator(current_participatory_space).edit,
-    :update,
-    :conference,
-    conference: current_participatory_space
-  )
+edit_link(
+  resource_locator(current_participatory_space).edit,
+  :update,
+  :conference,
+  conference: current_participatory_space
+)
 %>
 
 <%= render partial: "layouts/decidim/header/follow_space_menu_bar_button", locals: { participatory_space: current_participatory_space } %>
@@ -25,7 +25,7 @@
 
   <%= content_for :aside do %>
     <div class="conference__nav-container">
-      <button id="dropdown-trigger-conference" data-component="dropdown" data-target="dropdown-menu-conference" data-auto-close="true" data-scroll-to-menu="true">
+      <button id="dropdown-trigger-conference" data-controller="dropdown" data-target="dropdown-menu-conference" data-auto-close="true" data-scroll-to-menu="true">
         <span><%= t("decidim.searches.filters.jump_to") %></span>
         <%= icon "arrow-down-s-line" %>
         <%= icon "arrow-up-s-line" %>
