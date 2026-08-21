@@ -1,6 +1,6 @@
 # decidim-openheritage — gem overrides
 
-_Generated 2026-08-20. Currently on Decidim **0.31.4**._
+_Generated 2026-08-21. Currently on Decidim **0.31.4**._
 
 This app patches files that live inside the decidim gems. `spec/lib/overrides_spec.rb` stores an MD5 of each upstream original, so the suite fails the moment upstream changes one — that is the signal that a local copy has drifted from the version it was forked from.
 
@@ -12,10 +12,10 @@ Copied or patched via an `*Override` concern. Needs a real diff of upstream old-
 
 | package | file | recorded checksum |
 |---|---|---|
-| `decidim-forms` | `/app/queries/decidim/forms/questionnaire_user_answers.rb` | `0036e31f…` |
-| `decidim-forms` | `/app/commands/decidim/forms/answer_questionnaire.rb` | `3d6bb923…` |
-| `decidim-participatory_processes` | `/app/models/decidim/participatory_process.rb` | `7144cb6b…` |
-| `decidim-surveys` | `/app/controllers/decidim/surveys/surveys_controller.rb` | `5da98877…` |
+| `decidim-forms` | `/app/queries/decidim/forms/questionnaire_user_responses.rb` | `d9a56ef2…` |
+| `decidim-forms` | `/app/commands/decidim/forms/response_questionnaire.rb` | `dcac7f5a…` |
+| `decidim-participatory_processes` | `/app/models/decidim/participatory_process.rb` | `7a5d16b6…` |
+| `decidim-surveys` | `/app/controllers/decidim/surveys/surveys_controller.rb` | `78f24548…` |
 
 ## Views (8)
 
@@ -24,12 +24,12 @@ Full copies of gem templates. Re-copy the 0.31 version and re-apply the local ch
 | package | file | recorded checksum |
 |---|---|---|
 | `decidim-admin` | `/app/views/decidim/admin/static_pages/index.html.erb` | `debf4d3a…` |
-| `decidim-conferences` | `/app/views/decidim/conferences/conferences/_conference_hero.html.erb` | `da4e86d2…` |
-| `decidim-conferences` | `/app/views/decidim/conferences/conferences/show.html.erb` | `d803dd23…` |
-| `decidim-proposals` | `/app/views/decidim/proposals/proposals/show.html.erb` | `4647b22f…` |
+| `decidim-conferences` | `/app/views/decidim/conferences/conferences/_conference_hero.html.erb` | `c49e3bfd…` |
+| `decidim-conferences` | `/app/views/decidim/conferences/conferences/show.html.erb` | `16ff68b3…` |
+| `decidim-proposals` | `/app/views/decidim/proposals/proposals/show.html.erb` | `e2c0adf5…` |
 | `decidim-core` | `/app/views/layouts/decidim/footer/_mini.html.erb` | `c67cc97d…` |
-| `decidim-core` | `/app/views/decidim/pages/index.html.erb` | `b84cdfb1…` |
-| `decidim-core` | `/app/views/layouts/decidim/mailer.html.erb` | `23a555f9…` |
+| `decidim-core` | `/app/views/decidim/pages/index.html.erb` | `1f4f2c10…` |
+| `decidim-core` | `/app/views/layouts/decidim/mailer.html.erb` | `6a08103c…` |
 | `decidim-core` | `/app/views/devise/mailer/invite_private_user.html.erb` | `f978eddb…` |
 
 ## Override concerns
