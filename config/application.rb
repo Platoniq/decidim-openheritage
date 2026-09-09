@@ -13,8 +13,17 @@ module DecidimOpenheritage
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.autoloader = :zeitwerk
-    config.load_defaults 5.2
+    config.load_defaults 7.2
     config.time_zone = "Europe/Amsterdam"
+
+    # Rails 7.1 removed Rails.application.secrets, which this app still reads.
+    # Defined here rather than in an initializer because config/environments
+    # reads secrets during bootstrap, before initializers run.
+    def secrets
+      @secrets ||= ActiveSupport::OrderedOptions.new.merge(
+        config_for(:secrets).deep_symbolize_keys
+      )
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

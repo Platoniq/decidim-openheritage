@@ -415,25 +415,6 @@ if Decidim.module_installed? :meetings
     if Rails.application.secrets.dig(:decidim, :meetings, :embeddable_services).present?
       config.embeddable_services = Rails.application.secrets.dig(:decidim, :meetings, :embeddable_services)
     end
-    unless Rails.application.secrets.dig(:decidim, :meetings, :enable_proposal_linking) == "auto"
-      config.enable_proposal_linking = Rails.application.secrets.dig(:decidim, :meetings, :enable_proposal_linking).present?
-    end
-  end
-end
-
-if Decidim.module_installed? :budgets
-  Decidim::Budgets.configure do |config|
-    unless Rails.application.secrets.dig(:decidim, :budgets, :enable_proposal_linking) == "auto"
-      config.enable_proposal_linking = Rails.application.secrets.dig(:decidim, :budgets, :enable_proposal_linking).present?
-    end
-  end
-end
-
-if Decidim.module_installed? :accountability
-  Decidim::Accountability.configure do |config|
-    unless Rails.application.secrets.dig(:decidim, :accountability, :enable_proposal_linking) == "auto"
-      config.enable_proposal_linking = Rails.application.secrets.dig(:decidim, :accountability, :enable_proposal_linking).present?
-    end
   end
 end
 

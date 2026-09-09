@@ -40,8 +40,8 @@ describe "Visit the home page", :perform_enqueued do
   end
 
   it "has a custom menu" do
-    within "nav[role='navigation']", text: "Translation missing: en.i18n_key" do
-      expect(page).to have_link("Translation missing: en.i18n_key", href: "http://www.wikipedia.org")
+    within "nav[role='navigation']", text: "i18n_key" do
+      expect(page).to have_link("i18n_key", href: "http://www.wikipedia.org")
     end
   end
 
@@ -56,7 +56,7 @@ describe "Visit the home page", :perform_enqueued do
   end
 
   context "when using surveys" do
-    let(:first_type) { "short_answer" }
+    let(:first_type) { "short_response" }
     let!(:first) do
       create(:questionnaire_question, questionnaire:, position: 1, question_type: first_type)
     end
@@ -64,18 +64,11 @@ describe "Visit the home page", :perform_enqueued do
 
     let(:user) { create(:user, :confirmed, organization: component.organization) }
     let!(:questionnaire) { create(:questionnaire, skip_injection: true) }
-    let!(:survey) { create(:survey, component:, questionnaire:, starts_at: 1.day.ago, ends_at: 1.month.from_now, allow_answers: true, published_at: 1.day.ago, skip_injection: true) }
-    let!(:answer) { create(:answer, questionnaire:, question: first) }
+    let!(:survey) { create(:survey, component:, questionnaire:, starts_at: 1.day.ago, ends_at: 1.month.from_now, allow_responses: true, published_at: 1.day.ago, skip_injection: true) }
+    let!(:response) { create(:response, questionnaire:, question: first) }
 
     include_context "with a component"
     before do
-      component.update!(
-        step_settings: {
-          component.participatory_space.active_step.id => {
-            allow_answers: true
-          }
-        }
-      )
       login_as user, scope: :user
     end
 
@@ -107,7 +100,7 @@ describe "Visit the home page", :perform_enqueued do
       visit_component
       click_on questionnaire.title[current_locale]
 
-      expect(page).to have_content("You have already answered this form.")
+      expect(page).to have_content("You have already responded this form.")
       expect(page).to have_no_i18n_content(questionnaire.questions.first.body)
     end
 
@@ -146,7 +139,7 @@ describe "Visit the home page", :perform_enqueued do
         visit_component
         click_on questionnaire.title[current_locale]
 
-        expect(page).to have_no_content("You have already answered this form.")
+        expect(page).to have_no_content("You have already responded this form.")
         expect(page).to have_i18n_content(questionnaire.questions.first.body)
 
         fill_in questionnaire.questions.first.body["en"], with: "My first answer"
