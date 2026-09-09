@@ -28,12 +28,17 @@ class MoveSignatureTypeToInitativeType < ActiveRecord::Migration[5.2]
     InitiativesType.reset_column_information
 
     InitiativesType.find_each do |type|
+      # The InitiativesType defined at the top of this migration is a bare
+      # ApplicationRecord with no enum, so under Rails 7.2 a symbol casts to NULL on
+      # this integer column and save! fails the not-null constraint. Assign the enum's
+      # integer values directly - Decidim::InitiativesType declares
+      # `enum :signature_type, [:online, :offline, :any]`, so online=0, offline=1, any=2.
       type.signature_type = if type.online_signature_enabled && face_to_face_voting_allowed
-                              :any
+                              2 # :any
                             elsif type.online_signature_enabled && !face_to_face_voting_allowed
-                              :online
+                              0 # :online
                             else
-                              :offline
+                              1 # :offline
                             end
       type.save!
     end
