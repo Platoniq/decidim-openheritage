@@ -1,6 +1,6 @@
 # decidim-openheritage — gem overrides
 
-_Generated 2026-08-21. Currently on Decidim **0.31.4**._
+_Generated 2026-09-09. Currently on Decidim **0.31.7**._
 
 This app patches files that live inside the decidim gems. `spec/lib/overrides_spec.rb` stores an MD5 of each upstream original, so the suite fails the moment upstream changes one — that is the signal that a local copy has drifted from the version it was forked from.
 
@@ -13,9 +13,9 @@ Copied or patched via an `*Override` concern. Needs a real diff of upstream old-
 | package | file | recorded checksum |
 |---|---|---|
 | `decidim-forms` | `/app/queries/decidim/forms/questionnaire_user_responses.rb` | `d9a56ef2…` |
-| `decidim-forms` | `/app/commands/decidim/forms/response_questionnaire.rb` | `dcac7f5a…` |
+| `decidim-forms` | `/app/commands/decidim/forms/response_questionnaire.rb` | `bccc2b66…` |
 | `decidim-participatory_processes` | `/app/models/decidim/participatory_process.rb` | `7a5d16b6…` |
-| `decidim-surveys` | `/app/controllers/decidim/surveys/surveys_controller.rb` | `78f24548…` |
+| `decidim-surveys` | `/app/controllers/decidim/surveys/surveys_controller.rb` | `f72e142e…` |
 
 ## Views (8)
 
@@ -25,10 +25,10 @@ Full copies of gem templates. Re-copy the 0.31 version and re-apply the local ch
 |---|---|---|
 | `decidim-admin` | `/app/views/decidim/admin/static_pages/index.html.erb` | `debf4d3a…` |
 | `decidim-conferences` | `/app/views/decidim/conferences/conferences/_conference_hero.html.erb` | `c49e3bfd…` |
-| `decidim-conferences` | `/app/views/decidim/conferences/conferences/show.html.erb` | `16ff68b3…` |
+| `decidim-conferences` | `/app/views/decidim/conferences/conferences/show.html.erb` | `d8244b43…` |
 | `decidim-proposals` | `/app/views/decidim/proposals/proposals/show.html.erb` | `e2c0adf5…` |
 | `decidim-core` | `/app/views/layouts/decidim/footer/_mini.html.erb` | `c67cc97d…` |
-| `decidim-core` | `/app/views/decidim/pages/index.html.erb` | `1f4f2c10…` |
+| `decidim-core` | `/app/views/decidim/pages/index.html.erb` | `37c8c372…` |
 | `decidim-core` | `/app/views/layouts/decidim/mailer.html.erb` | `6a08103c…` |
 | `decidim-core` | `/app/views/devise/mailer/invite_private_user.html.erb` | `f978eddb…` |
 
@@ -48,13 +48,13 @@ Every guarded file has to be checked against 0.31. Three outcomes:
 
 - **Upstream unchanged** — only the checksum needs re-recording.
 - **Upstream renamed** — update the path in the spec as well (0.31 renames Answer→Response across forms/surveys).
-- **Upstream changed** — diff 0.30.x→0.31.4 and re-apply the local customisation.
+- **Upstream changed** — diff 0.30.x→0.31.7 and re-apply the local customisation.
 
 Compare with:
 
 ```console
 gh api repos/decidim/decidim/contents/<package><file>?ref=v0.30.9 -q .sha
-gh api repos/decidim/decidim/contents/<package><file>?ref=v0.31.4 -q .sha
+gh api repos/decidim/decidim/contents/<package><file>?ref=v0.31.7 -q .sha
 ```
 
 Same sha = category 1. 404 on the 0.31 side = category 2.
