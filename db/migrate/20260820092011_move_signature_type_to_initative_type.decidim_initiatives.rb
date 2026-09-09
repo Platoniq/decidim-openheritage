@@ -10,14 +10,18 @@ class MoveSignatureTypeToInitativeType < ActiveRecord::Migration[5.2]
     if !ActiveRecord::Base.connection.table_exists?("decidim_initiatives_types")
       Rails.logger.info "Skipping migration since there is no InitiativesType table"
       return
-    elsif InitiativesType.count.positive?
-      raise "You need to edit this migration to continue"
     end
 
     # This flag says when mixed and face-to-face voting methods
     # are allowed. If set to false, only online voting will be
-    # allowed
-    # face_to_face_voting_allowed = true
+    # allowed.
+    #
+    # Decidim raises here until this is answered. Set to false: this install has
+    # one initiative type ("Free speech") with online_signature_enabled, and no
+    # initiatives at all, so online-only preserves exactly the current capability
+    # rather than granting face-to-face collection nobody configured. Change it in
+    # the admin UI if offline signatures are ever wanted.
+    face_to_face_voting_allowed = false
 
     add_column :decidim_initiatives_types, :signature_type, :integer, null: false, default: 0
 
